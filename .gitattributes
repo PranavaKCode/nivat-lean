@@ -1,0 +1,6 @@
+# keep the verified bytes identical on every platform.
+* -text
+# preserve the audited final-line formatting as well as line endings.
+* whitespace=blank-at-eol,space-before-tab,cr-at-eol,-blank-at-eof
+*.pdf binary
+*.zip binary

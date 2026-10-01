@@ -1,0 +1,13 @@
+.lake/
+reference/
+tmp/
+inputs/private_summary/
+audit/*
+!audit/build.log
+!audit/axioms.log
+!audit/full-target.log
+!audit/verification-run.log
+!audit/verification.json
+*.olean
+*.ilean
+*.trace

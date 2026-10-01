@@ -1,0 +1,1273 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[nopatch=footnote]{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage{enumitem,needspace}
+\hypersetup{
+ pdftitle={A proof of Nivat's conjecture},
+ pdfauthor={Pranava Kumar},
+ pdfsubject={Rectangular pattern complexity and periodicity}
+}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{1em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\frenchspacing
+\setlist{itemsep=2pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Newt}{\operatorname{Newt}}
+\newcommand{\Pat}{\operatorname{Pat}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\rec}{\operatorname{rec}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Laur}{\mathscr L}
+\newcommand{\Del}[1]{\Delta_{#1}}
+\newcommand{\Rect}{R_{k,n}}
+\newcommand{\ZZ}{\mathcal Z}
+\newcommand{\RR}{\mathcal R}
+\DeclareMathOperator{\lcm}{lcm}
+\title{A proof of Nivat's conjecture}
+\author{Pranava Kumar}
+\date{14 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that a finite-alphabet configuration on $\Z^2$ with at most $kn$ patterns on a $k\times n$
+rectangle has a nonzero period. The main ingredient is a sharp lower bound: a nonperiodic
+finite-valued configuration that has a product of directional binomial annihilators and agrees with a
+fully periodic configuration on a rational wedge has at least $kn+1$ patterns on every $k\times n$
+rectangle. We obtain this bound by supplementing
+the affine coordinate functions with local quadratic functions. Their independence follows from a
+support argument: directional differences produce nonzero pointwise products of half-plane-supported defects,
+confined to pointed cones on which no Laurent recurrence can hold. A selection argument based on
+Colle's construction supplies the wedge. Here we retain a finite boundary disagreement, so that the
+orbit-closure point to which the bound is applied remains nonperiodic.
+\end{abstract}
+
+\section{Introduction}
+Let $c:\Z^2\to\mathcal A$ be a configuration over a finite alphabet. For a finite set $D\subset\Z^2$, write
+\[
+ \Pat_c(D)=\{(c(g+u))_{u\in D}:g\in\Z^2\},\qquad P_c(D)=|\Pat_c(D)|.
+\]
+Thus $P_c(D)$ counts the patterns seen by translating the observation window $D$. We use the rectangles
+\[
+ \Rect=\{0,\ldots,k-1\}\times\{0,\ldots,n-1\},\qquad
+ P_c(k,n)=P_c(\Rect).
+\]
+A \emph{period} of $c$ is a nonzero vector $h\in\Z^2$ such that $c(g+h)=c(g)$ for all $g$. We call
+$c$ \emph{fully periodic} if it has two linearly independent periods, and \emph{nonperiodic} if it
+has no period. The following is the classical Nivat statement, a two-dimensional analogue of the Morse--Hedlund theorem \cite{MH}.
+
+\begin{theorem}\label{thm:nivat}
+Let $\mathcal A$ be a finite alphabet and $c:\Z^2\to\mathcal A$. If
+\[
+ P_c(k,n)\le kn
+\]
+for some positive integers $k,n$, then $c$ has a period.
+\end{theorem}
+
+The threshold is sharp. A configuration equal to $1$ at the origin and $0$ elsewhere is nonperiodic
+and has exactly $kn+1$ patterns on $\Rect$. The conclusion cannot be strengthened to full
+periodicity: if $s$ is a finite-valued aperiodic sequence, then $c(x,y)=s(x)$ has a vertical period
+but no transverse period, while $P_c(1,n)$ is at most the alphabet size and hence at most $n$ for
+sufficiently large $n$.
+
+Cyr and Kra proved periodicity under the bound $P_c(k,n)\le kn/2$
+\cite[Theorem~1.2]{CK}. Their generating-set method was refined by Colle and Garibaldi to retain
+information from the alphabet size \cite[Theorem~2.2]{CG}. Short rectangles admit the full
+threshold: Cyr and Kra treat short side at most three \cite[Theorem~1.1]{CKshort}, and Colle and
+Garibaldi treat short side at most four \cite[Theorem~1.3]{CG26}.
+
+A different approach, due to Kari and Szabados, associates a Laurent annihilator to a low-complexity
+configuration and obtains a product of directional differences \cite[Lemma~5 and Corollary~13]{KS}.
+Szabados proves the conjecture when the resulting periodic decomposition has at most two components
+\cite{Sz}. Kari and Moutot show that the orbit closure contains a periodic point, and
+obtain the conjecture for uniformly recurrent configurations \cite[Theorem~5 and Corollary~8]{KM}.
+These conclusions do not remove the need to control the particular point to which a complexity
+estimate is applied. Our selection argument follows the periodic-region constructions of
+Colle \cite[Sections~3--4]{Colle}; their relation to the work of Colle and Garibaldi is described in Appendix~\ref{app:sources}.
+
+Even the single-defect example above has the zero configuration in its orbit closure: one can simply
+translate the defect to infinity. Thus a periodic limit, or agreement with a periodic background on
+a wedge, is not itself a contradiction. We need a point that retains nonperiodicity. On this point,
+the periodic region will be used to produce additional patterns, rather than to extend a period
+through the plane.
+
+We use the shifts and differences
+\[
+ T^u c(g)=c(g+u),\qquad \Del u=T^u-1,
+\]
+and write $X_c=\overline{\{T^u c:u\in\Z^2\}}$ for the orbit closure in the product topology, with
+the finite alphabet discrete. A complex configuration is \emph{finitary} if it has finite image. A
+\emph{rational wedge} is a translate of a closed rational cone with nonempty interior and aperture
+less than $\pi$.
+
+\begin{theorem}[The periodic-wedge bound]\label{thm:wedge}
+Let $c:\Z^2\to\C$ be finitary and nonperiodic. Suppose that
+\[
+ Q_0c=0,\qquad Q_0=\prod_{\ell=1}^q\Del{h_\ell},
+\]
+where the nonzero integer vectors $h_\ell$ have pairwise distinct unoriented directions. If $c$
+agrees with a fully periodic configuration on a rational wedge, then
+\[
+ P_c(k,n)\ge kn+1\qquad(k,n\ge1).
+\]
+\end{theorem}
+
+If the constant function and the $kn$ coordinate functions were independent, they would give the desired bound. Annihilators can impose relations among them, so we look for nonlinear functions of the
+same pattern. Let $\phi$ be the common directional divisor of the annihilators. Applying all but one
+of its directional factors gives a singly periodic configuration whose agreement with the background
+spreads from the wedge to a half-plane. A transverse difference then vanishes on that half-plane,
+after a fixed inset.
+
+With two distinct directions, we take the \emph{pointwise} product of the resulting defects:
+for arrays $x,y:\Z^2\to\C$, $(xy)(g)=x(g)y(g)$. Its support is the intersection of
+the two supports, hence is contained in a translated pointed cone. This rules out a nonzero Laurent
+annihilator provided the product itself is nonzero.
+There is a placement issue here: shifting arbitrary nonzero sites together could require shifts far
+larger than the rectangle. Short recurrences along the factor directions instead allow us to work
+inside the coordinate boxes of the factors of $\phi$. The resulting product is the double difference
+of a quadratic local observable, whose fitting translates are independent modulo the affine
+coordinate functions.
+
+The same factor boxes also control how many affine relations there can be. Write $r,s$ for the
+coordinate widths of $\phi$ and $D_R$ for the dimension of the affine relations on $R=\Rect$. With
+$t_+=\max\{t,0\}$, we have
+\[
+ D_R\le L_R:=(k-r)_+(n-s)_+.
+\]
+There are exactly $L_R$ translates of the quadratic observable that fit in $R$. Adding them to the
+$kn+1-D_R$ dimensions supplied by the affine coordinate functions gives
+\[
+ P_c(k,n)\ge (kn+1-D_R)+L_R\ge kn+1.
+\]
+The details occupy Sections~\ref{sec:algebra}--\ref{sec:count}.
+
+\begin{proposition}[Selection of a nonperiodic point]\label{prop:selection}
+Suppose that $c:\Z^2\to\Z$ is finitary and nonperiodic and $P_c(k,n)\le kn$. There exist a
+nonperiodic $\theta$ in the orbit closure $X_c$, a fully periodic configuration $B$, and a rational
+wedge $K$ such that $\theta=B$ on $K\cap\Z^2$.
+\end{proposition}
+
+We prove this in Sections~\ref{sec:selection-inputs}--\ref{sec:selection-proof}, adapting the two
+cases in the proof of Colle's Lemma~4.6 \cite{Colle}. The main difficulty in the compactness case is to retain nonperiodicity. We anchor
+maximal agreement polygons at a boundary point and keep a disagreement on a fixed finite set. A
+hypothetical period of the limit would then extend agreement to a reference half-plane, or give that
+half-plane a second period; either conclusion is ruled out by the construction. The agreement region
+spreads to that half-plane under the reference period. No recurrence hypothesis is needed.
+
+\begin{proof}[Deduction of Theorem~\ref{thm:nivat}]
+Relabel the alphabet injectively by integers, preserving patterns and periods, and suppose for a
+contradiction that $c$ is nonperiodic. If $n=1$, every horizontal row has at most $k$ words of
+length $k$. The Morse--Hedlund theorem \cite[Theorem~2.2(iii)]{CK} gives each row a period at most $k$, so $\lcm(1,\ldots,k)$ is a common horizontal period. The case $k=1$ follows in the same way from the columns.
+
+We may therefore assume $k,n\ge2$. Lemma~\ref{lem:affine-ann} supplies a nonzero integral annihilator, and Theorem~\ref{thm:KS} supplies the product $Q_0$. This finite local identity holds on every point of $X_c$. Every finite pattern of such a point also occurs in $c$, since its cylinder neighborhood meets the orbit. Apply Proposition~\ref{prop:selection} and then Theorem~\ref{thm:wedge} to the selected nonperiodic point $\theta$. We obtain
+\[
+ kn+1\le P_\theta(k,n)\le P_c(k,n)\le kn,
+\]
+a contradiction.
+\end{proof}
+
+\section{Annihilators and directional filters}\label{sec:algebra}
+We regard configurations as functions on $\Z^2$, rather than multiply them as formal Laurent
+series. Their values may be added and multiplied pointwise. In particular,
+\[
+ (xy)(g)=x(g)y(g),\qquad
+ \supp(x):=\{g\in\Z^2:x(g)\ne0\}.
+\]
+No summation is involved, even when both supports are infinite. Over $\C$,
+\begin{equation}\label{eq:pointwise-support}
+ \supp(xy)=\supp(x)\cap\supp(y),\qquad
+ \supp(T^u x)=\supp(x)-u.
+\end{equation}
+The second sign follows from our convention $T^u x(g)=x(g+u)$.
+
+Laurent polynomials play a different role. Put $\Laur=\C[X^{\pm1},Y^{\pm1}]$ and abbreviate
+$X^{h_1}Y^{h_2}$ by $X^h$. For $f=\sum_{u\in\supp(f)}f_uX^u\in\Laur$, define
+\begin{equation}\label{eq:finite-action}
+ f(T)x(g)=\sum_{u\in\supp(f)} f_u x(g+u),\qquad
+ \Ann(x)=\{f\in\Laur:f(T)x=0\}.
+\end{equation}
+This sum is finite. Polynomial multiplication corresponds to composition,
+$(fg)(T)x=f(T)(g(T)x)$, so $\Ann(x)$ is an ideal. This is the annihilator formalism of
+Kari--Szabados \cite[Section~2]{KS}, with the shift convention reversed. In formal-series notation,
+our product of two configurations would be a coefficientwise (Hadamard) product, not a Cauchy
+product. No convolution of two infinitely supported arrays is used.
+
+A shift preserves pointwise products: $T^u(xy)=(T^u x)(T^u y)$. A general operator $f(T)$ does
+not. We will expand the two differences of a product explicitly when this distinction matters.
+Here, \emph{finitary} means finite image, not finite support. Finite sums and pointwise products
+of translates of a finitary configuration remain finitary.
+
+For a polynomial $f$, the set $\supp(f)$ is the input stencil of $f(T)$; it need not contain the
+support of the output array $f(T)x$. Its Newton polygon is
+$\Newt(f)=\conv(\supp(f))$ for $f\ne0$. The coordinate minima and maxima of nonzero Laurent
+polynomials add under multiplication: viewing a
+polynomial in $X$ with coefficients in the integral domain $\C[Y^{\pm1}]$ proves this for the two
+$X$-extrema, and interchanging the coordinates proves it for the other two. The \emph{coordinate
+widths} are the differences between the corresponding maxima and minima. We call a nonconstant
+Laurent polynomial a \emph{line polynomial} when its Newton polygon is a nondegenerate segment.
+
+The initial linear-algebra argument is the one in Kari--Szabados \cite[Lemma~5]{KS}. We include it
+to keep the equality case visible.
+
+\begin{lemma}\label{lem:affine-ann}
+If $c$ is finitary and integer-valued and $P_c(D)\le |D|$ for a nonempty finite set $D$, then $c$
+has a nonzero integral Laurent annihilator.
+\end{lemma}
+\begin{proof}
+Fix a $D$-pattern $p_0$. The at most $|D|-1$ nonzero vectors $p-p_0$ have a nonzero orthogonal
+vector in $\Q^D$. Its coefficients define a nonzero polynomial $f$ supported in $D$ for which
+$f(T)c$ is constant. For any $w\in\Z^2\setminus\{0\}$, the nonzero polynomial $(X^w-1)f$ annihilates
+$c$. Clearing denominators gives an integral annihilator.
+\end{proof}
+
+\begin{theorem}[Kari--Szabados, Corollary 13 of \cite{KS}]\label{thm:KS}
+A finitary integer configuration with a nonzero annihilator has an annihilator
+$\prod_{\ell=1}^q(X^{h_\ell}-1)$ with nonzero integer vectors in pairwise distinct directions.
+\end{theorem}
+The source uses the opposite shift convention. Replacing every exponent by its negative gives the
+statement above, since reversing a period binomial changes it only by a Laurent unit. We use the
+product identity, not a bounded decomposition into periodic components.
+
+The next proof uses the elimination argument of Kari--Moutot \cite[Lemma~8]{KMalg}. We state the
+finite-image hypothesis explicitly: it is what turns the resulting recurrences into periods.
+
+\Needspace{7\baselineskip}
+\begin{lemma}[Coprime annihilators]\label{lem:coprime}
+A finitary complex configuration with two coprime nonzero Laurent annihilators is fully periodic.
+\end{lemma}
+\begin{proof}
+Let $f,g$ be the two annihilators. They are coprime in $\C(X)[Y^{\pm1}]$: a common nonunit factor
+there would give one in $\Laur$ after clearing denominators and taking primitive parts. A B\'ezout
+identity in this one-variable ring, with denominators cleared, gives a nonzero polynomial in $X$ in
+$(f,g)$. Interchanging the variables gives a nonzero polynomial in $Y$.
+
+We remove the monomial factor from each eliminant. A nonconstant eliminant now gives a reversible
+recurrence of some order $d$ along every parallel lattice line, since its constant and leading
+coefficients are nonzero. The length-$d$ states occurring anywhere in the configuration form one
+finite set. Each state determines both its successor and its predecessor, so the successor map is a
+permutation, whose order is a period on all the parallel lines simultaneously. Applying this to the
+two eliminants gives independent coordinate periods. If either eliminant is a nonzero constant,
+the configuration is zero.
+\end{proof}
+
+For the remainder of Sections~\ref{sec:algebra}--\ref{sec:count}, assume the hypotheses of
+Theorem~\ref{thm:wedge}. An individual annihilator may have factors which another annihilator lacks.
+For the local count we need their common factors. We do not assume that their gcd annihilates $c$; the
+following lemma shows that applying it leaves only a fully periodic remainder
+(cf.~\cite[Corollaries~28--29]{KS}).
+
+\begin{lemma}[The common directional divisor]\label{lem:gcd}
+The nonzero elements of $\Ann(c)$ have a gcd $\phi$, defined up to a Laurent unit. It can be written
+\[
+ \phi=\phi_1\cdots\phi_m,\qquad m\ge2,
+\]
+where the $\phi_i$ are nonconstant line polynomials in distinct directions, each dividing the
+corresponding binomial in $Q_0$. Choose their monomial representatives so that both coordinate
+minima of every $\phi_i$ are zero, and use their product as the representative of $\phi$. Then
+$\rho=\phi(T)c$ is fully periodic. In addition,
+\[
+ f(T)c\text{ constant}\quad\Longrightarrow\quad \phi\mid f.
+\]
+\end{lemma}
+\begin{proof}
+Write $h=ap$ with $a\ge1$ and $p$ primitive. Then the factors of $X^h-1$ over $\C$ are $X^p-\zeta$,
+with $\zeta^a=1$, up to a unit. They are distinct. Binomials in different directions have no common
+nonunit factor. Thus $Q_0$ is squarefree.
+
+Because $Q_0\in\Ann(c)$, we may define $\phi$ as the product of the irreducible factors of $Q_0$
+which divide every annihilator. This is a gcd even though the ideal contains infinitely many
+polynomials. For each factor omitted from $\phi$, choose an annihilator not divisible by that
+factor. We can choose a finite linear combination $g$ of these annihilators which avoids every
+omitted factor: each divisibility condition defines a proper linear subspace of the coefficient
+space, and a finite union of such subspaces does not cover a complex vector space. Thus
+$\gcd(Q_0,g)=\phi$. If no factor is omitted, take $g=Q_0$.
+
+The coprime quotients $Q_0/\phi$ and $g/\phi$ annihilate $\rho=\phi(T)c$. This configuration is
+finitary, so Lemma~\ref{lem:coprime} makes it fully periodic. Grouping the irreducible factors of
+$\phi$ by direction, we obtain the polynomials $\phi_i$. Multiplying each by the prescribed monomial unit
+fixes its representative without changing the divisibility statements or periodicity.
+
+There cannot be zero or one surviving direction. The first case makes $c$ fully periodic. In the
+second, choose a nonzero multiple $v$ of the vector in $Q_0$ which is also a period of $\rho$, and
+write $\Del v=\phi a$. The difference $\Del v c=a(T)\rho$ is $v$-periodic, so its increments along
+each $v$-line are constant: for $N\ge0$,
+\[
+ c(g+Nv)=c(g)+N(a(T)\rho)(g).
+\]
+Boundedness forces $a(T)\rho=0$, making $v$ a period of $c$. Both cases contradict nonperiodicity, so $m\ge2$.
+
+If $f(T)c$ is constant, choose $w\in\Z^2\setminus\{0\}$ parallel to none of the directions of $\phi$. Then $\Del w
+f\in\Ann(c)$ and $\gcd(\Del w,\phi)=1$. Every irreducible factor of the squarefree polynomial $\phi$
+therefore divides $f$, as required.
+\end{proof}
+
+Put
+\[
+ f_i=\phi/\phi_i,\qquad A_i=f_i(T)c.
+\]
+The filter $f_i$ applies every directional factor except $\phi_i$. The phrase ``direction'' refers
+to a line, not a chosen period: a primitive vector spans all lattice points on that line, but need
+not itself be a period. Let $B$ be the fully periodic background on the wedge. Choose a nonzero multiple $v_i$ of the corresponding vector in $Q_0$ which
+is a period of both $\rho$ and $B$. This is possible because both period lattices have finite index
+in $\Z^2$.
+
+\begin{lemma}[Directional filters]\label{lem:filters}
+Each $A_i$ has period $v_i$, is not fully periodic, and agrees with a fully periodic configuration
+on a rational lattice half-plane whose boundary is parallel to $v_i$.
+\end{lemma}
+\begin{proof}
+Write $\Del{v_i}=\phi_i a_i$. Then
+\[
+ \Del{v_i}A_i=a_i(T)\rho
+\]
+is $v_i$-periodic. Applying the boundedness argument of Lemma~\ref{lem:gcd} to $A_i$ gives
+$\Del{v_i}A_i=0$. A transverse period $w$ would put $\Del w f_i$ in $\Ann(c)$, although it is
+coprime to $\phi_i$. Thus $A_i$ is not fully periodic.
+
+A finite stencil only costs a translation of the wedge into its interior. After making this
+translation, $A_i=B_i$ on a smaller wedge $K'$, where $B_i=f_i(T)B$. Their common period $v_i$
+spreads agreement to $(K'\cap\Z^2)+\Z v_i$. For a nonprimitive period this set can miss lattice
+points near its boundary; what we need, and will prove, is that it contains an inset lattice
+half-plane.
+
+Write $K'=\{g:\lambda_1(g)\ge a_1,\ \lambda_2(g)\ge a_2\}$ with independent rational linear forms. A
+lattice point $g$ belongs to this saturation whenever some integer $t$ satisfies
+\[
+ \lambda_1(g)+t\lambda_1(v_i)\ge a_1,\qquad
+ \lambda_2(g)+t\lambda_2(v_i)\ge a_2.
+\]
+If $\lambda_1(v_i)$ and $\lambda_2(v_i)$ have the same strict sign, an integer $t$ exists for every
+$g$. This would give $A_i=B_i$ globally, contrary to non-full-periodicity. If one coefficient
+vanishes, the other is nonzero, and the inequalities can be solved throughout the half-plane imposed
+by the inequality with zero coefficient of $t$.
+
+In the remaining case, after reversing $v_i$ if necessary, write $a=\lambda_1(v_i)>0$ and
+$b=-\lambda_2(v_i)>0$. The admissible interval is
+\[
+ \frac{a_1-\lambda_1(g)}{a}\le t\le
+ \frac{\lambda_2(g)-a_2}{b}.
+\]
+Put $\nu=\lambda_1/a+\lambda_2/b$. This is a nonzero rational form with $\nu(v_i)=0$. On the half-plane
+\[
+ \nu(g)\ge \frac{a_1}{a}+\frac{a_2}{b}+1,
+\]
+the interval has length at least $1$ and contains an integer. This proves the assertion for
+nonprimitive periods as well; the inset avoids any missing lattice points near the boundary of the
+real saturation.
+\end{proof}
+
+\section{The pointed-cone obstruction and a local observable}\label{sec:observable}
+An array supported in a half-plane may still be periodic along its boundary. A pointwise product
+of two such arrays has a different support restriction: by \eqref{eq:pointwise-support}, it vanishes
+outside the intersection of their half-planes. When the boundaries are nonparallel this intersection
+is a translated pointed cone. The product need not be nonzero; Lemma~\ref{lem:placement} will deal
+with that issue. We first record what the support restriction gives once nonvanishing is known.
+
+\begin{lemma}[The pointed-cone obstruction]\label{lem:cone}
+A nonzero complex array supported in a translate of a closed pointed cone of aperture less than
+$\pi$ has no nonzero Laurent annihilator.
+\end{lemma}
+\begin{proof}
+Choose a linear functional $\lambda$ in the interior of the dual cone whose kernel contains no
+nonzero lattice vector; this requires avoiding only countably many lines. Its sublevel sets in the
+translated cone are bounded and contain finitely many lattice points. Hence the nonempty support of
+the array has a unique $\lambda$-minimum $g_*$. For a nonzero operator $f=\sum_u a_uT^u$, choose the
+unique $\lambda$-maximum $u_*$ of its exponent support. In
+\[
+ f(T)e(g_*-u_*)=\sum_u a_u e(g_*-u_*+u),
+\]
+all terms with $u\ne u_*$ sample points below the minimum $g_*$ and hence vanish. The remaining
+term is $a_{u_*}e(g_*)\ne0$. We have used a maximum for the operator and a minimum for the array
+because $T^u$ samples at $g+u$.
+\end{proof}
+
+Let $r_i,s_i$ be the coordinate widths of the normalized $\phi_i$, and put $r=\sum_i r_i$, $s=\sum_i
+s_i$. Let $[E_i^-,E_i^+]$ be its Newton segment, of primitive lattice length $t_i\ge1$. The support
+of $f_i$ lies in
+\[
+ [0,r-r_i]\times[0,s-s_i].
+\]
+Fix distinct indices $i,j$. Increase $v_i,v_j$ by common multiples so that they fix $\rho$ and all
+the fully periodic $B_i$ in Lemma~\ref{lem:filters}. Define the transverse defects
+\[
+ b_i=\Del{v_j}A_i,\qquad b_j=\Del{v_i}A_j.
+\]
+Neither is zero, since otherwise the corresponding filtered configuration would be fully periodic.
+To locate the support, write an agreement half-plane for $A_i,B_i$ as $\nu_i(g)\ge\beta_i$, with
+$\nu_i(v_i)=0$. Since $v_j$ is a period of $B_i$,
+\[
+ b_i(g)=0\qquad\text{if}\qquad
+ \nu_i(g)\ge\beta_i+\max\{0,-\nu_i(v_j)\}.
+\]
+Thus $b_i$ is supported in the opposite closed half-plane. The same argument applies to $b_j$. Their
+support boundaries are parallel to $v_i,v_j$, respectively. Also
+\begin{equation}\label{eq:small-recurrence}
+ \phi_i(T)b_i=\Del{v_j}\rho=0,\qquad
+ \phi_j(T)b_j=\Del{v_i}\rho=0.
+\end{equation}
+The useful length scale is that of these recurrences, not the possibly large periods $v_i,v_j$.
+On a line where a defect is nonzero, a short recurrence prevents a long run of zeros. We can
+therefore move nonzero values together using only the factor boxes.
+
+\begin{lemma}[Placement in the factor boxes]\label{lem:placement}
+There are integer vectors $u_i\in[0,r_i]\times[0,s_i]$ and $u_j\in[0,r_j]\times[0,s_j]$ for which
+\[
+ e=(T^{u_i}b_i)(T^{u_j}b_j)
+\]
+is nonzero.
+\end{lemma}
+\begin{proof}
+Choose a real affine line $L_i$ in the direction of $\phi_i$ containing a lattice point where $b_i$
+is nonzero, and choose $L_j$ in the same way. The translated lines intersect at
+\[
+ z=(L_i-E_i^-)\cap(L_j-E_j^-).
+\]
+Although $z$ need not be integral, the segment $z+[E_i^-,E_i^+]$ lies on $L_i$ and contains at least
+$t_i$ consecutive points of $L_i\cap\Z^2$: an interval of length $t_i$ in primitive lattice units
+contains at least $t_i$ lattice points, regardless of its endpoints.
+
+Translate the operator by $-E_i^-$. Equation~\eqref{eq:small-recurrence} then gives a recurrence of
+order $t_i$ on $L_i\cap\Z^2$ with nonzero first and last coefficients. A run of $t_i$ zeros would
+propagate in both directions and make the entire line zero. We may therefore choose $p_i$ on the
+segment with $b_i(p_i)\ne0$, and similarly choose $p_j$ for $b_j$.
+
+Set $g=\lfloor z\rfloor$ coordinatewise and $u_i=p_i-g$, $u_j=p_j-g$. Since $p_i-z$ belongs to the
+integral coordinate box $[0,r_i]\times[0,s_i]$,
+\[
+ u_i=p_i-\lfloor z\rfloor=\lceil p_i-z\rceil
+\]
+also belongs to that box. The same holds for $j$, and $e(g)=b_i(p_i)b_j(p_j)\ne0$.
+\end{proof}
+
+If $H_i,H_j$ are the half-planes containing the supports of $b_i,b_j$, then
+\[
+ \supp(e)=(\supp(b_i)-u_i)\cap(\supp(b_j)-u_j)
+       \subset (H_i-u_i)\cap(H_j-u_j).
+\]
+The containing half-planes, not the supports themselves, intersect in a translated pointed cone.
+Since $e\ne0$, Lemma~\ref{lem:cone} applies. We do not use $e$ directly as the local observable,
+since its definition involves the large shifts $v_i,v_j$. Instead, form the pointwise product before
+taking those differences:
+\[
+ d=(T^{u_i}A_i)(T^{u_j}A_j).
+\]
+Its input sites, relative to the evaluation site, belong to
+\begin{equation}\label{eq:observable-stencil}
+ (u_i+\supp(f_i))\cup(u_j+\supp(f_j))
+       \subset W:=[0,r]\times[0,s]\cap\Z^2.
+\end{equation}
+Thus $d(g)$ is a quadratic function of the $c$-values on $g+W$. This is a statement about its
+input stencil, not a claim that the output array $d$ has finite support.
+
+To recover $e$, write $U(g)=A_i(g+u_i)$ and $V(g)=A_j(g+u_j)$, so that $d(g)=U(g)V(g)$.
+Since $T^{v_i}U=U$ and $T^{v_j}V=V$,
+\begin{align*}
+ \Del{v_i}\Del{v_j}(UV)
+ &= (T^{v_j}U)(T^{v_i}V)-U(T^{v_i}V)-(T^{v_j}U)V+UV\\
+ &= (\Del{v_j}U)(\Del{v_i}V)=e.
+\end{align*}
+Set $Q=\Del{v_i}\Del{v_j}Q_0$. This operator annihilates both $c$ and constants, while
+\begin{equation}\label{eq:Qd}
+ Qd=Q_0e
+\end{equation}
+has no nonzero annihilator. Indeed, an annihilator $H$ of $Q_0e$ would make the nonzero polynomial
+$HQ_0$ annihilate $e$.
+
+\section{The exact rectangle count}\label{sec:count}
+Kari--Szabados relate linear independence of patterns to the absence of annihilators fitting in a
+window \cite[Lemma~36]{KS}. We keep the constant coordinate as well, rather than first normalizing
+the configuration as in \cite[Lemma~33]{KS}. The extra step is to supplement this affine space
+with translates of the quadratic function just constructed.
+
+\begin{proof}[Proof of Theorem~\ref{thm:wedge}]
+Fix $R=\Rect$ and let
+\[
+ F_R=\{f\in\Laur:\supp(f)\subset R,\ f(T)c\text{ is constant}\},\qquad D_R=\dim F_R.
+\]
+Lemma~\ref{lem:gcd} makes every member of $F_R$ divisible by $\phi$. Since the latter has coordinate
+minima zero and widths $r,s$, additivity of coordinate extrema confines every nonzero quotient
+$f/\phi$ to
+\[
+ [0,k-r-1]\times[0,n-s-1].
+\]
+Multiplication by $\phi$ is injective, so
+\begin{equation}\label{eq:relation-count}
+ D_R\le L_R:=(k-r)_+(n-s)_+.
+\end{equation}
+If $k\le r$ or $n\le s$, the quotient box has no lattice sites and $D_R=0$.
+
+Let $V_R$ be the subspace of all complex functions on $\Pat_c(R)$ spanned by $1$ and the coordinate
+evaluations $p\mapsto p(u)$, $u\in R$. The map from their $kn+1$ coefficients to this function space
+has kernel
+\[
+ \{(-\kappa(f),f):f\in F_R\},\qquad f(T)c=\kappa(f).
+\]
+Since $\kappa(f)$ is uniquely determined by $f$, including for $f=0$, we obtain
+\begin{equation}\label{eq:affine-count}
+ \dim V_R=kn+1-D_R.
+\end{equation}
+If $L_R=0$, this already proves the theorem. For integral configurations, this thin-rectangle
+conclusion also appears in Kari--Szabados \cite[Lemma~39]{KS}.
+
+Suppose $L_R>0$. Write $f_i=\sum_a\alpha_{i,a}X^a$ and
+$f_j=\sum_b\alpha_{j,b}X^b$, with both sums restricted to the finite polynomial supports. The
+function on $W$-patterns which gives $d$ is
+\[
+ \mathcal D(p)=
+ \left(\sum_a\alpha_{i,a}p(u_i+a)\right)
+ \left(\sum_b\alpha_{j,b}p(u_j+b)\right).
+\]
+In other words, $d(g)=\mathcal D((c(g+z))_{z\in W})$. This also makes the word ``local'' precise.
+For each $t$ with $t+W\subset R$, the function
+$p\mapsto\mathcal D((p(t+z))_{z\in W})$ is defined on $\Pat_c(R)$; evaluating it at the pattern
+based at $g$ gives $T^td(g)$. There are exactly $L_R$ such translations.
+
+We claim that these functions are independent modulo $V_R$. A relation on the finite set
+$\Pat_c(R)$, evaluated at every translate of $c$, gives the global array identity
+\[
+ \sum_t\alpha_t T^td=\alpha+f(T)c,\qquad \supp(f)\subset R.
+\]
+The identity holds at every $g\in\Z^2$, so it remains valid at all sites sampled by $Q$.
+Applying $Q$ removes the affine terms and gives
+\[
+ \Big(\sum_t\alpha_tT^t\Big)(Qd)=0.
+\]
+By \eqref{eq:Qd}, all $\alpha_t$ vanish. These $L_R$ functions are thus independent modulo $V_R$.
+The full function space on the finite set $\Pat_c(R)$ has dimension $P_c(R)$, and consequently
+\[
+ P_c(k,n)\ge\dim V_R+L_R
+ =kn+1-D_R+L_R\ge kn+1.
+\]
+The distinction between defining the functions and testing a relation among them is worth keeping
+in view. Each function counted above uses only the $R$-pattern; $Q$ acts afterwards on the global
+identity, so its large shifts do not enlarge the observation window.
+\end{proof}
+
+\section{Generating sets and a periodic reference}\label{sec:selection-inputs}
+For Sections~\ref{sec:selection-inputs}--\ref{sec:selection-proof}, fix a nonperiodic finitary
+integer configuration $c$ with $P_c(k,n)\le kn$ and a product annihilator $Q_0$ as in
+Theorem~\ref{thm:KS}. Since $c$ is nonperiodic, $Q_0$ has at least two factor directions.
+Every point of $X_c$ satisfies $Q_0z=0$ and uses only finite patterns occurring in $c$. The reference we construct below will have one period, but its restriction to a chosen
+half-plane must not be fully periodic. This distinction will later exclude a transverse period of
+the selected point.
+
+A finite set is \emph{lattice-convex} if it consists of all lattice points of its convex hull. A
+vertex $v$ of a lattice-convex set $S$ is \emph{generated} if any two occurring $S$-patterns
+agreeing on $S\setminus\{v\}$ also agree at $v$. We call $S$ a \emph{generating set} when every
+vertex is generated, and an array \emph{$S$-legal} when each of its translated $S$-patterns occurs
+in $c$. An edge $e$ in a pattern count denotes its lattice sites; $\conv(e)$ denotes the
+corresponding geometric segment. We use the generating-set construction of Cyr--Kra
+\cite[Lemmas~2.5 and~2.8]{CK}, in the extremal form stated by Colle \cite[Section~2]{Colle}.
+The short discrepancy proof below records the edge bound needed later.
+
+\begin{lemma}[A generating polygon]\label{lem:generating}
+There is a lattice-convex $S\subset\Rect$ of positive area such that every vertex is generated and,
+for every edge $e$ of $S$,
+\begin{equation}\label{eq:edge-budget}
+ P_c(S)-P_c(S\setminus e)\le |e|-1.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Minimize the discrepancy $P_c(S)-|S|$ over nonempty lattice-convex subsets of $\Rect$, and choose an
+inclusion-minimal minimizer. Its discrepancy is nonpositive, since $\Rect$ is a competitor.
+
+If $S$ were a segment of $t$ consecutive lattice sites, every parallel bi-infinite line would have
+at most $t$ words of length $t$. Morse--Hedlund would give each line a period at most $t$, and their
+common multiple would be a global period of $c$. This also excludes a singleton, so $S$ has positive
+area.
+
+Every proper nonempty lattice-convex subset of $S$ has larger discrepancy. Deleting a vertex $v$
+therefore gives $P_c(S)-P_c(S\setminus\{v\})<1$. This difference is a nonnegative integer, since
+restriction of patterns is surjective, so it is zero and $v$ is generated. Deleting an edge also
+leaves a nonempty lattice-convex set, and the same comparison gives \eqref{eq:edge-budget}.
+\end{proof}
+
+For an edge $e$, an occurring $S\setminus e$-pattern is \emph{ambiguous} if it has at least two
+occurring $S$-extensions. If $N(\gamma)$ is the number of such extensions, then
+\begin{equation}\label{eq:ambiguity-budget}
+ \sum_{\gamma}\bigl(N(\gamma)-1\bigr)
+ =P_c(S)-P_c(S\setminus e)\le |e|-1.
+\end{equation}
+In particular, there are at most $|e|-1$ ambiguous base patterns.
+
+Following Colle \cite[Section~1]{Colle}, an oriented line through the origin is
+\emph{one-sided nonexpansive} for $X_c$ if two distinct points of $X_c$ agree on the closed lattice
+half-plane on its left. The two orientations specify the two sides of the line. The next result is
+the contrapositive of Colle's theorem.
+
+\begin{theorem}[Colle, Theorem 1.9 of \cite{Colle}]\label{thm:paired}
+If a finitary integer configuration with a nonzero annihilator is not fully periodic, then some line
+has both orientations one-sided nonexpansive on its orbit closure.
+\end{theorem}
+
+Both supporting faces of the generating polygon in this direction must be edges. Indeed, suppose the
+face were a single generated vertex $v$, and let $\lambda$ increase into the half-plane. The
+positive minimum of $\lambda(u-v)$ over $u\in S\setminus\{v\}$ gives a slab thickness through which
+agreement propagates. Iterating would determine the entire plane, contradicting one-sided
+nonexpansiveness. In particular the line is rational. Applying the same argument to the nonzero
+extreme coefficient of $Q_0$ shows that the line is parallel to a factor of $Q_0$: otherwise its
+Newton polygon has a unique minimizing vertex.
+
+A nonzero vector $h$ is a \emph{regional period} of $x$ on $U$ if $x(g+h)=x(g)$ whenever $g,g+h\in
+U$. The restriction is \emph{fully periodic} if it has two linearly independent regional periods
+(compare \cite[Definition~2.12]{Colle}). If $U+h\subset U$, a regional period $h$ is equivalently
+expressed by $\Del h x=0$ on $U$. We use this equivalence only when the indicated translation
+stays in the region.
+
+For a tangent half-plane period, we can work directly with its difference. Taking a suitable
+multiple of the period cancels any parallel factor of the annihilator; the remaining factors then
+determine successive normal levels, extending the period to the plane
+(cf.~\cite[Proposition~2.14]{Colle}).
+
+\begin{lemma}[Extending a tangent period]\label{lem:globalize}
+Suppose $Q_0z=0$ and $z$ has a period parallel to the boundary of a rational half-plane on that
+half-plane. Then $z$ has a global period in the same direction.
+\end{lemma}
+\begin{proof}
+If a factor $\Del{h_j}$ is parallel to the boundary, choose a nonzero common multiple $h$ of $h_j$
+and the regional period, and write $\Del h=a\Del{h_j}$. Then
+\[
+ E=\Del h z,\qquad \Bigl(Q_0/\Del{h_j}\Bigr)E=aQ_0z=0.
+\]
+If there is no parallel factor, take the given period difference as $E$ and retain $Q_0$. In either
+case $E$ vanishes on the half-plane and has a product annihilator whose directions are all
+transverse to the boundary.
+
+Choose a primitive integer normal $\nu$ pointing into the half-plane, and reverse the remaining
+factor vectors so that their $\nu$-values are positive. This changes the product only by a Laurent
+unit. Its constant coefficient is nonzero, while every other exponent has positive integer
+$\nu$-value. The recurrence therefore propagates zero one outward lattice level at a time, giving
+$E=0$ on the plane. If the remaining product is empty, the same conclusion is immediate.
+\end{proof}
+
+The following construction adapts the ambiguity argument of Cyr--Kra \cite[Lemma~2.24]{CK},
+as developed in Colle \cite[Proposition~2.13]{Colle}.
+
+\begin{lemma}[A periodic reference]\label{lem:reference}
+There are a primitive integer vector $a$, an integer half-plane $H$ with boundary parallel to $a$,
+and a globally $a$-direction-periodic $w\in X_c$ such that $w|_H$ is not fully periodic. The
+generating polygon $S$ has two opposite edges parallel to $a$, and this direction occurs in $Q_0$.
+\end{lemma}
+\begin{proof}
+Choose the line supplied by Theorem~\ref{thm:paired}, and orient its primitive vector $a$ so that
+the facing edge $e$ of $S$ is no longer than the opposite edge. Set $r=|e|-1\ge1$. Subtracting $r$
+primitive units from these two opposite edges leaves nonnegative cyclic edge vectors with sum zero.
+Hence $[0,ra]$ is a Minkowski summand of $\conv S$, and every parallel lattice row through $S$
+contains at least $r$ consecutive sites.
+
+Choose $x,y\in X_c$ agreeing on the associated half-plane and differing on the first outer lattice
+line where agreement fails; translate the pair so that this is the next line. The first such line
+exists because the normal levels are integral. Place $e$ on it. Every $a$-translate of the common
+$S\setminus e$-pattern is ambiguous: a unique extension at one position would give agreement on an
+edge block, and generation of the two endpoints would extend this agreement along the entire line.
+
+Let $d$ be the width of $S$ in primitive normal levels. On each of the $d$ rows of $(S\setminus
+e)+\Z a$, choose the initial site of a run of $r$ sites in $S\setminus e$. Read these initial sites
+as one tuple and translate the tuple along $a$. Every length-$r$ word of the resulting bi-infinite
+sequence is a restriction of an ambiguous base pattern. There are at most $r$ such patterns by
+\eqref{eq:ambiguity-budget}, so Morse--Hedlund gives the whole strip a common period $pa$, with
+$p\le r$.
+
+The period can change as we add an outer row. It is enough to keep its length at most $2r$ on each
+strip of $d$ rows, since we can take a common multiple afterwards. A unique next-line extension
+among $S$-legal configurations preserves the current period. Otherwise every translated base is
+ambiguous by the endpoint argument, and the tuple argument gives a period $p_0a$ with $p_0\le r$.
+The number of full $S$-patterns extending the observed bases is then at most
+\[
+ \sum_{\gamma\text{ observed}}N(\gamma)
+ \le r+\#\{\gamma\text{ observed}\}\le2r.
+\]
+Among $2r+1$ successive full $S$-patterns of $x$, two therefore agree at a gap
+$q\in\{1,\ldots,2r\}$. The agreement contains $r$ consecutive sites on every old row. Since these
+rows are $p_0a$-periodic and $p_0\le r$, $qa$ is a period on the old strip. Generation of the
+endpoints of $e$ propagates the equality in both directions along the new line, so the extended
+strip has period $qa$.
+
+Iterating gives each row in the outward half-plane a period of length at most $2r$. Thus
+$\lcm(1,\ldots,2r)a$ is a common period there. The argument applies to both $x$ and $y$, and
+Lemma~\ref{lem:globalize} makes each globally periodic in direction $a$.
+
+Let $H$ be the original agreement half-plane enlarged to include the line where $x$ and $y$ differ.
+At least one of $x|_H,y|_H$ is not fully periodic. To see this, a fully periodic restriction on a
+half-plane extends to a fully periodic array: choose an inward regional period and transport each
+point far enough into the half-plane. The values stabilize, and both regional periods become global.
+If both restrictions had such extensions, the extensions would agree on the smaller half-plane. An
+inward vector common to their two finite-index period lattices would then give agreement on the
+plane, contradicting the differing boundary line. Choose $w$ to be a member whose restriction to $H$
+is not fully periodic, and retain this choice throughout the selection argument.
+\end{proof}
+
+\section{Boundary continuation in polygons}\label{sec:geometry}
+Let $\ZZ=\Newt(Q_0)$. Then $\ZZ$ is the Minkowski sum of the segments $[0,h_\ell]$, hence a lattice
+zonotope. Interior subset sums may cancel in $Q_0$; the Newton polygon identity is unaffected.
+Reversing a factor translates $\ZZ$.
+
+A finite lattice polygon is \emph{$\ZZ$-enveloped} if it has the same oriented edge directions as
+$\ZZ$, with each primitive edge length at least the corresponding length of $\ZZ$. Subtracting the
+cyclic edge-vector lists writes it as $\ZZ+C$ for a compact convex polygon $C$, possibly a segment
+or a point. A \emph{two-ray region} is a rational convex polyhedron with pointed two-dimensional
+recession cone; its boundary consists of two rays joined by a finite chain of edges. In the
+continuation arguments below, these regions have the form $\ZZ+C$ with $C$ a rational polyhedron.
+Here $A+B=\{a+b:a\in A,\ b\in B\}$ denotes a Minkowski sum, and
+$\rec(C)=\{v:C+tv\subset C\text{ for all }t\ge0\}$ is the recession cone. A facet is an exposed
+one-dimensional face, which may be a finite edge or an infinite ray. Restrictions of arrays to real
+regions always mean restrictions to their lattice points. The enveloped regions follow Colle's
+geometric construction \cite[Definition~3.3]{Colle}; we retain the Minkowski summand because
+it guarantees that the recurrence stencil fits at the boundary.
+
+Once the interior values vanish, the recurrence on a new layer involves only an exposed face of
+the Newton polygon. It becomes a one-dimensional recurrence along that layer. We will use this to control a growing boundary from a fixed finite seed.
+
+\Needspace{16\baselineskip}
+\begin{lemma}[Continuation across a facet]\label{lem:facet}
+Let $f$ be a nonzero Laurent polynomial with Newton polygon $\ZZ$, and let $f(T)\delta=0$. Suppose
+$P^+=\ZZ+C$ has a facet on $\nu=\beta$, with primitive integer inward normal $\nu$ and integer
+$\beta$, and $\delta=0$ on
+\[
+ P=P^+\cap\{\nu\ge\beta+1\}.
+\]
+Orient the facet by a primitive integer vector $b$, pointing towards infinity when the facet is a
+ray. Write the corresponding exposed face of $\ZZ$ as $[q_0,q_1]$, with $q_1-q_0=tb$ and $t\ge0$.
+The case $t=0$ means that the exposed face is a single vertex.
+
+If the facet of $P^+$ is finite and $\delta$ vanishes on its first $t$ consecutive lattice points in
+direction $b$, it vanishes on the entire facet. If the facet is a ray in direction $b$, vanishing on
+a tail of the ray implies vanishing on the entire ray. When $t=0$, no boundary seed is needed in
+either assertion.
+\end{lemma}
+\begin{proof}
+Let $F_C$ be the corresponding exposed face of $C$. If $t=0$, additivity of faces under Minkowski
+summation gives $x-q_0\in F_C$ for every facet point $x$. In the recurrence at $x-q_0$, only the
+nonzero extreme coefficient times $\delta(x)$ lies on the face; all other inputs are in $P$.
+Thus $\delta(x)=0$ without a seed. Assume henceforth that $t\ge1$.
+
+On a finite facet, a point $x$ at least $t$ primitive units from its initial endpoint satisfies
+$x-q_1\in F_C$. Thus
+\[
+ x-q_1+\ZZ\subset P^+.
+\]
+In the recurrence at $x-q_1$, every nonface input lies in $P$, its normal level having increased by
+a positive integer. The other face inputs precede $x$ along the facet, so the nonzero coefficient at
+$q_1$ determines $\delta(x)$. Starting with the first $t$ zeros proves the assertion. This also
+covers rational endpoints: each subsequent lattice point is at least $t$ primitive units from the
+initial endpoint.
+
+For a ray, the exposed face of $P^+$ is $q_0+F_C$. The recurrence at $x-q_0$ is therefore valid for
+every lattice point $x$ on the ray, with all nonface inputs in $P$. Its first and last face
+coefficients are nonzero. An all-zero tail extends backwards along the ray by solving for the term
+at $q_0$.
+\end{proof}
+
+To expand a region outwards, we relax a signed supporting inequality. For an infinite facet on the
+integer level $\nu=\beta$ of a primitive inward normal, let $\RR^{(j)}$ be obtained by replacing
+that inequality with $\nu\ge\beta-j$ and keeping all others. Thus
+$\RR^{(0)}=\RR\subset\RR^{(1)}\subset\cdots$. Moving the infinite facet lengthens the neighboring
+finite edge and retains the $\ZZ$ summand. For a finite polygon, any fixed number of such layers
+also retains the summand once the moving edge is sufficiently long: its neighbors lengthen, while
+its own length changes by a bounded amount.
+
+\begin{lemma}[A failed extension is ambiguous]\label{lem:boundary-ambiguity}
+Let $x,y\in X_c$ agree on a two-ray region $\RR$ with Minkowski summand $\ZZ$, but not on its next
+outward lattice layer $\RR^{(1)}$ along the infinite edge in primitive direction $b$. Assume the
+moving facet is on an integer level of its primitive inward normal. Then $S$ has a supporting edge
+$e_b$ in that direction. After translating $S$ so that $e_b$ lies on the new layer, every
+sufficiently far positive $b$-translate of the common $S\setminus e_b$-pattern is ambiguous.
+\end{lemma}
+\begin{proof}
+Place the minimizing face of $S$ on the new lattice line. Every other irredundant inward normal of
+$\RR$ is strictly positive on $b$, so after a sufficiently large positive $b$-translation all
+remaining sites of $S$ lie in $\RR$. They remain there under further positive translations.
+
+A singleton supporting face would give agreement on a tail of the new line by generation of that
+vertex. For an edge, a unique extension of one translated base pattern would give agreement on an
+edge block; generation of its final endpoint would then propagate agreement along the remaining
+tail. In either case, the ray part of Lemma~\ref{lem:facet}, applied to $x-y$, would extend
+agreement to the entire new layer. This contradiction proves that the face is an edge and every
+sufficiently far base pattern is ambiguous.
+\end{proof}
+
+Two periods pointing along the recession rays of a two-ray region $\RR$ determine one fully periodic
+background. If these periods are $h_1,h_2$, then $t=h_1+h_2$ lies in the interior of the recession
+cone, and we may define
+\begin{equation}\label{eq:background}
+ B(g)=x(g+Nt)\quad\text{for all sufficiently large }N.
+\end{equation}
+The value stabilizes: an $h_1$ step followed by an $h_2$ step stays in the region and preserves the
+value. For either $i$, move both $g$ and $g+h_i$ into $\RR$ by the same sufficiently large multiple
+of $t$. The regional period gives $B(g+h_i)=B(g)$, so $B$ is fully periodic. For $g\in\RR$, the same
+steps show $B(g)=x(g)$. Since $\RR$ contains a translate of its recession cone, agreement holds on a
+rational wedge.
+
+\section{From one regional period to two}\label{sec:two-periods}
+Following Colle \cite[Lemma~4.2]{Colle}, we use the existing period and generated vertices to
+extend equalities from an eventually periodic transverse half-strip into the widening region.
+A downward sweep requires the same transverse period on arbitrarily high starting bands;
+repetitions of one finite pattern provide this choice.
+
+\begin{lemma}[A second regional period]\label{lem:regional}
+Let $a,b$ be primitive integer vectors spanning a pointed cone of positive aperture, and let $\RR$
+be a rational two-ray polyhedron with recession cone $\R_{\ge0}a+\R_{\ge0}b$. Suppose $x\in X_c$ has
+a period $pa$, $p\ge1$, on $\RR$. Let $S$ be a lattice-convex generating set for the language of
+$c$, with opposite edges parallel to $a$ and a supporting edge $e_b$ parallel to $b$. Assume
+\[
+ P_c(S)-P_c(S\setminus e_b)\le |e_b|-1,
+\]
+and that the inward normal of $e_b$ is strictly positive on $a$. Suppose $S$ can be placed so that
+every sufficiently far $b$-translate of $S\setminus e_b$ lies in $\RR$ and is ambiguous. Then $x$
+has two independent periods, parallel to $a,b$, on a smaller two-ray region with the same recession
+cone.
+\end{lemma}
+\begin{proof}
+Let $r\ge1$ be the smaller primitive length of the two $a$-parallel edges. As in
+Lemma~\ref{lem:reference}, the segment $[0,ra]$ is a Minkowski summand of $\conv S$. Since the
+inward normal of $e_b$ is positive on $a$, the parallelogram
+\[
+ J=\conv(e_b)+[0,ra]
+\]
+lies in $\conv S$. Put $t=|e_b|-1$. The existence of an ambiguous base pattern and the stated edge
+bound give $t\ge1$.
+
+Each $b$-parallel lattice line through $J$, other than the line of $e_b$, contains at least $t$
+consecutive sites of $S\setminus e_b$. Along its sufficiently far positive ray, the length-$t$ words
+are restrictions of the ambiguous base patterns. There are at most $t$ such patterns by
+\eqref{eq:ambiguity-budget}, so the one-sided Morse--Hedlund theorem gives an eventually periodic
+tail with period at most $t$ \cite[Theorem~2.2(ii)]{CK}. Taking a common multiple over the finitely many lines through $J$, and
+discarding their initial segments, gives a half-strip $H_0\subset\RR$ with period $h_b=lb$, $l\ge1$.
+
+To start the row extensions, we need consecutive sites on the $a$-rows, not just on the
+$b$-lines. Choose a primitive integer normal $\nu$ with $\nu(a)=0$ and $\nu(b)>0$, and let $g_0$
+be the initial endpoint of $e_b$. Removing the line of $e_b$ from $J$ and extending in the positive
+$b$-direction gives
+\[
+ J^+=\{g_0+\alpha a+\beta b:0<\alpha\le r,\ \beta\ge0\}.
+\]
+Every sufficiently high $\nu$-section of $J^+$ is a semi-open interval of length $r$ in primitive
+$a$-units, so it contains $r$ consecutive lattice points. Each such point lies on a $b$-line whose
+intersection with $J$ has primitive length $t\ge1$ and hence contains a lattice point. The
+difference of the two points is an integer multiple of the primitive vector $b$. At sufficiently
+high levels this multiple is positive and exceeds the corresponding eventual-periodicity threshold.
+There are only finitely many $b$-lines through $J$, so a single threshold $j_0$ ensures that
+$H_0\cap\{\nu=j\}$ contains $r$ consecutive $a$-sites whenever $j\ge j_0$. No assumption that
+$|\det(a,b)|=1$ is needed.
+
+The period $pa$ transports the same $h_b$-equalities to $H_0+Mpa$ for every integer $M\ge0$. These
+translates supply $r$ consecutive equality sites arbitrarily far along each $a$-row above $j_0$. The
+same sites give equality for every positive multiple of $h_b$.
+
+Let $d$ be the $\nu$-width of $S$. Choose a finite lattice parallelogram $F\subset\RR$ containing
+$p$ consecutive $a$-sites on each of $d+1$ successive levels above $j_0$. Complete $a$ to a
+unimodular basis to construct this finite set, then place it sufficiently far inside $\RR$. This
+auxiliary choice of coordinates does not change the observation rectangle. Every $F+qh_b$, $q\ge0$,
+remains in $\RR$.
+
+A repeated $F$-pattern at indices $q<q'$ gives agreement between $x$ and $T^{(q'-q)h_b}x$ on
+$F+qh_b$. On each of its rows, both arrays are $pa$-periodic on the row half-line in $\RR$.
+Agreement at $p$ consecutive sites therefore gives agreement on the whole row, producing a band of
+$d+1$ rows.
+
+Suppose first that the lower $a$-parallel edge has primitive length $r$. We extend such a band
+downwards to level $j_0$. On the next row, choose an $r$-site equality seed far enough along a
+translate $H_0+Mpa$. Place the lower edge of $S$ there, with all remaining sites in the known band.
+Generation of the final endpoint gives the next equality on the row. Iterating along $a$ gives a
+tail of equalities, and the common period $pa$ extends them to the whole row half-line. The same
+argument applies to each successive lower row.
+
+A different gap for each band would not suffice. Let $N$ be the number of possible $F$-patterns.
+Every disjoint index block $[m(N+1),m(N+1)+N]$ contains a repeat with gap in $\{1,\ldots,N\}$, so
+one gap $D$ occurs in infinitely many blocks. For this fixed $D$, the corresponding bands have
+heights tending to infinity, since $\nu(h_b)>0$. Their downward sweeps cover every row above $j_0$
+and all concern the same difference $\Del{Dh_b}x$. Hence $Dh_b$ is a period on
+$\RR\cap\{\nu\ge j_0\}$.
+
+If the upper $a$-parallel edge has the smaller length $r$, one repeated band suffices. Using that
+edge, the same generated-endpoint argument extends agreement upwards through every row above the
+band. Its fixed gap again gives a period $Dh_b$ on a smaller two-ray region. In both cases $pa$
+remains a period, and the recession cone is unchanged.
+\end{proof}
+
+\section{Half-strips and anchored compactness}\label{sec:compactness}
+A \emph{half-strip} in a primitive direction $a$, based on a finite polygon $F$, is
+$(F+\R_{\ge0}a)\cap\Z^2$. If $F$ is $\ZZ$-enveloped and $a$ is a factor direction, this is also the
+union of the nonnegative integer $a$-translates of $F\cap\Z^2$. Indeed, every parallel lattice fiber
+of $F$ has length at least one primitive unit and contains a lattice site.
+
+\begin{lemma}[A periodic half-strip supplies a wedge]\label{lem:initial-wedge}
+Assume that $Q_0$ has at least two factor directions, and let $a$ be primitive in one of them.
+Suppose $Q_0z=0$ and $z$ agrees with a globally $a$-direction-periodic array on a forward
+$a$-half-strip based on a $\ZZ$-enveloped polygon. Then $z$ has a period $h$ in direction $a$ on a
+translated region $\ZZ+\R_{\ge0}a+\R_{\ge0}b$, where $b$ is the next factor direction on one side of
+$a$.
+\end{lemma}
+\begin{proof}
+Choose a common multiple $h$ of the reference period and the parallel factor vector of $Q_0$, with
+its sign pointing along the forward half-strip. The difference $E=\Del h z$ vanishes on that
+half-strip. As in Lemma~\ref{lem:globalize}, cancelling the parallel factor gives $Q_1E=0$, where
+$Q_1$ is the nonempty product of the remaining factors. We use this recurrence to extend the zero
+set into an adjacent wedge.
+
+Complete $a$ to a unimodular basis and use integral coordinates $(\tau,\nu)$ with $\tau(a)=1$ and
+$\nu(a)=0$. Reverse each remaining factor vector $p_j$ so that $\nu(p_j)>0$. Let
+\[
+ d=\sum_j\nu(p_j),\qquad C=\max_j\frac{-\tau(p_j)}{\nu(p_j)}.
+\]
+After multiplication by a Laurent unit, $Q_1$ has nonzero constant coefficient. Every other exponent
+$u$ satisfies
+\[
+ 1\le\nu(u)\le d,\qquad \tau(u)+C\nu(u)\ge0.
+\]
+These inequalities hold for every subset sum of the factor vectors, and thus for the actual support
+even when coefficients cancel.
+
+For some integers $M,s$, the half-strip contains $\{\tau\ge M,\ s\le\nu\le s+d-1\}$. To see this,
+take a translate of $\ZZ$ in its base polygon. This zonotope has $\nu$-width $d$, and its factor
+segment parallel to $a$ gives a lattice site on each integer level in the indicated range. Forward
+$a$-translation then fills a tail on each of these finitely many levels, allowing a common threshold
+$M$. Put
+\[
+ A=M+\max_{s\le j\le s+d-1}Cj.
+\]
+The recurrence of $Q_1$ propagates $E=0$ downwards through all integer $\nu$-levels in
+\[
+ W=\{\nu\le s+d-1,\ \tau+C\nu\ge A\}.
+\]
+The initial $d$ levels of $W$ lie in $\{\tau\ge M\}$ by the choice of $A$. At any lower level, every
+nonconstant recurrence input has a larger $\nu$-value, at most $s+d-1$, and no smaller value of
+$\tau+C\nu$. All these inputs are already zero, so the nonzero constant coefficient determines the
+next level. Induction gives $E=0$ throughout $W$.
+
+The recession rays of $W$ are $a$ and a primitive vector $b$ antiparallel to a factor vector
+attaining the maximum in the definition of $C$. They are nonparallel. By this extremal choice of
+slope, no factor direction lies strictly between them. An integer translate of $\ZZ$ sufficiently
+far inside $W$ remains in $W$ after either recession ray is added. In particular, $\Del h
+z=0$ on the resulting region, as required.
+\end{proof}
+
+Maximality gives a disagreement somewhere outside each agreement polygon. That site may move with
+the polygon, and then compactness need not preserve the disagreement. We anchor a corner before
+taking a limit and use the facet recurrence to locate a witness in a fixed finite set near that
+corner.
+
+\Needspace{14\baselineskip}
+\begin{lemma}[Anchored agreement with a retained boundary failure]\label{lem:anchored}
+Let $a$ be primitive in a factor direction of $Q_0$, let $H$ be a lattice half-plane whose boundary
+is oriented by $a$ with $H$ on its left, and let $w\in X_c$ have a period in direction $a$. Suppose
+that no shift of $c$ agrees with $w$ on any forward $a$-half-strip based on a $\ZZ$-enveloped
+polygon. Then there are a fixed phase $\widehat w$ of $w$, a point $\theta\in X_c$, and a two-ray
+region $\RR\subset H$ with Minkowski summand $\ZZ$ such that:
+\begin{enumerate}[label=(\roman*)]
+\item its recession rays are $-a$ and a nonparallel primitive factor direction $b$;
+\item $\theta=\widehat w$ on $\RR$, but not on its next outward lattice layer $\RR^{(1)}$ along the $b$-edge;
+\item $\RR^{(1)}\subset H$, and every finite subset of $H$ can be moved into $\RR$ by a sufficiently large negative multiple of $a$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\emph{Maximal agreement polygons.} After completing $a$ to an integral basis, call the forward
+$a$-direction rightwards; we use these auxiliary coordinates only to describe the polygons.
+Fix a lattice point $g_1$ on the boundary of $H$. Inductively choose a $\ZZ$-enveloped lattice polygon $F_i$, supported on this boundary, which contains $M_{i-1}$ and $[-i,i]^2\cap H$. For the first step, omit $M_{i-1}$. Such polygons are obtained by sufficiently large integral dilations of $\ZZ$, translated along their nondegenerate $a$-edge. Since $w\in X_c$, choose $u_i$ so that $T^{u_i}c=w$ on $F_i$. Among the $\ZZ$-enveloped polygons between $F_i$ and its forward half-strip on which these arrays agree, choose an inclusion-maximal polygon $M_i$.
+
+To justify this choice, the half-strip fixes the transverse width. Along the finitely many
+nonhorizontal edge directions, the longitudinal change is bounded by that width times a constant
+depending only on the slopes. Thus if any right endpoint were unbounded, all right endpoints would
+tend to infinity. The left boundary is fixed by $F_i$, while some lattice site of the half-strip is
+a disagreement by hypothesis. This bounds all right endpoints, so there are only finitely many admissible
+lattice polygons. In particular $M_i$ exists, and
+\[
+ M_{i-1}\subset F_i\subset M_i.
+\]
+
+\smallskip\noindent
+\emph{Anchoring and convergence.} Translate the final endpoint of the oriented $a$-edge of $M_i$ to $g_1$, writing the translation as $-k_i a$. Set
+\[
+ P_i=M_i-k_i a,\qquad \theta_i=T^{u_i+k_i a}c.
+\]
+Then $\theta_i=T^{k_i a}w$ on $P_i$. The reference has a period parallel to $a$, so after passing to
+a subsequence $T^{k_i a}w$ is one fixed array $\widehat w$.
+
+The different anchor translations need not preserve the nesting of the $M_i$. Pass to a further
+subsequence on which every primitive edge length is nondecreasing. This is possible for a sequence
+in $\mathbb N^{2q}$: in each coordinate, stabilize a bounded infinite subsequence if there is one,
+and otherwise take a strictly increasing subsequence. Now the anchored $P_i$ are nested. The
+differences of successive cyclic edge-vector lists have nonnegative lengths and sum to zero, so
+they bound a convex polygon, possibly a segment or point, anchored at the origin. Minkowski addition
+adds both these lists and the anchored vertices. Each later $P_i$ is therefore the earlier polygon
+plus this residual polygon, which contains the origin.
+
+The $a$-edge lengths and the transverse widths tend to infinity. In the cyclic list following the
+$a$-edge, let $b$ be the first direction with unbounded length before the opposite $a$-edge. Since the widths diverge, such a
+direction exists; all intervening edge lengths stabilize. The increasing
+union of the $P_i$ is a rational two-ray polyhedron $R_\infty$ with recession rays $-a,b$ and a
+fixed finite boundary chain in $H$.
+
+More explicitly, the supporting lines of that finite chain stabilize. Every other supporting normal
+is negative on at least one of $-a,b$, so its support level tends to minus infinity. Precisely the
+finite-chain inequalities remain, and every point satisfying them eventually lies in $P_i$. Thus the
+union is the resulting closed polyhedron. Subtracting $\ZZ$ from the edge lists, or taking the
+increasing union of the corresponding summands, also shows that $R_\infty$ retains a Minkowski
+summand $\ZZ$.
+
+Passing to a subsequence, we may assume that $\theta_i\to\theta$. Every fixed finite part of $R_\infty$
+eventually lies in $P_i$, so $\theta=\widehat w$ there. Moreover $\theta\in X_c$, and hence
+$Q_0\theta=0$ and every finite pattern of $\theta$ occurs in $c$.
+
+\smallskip\noindent
+\emph{A fixed boundary witness.} Write $\nu_b=\beta$ for the infinite $b$-facet of $R_\infty$, with primitive integer inward normal. For large $i$, the $b$-facet of $P_i$ lies on this same line. Let $P_i^{(j)}$ be obtained by replacing its inequality with $\nu_b\ge\beta-j$ and retaining all other inequalities. For each fixed $j$, these polygons retain a $\ZZ$ summand for large $i$: the moving edge has length tending to infinity, its neighbors lengthen, and its own length changes by a bounded amount.
+
+An expansion by one lattice level need not leave lattice vertices. Let $\mu_-,\mu_+$ be the
+primitive inward normals of the neighboring facets, and choose $m\ge1$ divisible by the fixed
+nonzero integers $|\det(\mu_-,\nu_b)|$ and $|\det(\mu_+,\nu_b)|$. To see why this choice works,
+an endpoint $v$ incident to the neighbor with normal $\mu$ moves according to
+\[
+ \begin{pmatrix}\mu\\ \nu_b\end{pmatrix}
+ (v^{(j)}-v)=\begin{pmatrix}0\\-j\end{pmatrix}.
+\]
+By Cramer's rule, the displacement is integral at $j=m$. All other vertices are unchanged, so
+$P_i^{(m)}$ is a lattice polygon. Intermediate expansions may have rational vertices, as allowed in
+Lemma~\ref{lem:facet}. For large $i$, the final polygon is $\ZZ$-enveloped and strictly larger than
+$P_i$. It still lies in the allowed translated half-strip: the relaxed normal is negative on $a$, so
+its inequality does not define the half-strip, while every defining inequality of the half-strip was
+retained.
+
+Let $t$ be the primitive length of the $b$-face of $\ZZ$. For each $1\le j\le m$, take the first $t$
+lattice points, in direction $b$, on the new facet of $P_i^{(j)}$. Their union $E$ is independent of
+all sufficiently large $i$. Indeed, the initial endpoint is determined by the stabilized preceding
+supporting line and the fixed equation $\nu_b=\beta-j$; only the far endpoint escapes.
+
+For every sufficiently large $i$, the arrays $\theta_i$ and $\widehat w$ must disagree somewhere on
+$E$. Otherwise apply Lemma~\ref{lem:facet} successively to $\delta_i=\theta_i-\widehat w$, which
+satisfies $Q_0\delta_i=0$. Agreement on $P_i$, together with the first $t$ zeros on each successive
+facet, would give agreement on $P_i^{(m)}$, contradicting the maximality of $M_i$ after undoing the
+anchor translation.
+
+This is now a condition on one fixed finite pattern. Convergence on $E$ means eventual equality of
+entire $E$-patterns, so
+\[
+ \theta|_E\ne\widehat w|_E.
+\]
+Since $E\subset R_\infty^{(m)}$, one of the first $m$ outward layers contains a disagreement. Take
+the first such layer and let $\RR$ be the preceding region. Then $\theta=\widehat w$ on $\RR$ but
+not on $\RR^{(1)}$. The defining inequality of $H$ was never moved, so $\RR^{(1)}\subset H$. Every
+other surviving inward normal is strictly positive on $-a$; hence a sufficiently large negative
+$a$-translation moves any fixed finite subset of $H$ into $\RR$.
+\end{proof}
+
+\begin{lemma}[The selected point cannot acquire a period]\label{lem:nonperiodic}
+In Lemma~\ref{lem:anchored}, suppose in addition that $w|_H$ is not fully periodic. Then $\theta$ is
+nonperiodic.
+\end{lemma}
+\begin{proof}
+We test a hypothetical period against the fixed reference, rather than the approximating arrays.
+The phase shift is parallel to the boundary of $H$, so $\widehat w|_H$ is not fully periodic. Let
+$a_*=la$, $l\ge1$, be a period of $\widehat w$, and suppose that $p\ne0$ is a period of $\theta$.
+Given $g,g+p\in H$, subtracting $Na_*$ puts both points in $\RR$ for large $N$, whence
+\[
+ \widehat w(g)=\theta(g-Na_*)
+ =\theta(g+p-Na_*)=\widehat w(g+p).
+\]
+This makes $p$ a regional period of $\widehat w|_H$. Together with $a_*$ it would give full regional
+periodicity unless $p$ were parallel to $a$.
+
+In the remaining case, primitivity gives $p=ra$ for some nonzero integer $r$. Both arrays then have
+period $\lcm(l,|r|)a$. Transporting any point of $H$ into $\RR$ by a sufficiently large negative
+multiple of this common period extends their agreement to all of $H$, contradicting the disagreement
+on $\RR^{(1)}\subset H$.
+\end{proof}
+
+\section{Proof of the selection proposition}\label{sec:selection-proof}
+\begin{proof}[Proof of Proposition~\ref{prop:selection}]
+Fix $S$, $Q_0$, and the periodic reference $w$ from Lemmas~\ref{lem:generating}
+and~\ref{lem:reference}. The product $Q_0$ has at least two factors, since a single factor would
+give a period of $c$. Its directions include $a$, and $S$ has two opposite $a$-parallel edges and
+satisfies \eqref{eq:edge-budget}. We keep this reference fixed throughout. We divide into two cases, depending on
+whether one of its forward half-strips already occurs in a shift of $c$.
+
+\emph{A matching half-strip occurs.} Suppose that some shift $z=T^uc$ agrees with $w$ on a forward $a$-half-strip based on a $\ZZ$-enveloped polygon. By Lemma~\ref{lem:initial-wedge}, $z$ has a period $h$ parallel to $a$ on a translate $\RR_0$ of $\ZZ+\R_{\ge0}a+\R_{\ge0}b$, where $a,b$ are neighboring factor directions.
+
+We can enlarge the region towards a half-plane by adding successive factor rays on the side of $b$
+until reaching $-a$. Each new ray is added to the entire preceding region, with the earlier rays
+retained. Adjacency in the cyclic list makes each step remove precisely the inequality of the
+current infinite facet. The period $h$ cannot persist to the final half-plane, whose boundary is
+parallel to $a$: Lemma~\ref{lem:globalize} would give a global period of $z$ and hence of $c$.
+
+At the first enlargement on which the period fails, we relax the moving inequality through successive integer levels. These finite relaxations exhaust the enlargement, so there is a last region on which
+$\Del h z=0$ and a next layer on which it is nonzero. The points $z,T^hz\in X_c$ agree on the former
+region and not on the latter layer. Lemma~\ref{lem:boundary-ambiguity} gives ambiguity in that
+boundary direction, say $b'$. Its inward normal is positive on $a$, so Lemma~\ref{lem:regional}
+supplies periods parallel to $a,b'$ on a smaller two-ray region. We take $\theta=z$, which is
+nonperiodic as a shift of $c$.
+
+\emph{No matching half-strip occurs.} We apply Lemma~\ref{lem:anchored} to $w$ and $H$. It gives a point $\theta\in X_c$ agreeing with a fixed phase $\widehat w$ on a two-ray region with recession rays $-a,b$, and disagreeing on the next outward layer. By Lemma~\ref{lem:nonperiodic}, this point is nonperiodic. Lemma~\ref{lem:boundary-ambiguity} gives ambiguity along $b$. Agreement with the reference supplies a regional period pointing along $-a$, and the inward normal of the $b$-edge is positive on $-a$. Lemma~\ref{lem:regional} therefore gives two independent periods on a smaller region.
+
+In either case, choose the signs of the two periods along the recession rays.
+Formula~\eqref{eq:background} extends the restriction to a single fully periodic background $B$. The
+region contains a translate $K$ of its rational recession cone, of positive aperture less than
+$\pi$, and $\theta=B$ on $K\cap\Z^2$. Finally, $\theta\in X_c$ gives $P_\theta(k,n)\le P_c(k,n)$ on
+the original rectangle.
+\end{proof}
+
+\appendix
+\section{Relation to previous work}\label{app:sources}
+We use two structural results from the literature: Kari--Szabados, Corollary~13 \cite{KS}, and Colle,
+Theorem~1.9 \cite{Colle}, both quoted without proof. The one-dimensional arguments use the bi-infinite
+and one-sided forms of the Morse--Hedlund theorem recorded by Cyr--Kra, Theorem~2.2(ii)--(iii)
+\cite{CK}; see also the original paper \cite{MH}.
+
+The proof of Lemma~\ref{lem:affine-ann} follows the affine argument in \cite[Lemma~5]{KS}, while
+Lemma~\ref{lem:coprime} uses the elimination argument of \cite[Lemma~8]{KMalg}, with the finite-image
+hypothesis stated explicitly. For integral configurations, the directional structure underlying
+Lemma~\ref{lem:gcd} is contained in \cite[Corollaries~28--29]{KS}. Our proof starts from the product
+annihilator and also covers the finite-valued complex configurations in Theorem~\ref{thm:wedge}. The
+affine pattern count is related to \cite[Lemmas~33 and~36]{KS}. Products of directional layers also
+occur in the four-dot argument of Kari--Moutot \cite[proof of Theorem~11]{KMalg}. The contribution of
+Sections~\ref{sec:observable}--\ref{sec:count} is the construction of a quadratic observable with a
+small stencil and the proof that its fitting translates are independent modulo the affine functions on
+the same rectangle.
+
+We use Colle's half-plane formulation of one-sided nonexpansiveness \cite[Section~1]{Colle}; Cyr--Kra
+\cite[Definition~3.1 and Lemma~3.2]{CK} give the finite-extension formulation and its relation to
+half-plane ambiguity. Colle \cite[Proposition~2.14]{Colle}, following Kari--Szabados, obtains the
+tangent-period conclusion from a periodic decomposition; Lemma~\ref{lem:globalize} proves it directly
+from the product annihilator. The period-difference construction in Lemma~\ref{lem:initial-wedge} also
+appears in Colle \cite[proof of Lemma~4.6, Claim~4.7]{Colle}; our proof writes out the propagation
+into the wedge in integral coordinates.
+
+Lemma~\ref{lem:reference} is based on the ambiguity argument of Cyr--Kra \cite[Lemma~2.24]{CK} and the
+outward-extension argument from the proof of their Proposition~4.8, as presented by Colle
+\cite[Proposition~2.13]{Colle}. Since the full Cyr--Kra proposition assumes $P_c(k,n)\le kn/2$, we
+prove the extension step directly from the edge ambiguity bound at the $kn$ threshold. Related
+bounded-period propagation appears in Colle--Garibaldi \cite[Lemmas~4.11--4.13]{CG}.
+
+The argument in Lemma~\ref{lem:regional} follows Colle's Lemma~4.2 \cite{Colle}, with the hypotheses
+arranged in the form needed here. In Proposition~\ref{prop:selection}, we adapt the two-case
+region-selection argument in his proof of Lemma~4.6 to obtain a periodic region in a configuration
+that remains nonperiodic. For this purpose, the later conclusions about the angular positions of the
+nonexpansive directions, as well as Theorem~1.10 and its constant decomposition-order hypothesis, are
+not needed.
+
+Related periodic-region arguments appear in Colle--Garibaldi \cite[Sections~5--6]{CG} under an
+alphabet-sensitive complexity hypothesis. The more recent modular structure theorem
+\cite[Theorem~1.2]{CG26} concerns reductions of periodic components on pairs of half-planes, and the
+proof of Theorem~3.5 in that paper again uses the two-case construction. Here we keep a single orbit
+point over the original alphabet and prove its nonperiodicity directly, without imposing the earlier
+alphabet-sensitive hypothesis. The short-side-four result provides further context, though it is not
+actually used in the proof.
+
+The anchored construction in Lemma~\ref{lem:anchored} is based on Colle \cite[proof of
+Lemma~3.5]{Colle}, with an extra boundary argument to retain a disagreement in the limit. We shift the
+approximants by $u_i+k_i a$, reducing only the periodic reference phase to a fixed residue. After
+passing to a componentwise monotone subsequence of edge lengths, the anchored polygons are nested by
+the residual Minkowski-sum argument. Outward layers are formed by relaxing signed supporting
+inequalities, so that each new region contains the preceding one; an unsigned distance restriction on
+the entire region would clip it. Lemma~\ref{lem:facet} propagates agreement from the fixed finite set
+$E$, supplying the boundary control that keeps disagreement from escaping under compactness. Finally,
+Lemma~\ref{lem:nonperiodic} avoids the two ray-limit arguments by transporting a hypothetical period
+of $\theta$ to the reference half-plane and using the retained disagreement, without transferring a
+period backwards from a limit.
+
+\section{Boundary cases and examples}\label{app:examples}
+Finite image is needed in Lemma~\ref{lem:coprime}, although boundedness suffices for the later
+arithmetic-progression arguments applied to $c$ and $A_i$. For example, if
+$1,\alpha/(2\pi),\beta/(2\pi)$ are rationally independent, then $e^{i(\alpha x+\beta y)}$ is bounded
+and has two coprime univariate annihilators, but no period. Its image is infinite.
+
+The single defect has exactly $kn+1$ patterns but no Laurent annihilator by Lemma~\ref{lem:cone}:
+it gives sharpness without satisfying the algebraic hypothesis of Theorem~\ref{thm:wedge}. A lifted
+aperiodic sequence has one period, though not two independent periods, and is excluded by the
+nonperiodicity hypothesis.
+
+An example meeting the algebraic and wedge hypotheses is
+\[
+ c(x,y)=\mathbf1_{x\ge0}+\mathbf1_{y\ge0}-\mathbf1_{x+y\ge0}\in\{0,1\}.
+\]
+It is annihilated by $\Del{(1,0)}\Del{(0,1)}\Del{(1,-1)}$ and is $1$ on the first quadrant. It is
+nonperiodic: for $y>0$, the zero interval in its row is $[-y,-1]$. Comparing these intervals at
+sufficiently large heights under a hypothetical period $(a,b)$ forces $a=0$ from the right endpoints
+and then $b=0$ from the left endpoints. Thus the wedge hypotheses allow nonperiodic binary
+configurations with three factor directions, including a negatively sloped direction.
+
+Section~\ref{sec:count} covers every positive rectangle size, including $L_R=0$, in the original
+coordinates; the auxiliary bases used in the selection do not alter the window. The cone argument does not extend to dimension three, since two half-spaces can intersect in a set containing a line.
+
+\begingroup
+\raggedright
+\begin{thebibliography}{10}
+\bibitem{Colle}
+C. F. Colle,
+\emph{On periodic decompositions, one-sided nonexpansive directions and Nivat's conjecture},
+Discrete and Continuous Dynamical Systems \textbf{43} (2023), no.~12, 4299--4327.
+\href{https://doi.org/10.3934/dcds.2023088}{doi:10.3934/dcds.2023088}.
+
+\bibitem{CG}
+C. F. Colle and E. Garibaldi,
+\emph{An alphabetical approach to Nivat's conjecture},
+Nonlinearity \textbf{33} (2020), no.~7, 3620--3652.
+\href{https://doi.org/10.1088/1361-6544/ab7638}{doi:10.1088/1361-6544/ab7638}.
+
+\bibitem{CG26}
+C. F. Colle and E. Garibaldi,
+\emph{A modular structure theorem for minimal periodic decompositions and periodicity of
+configurations with $P_\eta(4,n)\le4n$},
+preprint, \href{https://arxiv.org/abs/2606.10193}{arXiv:2606.10193} (2026).
+
+\bibitem{CK}
+V. Cyr and B. Kra,
+\emph{Nonexpansive $\Z^2$-subdynamics and Nivat's conjecture},
+Transactions of the American Mathematical Society \textbf{367} (2015), no.~9, 6487--6537.
+\href{https://doi.org/10.1090/S0002-9947-2015-06391-0}{doi:10.1090/S0002-9947-2015-06391-0}.
+
+\bibitem{CKshort}
+V. Cyr and B. Kra,
+\emph{Complexity of short rectangles and periodicity},
+European Journal of Combinatorics \textbf{52} (2016), 146--173.
+\href{https://doi.org/10.1016/j.ejc.2015.10.003}{doi:10.1016/j.ejc.2015.10.003}.
+
+\bibitem{KMalg}
+J. Kari and E. Moutot,
+\emph{Nivat's conjecture and pattern complexity in algebraic subshifts},
+Theoretical Computer Science \textbf{777} (2019), 379--386.
+\href{https://doi.org/10.1016/j.tcs.2018.12.029}{doi:10.1016/j.tcs.2018.12.029}.
+
+\bibitem{KM}
+J. Kari and E. Moutot,
+\emph{Decidability and periodicity of low complexity tilings},
+Theory of Computing Systems \textbf{67} (2023), 125--148.
+\href{https://doi.org/10.1007/s00224-021-10063-8}{doi:10.1007/s00224-021-10063-8}.
+
+\bibitem{KS}
+J. Kari and M. Szabados,
+\emph{An algebraic geometric approach to Nivat's conjecture},
+Information and Computation \textbf{271} (2020), article~104481.
+\href{https://doi.org/10.1016/j.ic.2019.104481}{doi:10.1016/j.ic.2019.104481}.
+
+\bibitem{MH}
+M. Morse and G. A. Hedlund,
+\emph{Symbolic dynamics},
+American Journal of Mathematics \textbf{60} (1938), no.~4, 815--866.
+\href{https://doi.org/10.2307/2371264}{doi:10.2307/2371264}.
+
+\bibitem{Sz}
+M. Szabados,
+\emph{Nivat's conjecture holds for sums of two periodic configurations},
+in \emph{SOFSEM 2018: Theory and Practice of Computer Science},
+Lecture Notes in Computer Science, vol.~10706, Springer, 2018, pp.~539--551.
+\href{https://doi.org/10.1007/978-3-319-73117-9_38}{doi:10.1007/978-3-319-73117-9\_38}.
+\end{thebibliography}
+\endgroup
+\end{document}
