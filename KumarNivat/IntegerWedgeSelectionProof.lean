@@ -1,10 +1,14 @@
-import KumarNivat.CollePairedDirection
-import KumarNivat.LowComplexityPeriodicReference
-import KumarNivat.MainMatchingBackgroundHalfStrip
-import KumarNivat.NoMatchingWedgeSelection
-import KumarNivat.NonperiodicProductLengths
-import KumarNivat.FinalDeduction
-import KumarNivat.DivisorPeriods
+module
+
+public import KumarNivat.CollePairedDirection
+public import KumarNivat.LowComplexityPeriodicReference
+public import KumarNivat.MainMatchingBackgroundHalfStrip
+public import KumarNivat.NoMatchingWedgeSelection
+public import KumarNivat.NonperiodicProductLengths
+public import KumarNivat.FinalDeduction
+public import KumarNivat.DivisorPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

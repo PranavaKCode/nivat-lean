@@ -1,4 +1,8 @@
-import KumarNivat.LocalParallelograms
+module
+
+public import KumarNivat.LocalParallelograms
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredCyclicFacesRelaxation
-import KumarNivat.NewtonEnvelopeSaturation
-import KumarNivat.PolyhedralLimits
+module
+
+public import KumarNivat.AnchoredCyclicFacesRelaxation
+public import KumarNivat.NewtonEnvelopeSaturation
+public import KumarNivat.PolyhedralLimits
+
+@[expose] public section
 
 namespace KumarNivat
 

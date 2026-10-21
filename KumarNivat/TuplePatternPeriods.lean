@@ -1,7 +1,11 @@
-import KumarNivat.WordComplexity
-import KumarNivat.PatternExtensions
-import KumarNivat.OrbitLanguage
-import KumarNivat.RetainedDisagreement
+module
+
+public import KumarNivat.WordComplexity
+public import KumarNivat.PatternExtensions
+public import KumarNivat.OrbitLanguage
+public import KumarNivat.RetainedDisagreement
+
+@[expose] public section
 
 namespace KumarNivat
 

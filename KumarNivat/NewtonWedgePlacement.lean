@@ -1,5 +1,9 @@
-import KumarNivat.PolyhedralRays
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.PolyhedralRays
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

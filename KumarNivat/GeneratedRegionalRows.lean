@@ -1,8 +1,12 @@
-import KumarNivat.ExposedPolygonFaces
-import KumarNivat.BoundaryEdgeAgreement
-import KumarNivat.RegionalRowAgreement
-import KumarNivat.PolyhedralRays
-import KumarNivat.MinkowskiStencilFit
+module
+
+public import KumarNivat.ExposedPolygonFaces
+public import KumarNivat.BoundaryEdgeAgreement
+public import KumarNivat.RegionalRowAgreement
+public import KumarNivat.PolyhedralRays
+public import KumarNivat.MinkowskiStencilFit
+
+@[expose] public section
 
 namespace KumarNivat
 

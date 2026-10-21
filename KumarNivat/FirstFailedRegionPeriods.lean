@@ -1,5 +1,9 @@
-import KumarNivat.TangentPeriods
-import Mathlib.Data.Nat.Find
+module
+
+public import KumarNivat.TangentPeriods
+public import Mathlib.Data.Nat.Find
+
+@[expose] public section
 
 namespace KumarNivat
 

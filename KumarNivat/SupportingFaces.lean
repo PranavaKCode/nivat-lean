@@ -1,5 +1,9 @@
-import KumarNivat.GeneratingSets
-import KumarNivat.GeneratedHalfplanes
+module
+
+public import KumarNivat.GeneratingSets
+public import KumarNivat.GeneratedHalfplanes
+
+@[expose] public section
 
 namespace KumarNivat
 

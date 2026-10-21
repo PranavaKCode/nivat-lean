@@ -1,4 +1,8 @@
-import KumarNivat.PairedStructureFiberLimits
+module
+
+public import KumarNivat.PairedStructureFiberLimits
+
+@[expose] public section
 
 open Filter Topology
 

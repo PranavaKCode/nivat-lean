@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredPreparedChains
-import KumarNivat.AnchoredRetainedFailures
-import KumarNivat.AnchoredRelaxedChainUnionsResidual
+module
+
+public import KumarNivat.AnchoredPreparedChains
+public import KumarNivat.AnchoredRetainedFailures
+public import KumarNivat.AnchoredRelaxedChainUnionsResidual
+
+@[expose] public section
 
 open Filter Topology
 

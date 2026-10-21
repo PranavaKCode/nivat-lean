@@ -1,5 +1,9 @@
-import KumarNivat.LaurentMaps
-import Mathlib.Algebra.Squarefree.Basic
+module
+
+public import KumarNivat.LaurentMaps
+public import Mathlib.Algebra.Squarefree.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

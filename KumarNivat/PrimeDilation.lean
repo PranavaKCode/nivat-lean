@@ -1,9 +1,13 @@
-import KumarNivat.LaurentDilation
-import Mathlib.Algebra.CharP.Algebra
-import Mathlib.Algebra.CharP.Frobenius
-import Mathlib.FieldTheory.Finite.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Nat.Factorization.Induction
+module
+
+public import KumarNivat.LaurentDilation
+public import Mathlib.Algebra.CharP.Algebra
+public import Mathlib.Algebra.CharP.Frobenius
+public import Mathlib.FieldTheory.Finite.Basic
+public import Mathlib.Data.Nat.Factorial.Basic
+public import Mathlib.Data.Nat.Factorization.Induction
+
+@[expose] public section
 
 namespace KumarNivat
 

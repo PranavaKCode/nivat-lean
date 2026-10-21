@@ -1,7 +1,11 @@
-import KumarNivat.PairedStructureBoundaryBlocks
-import KumarNivat.PairedStructureBoundaryTransport
-import KumarNivat.PairedStructurePeriodic
-import KumarNivat.TangentPeriods
+module
+
+public import KumarNivat.PairedStructureBoundaryBlocks
+public import KumarNivat.PairedStructureBoundaryTransport
+public import KumarNivat.PairedStructurePeriodic
+public import KumarNivat.TangentPeriods
+
+@[expose] public section
 
 open Filter Topology
 

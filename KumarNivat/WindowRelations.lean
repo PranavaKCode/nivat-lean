@@ -1,4 +1,8 @@
-import KumarNivat.RectangleQuotient
+module
+
+public import KumarNivat.RectangleQuotient
+
+@[expose] public section
 
 namespace KumarNivat
 

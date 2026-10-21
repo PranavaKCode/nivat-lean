@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredEnvelopeLengthsResidual
+module
+
+public import KumarNivat.AnchoredEnvelopeLengthsResidual
+
+@[expose] public section
 
 namespace KumarNivat
 

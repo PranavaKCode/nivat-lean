@@ -1,4 +1,8 @@
-import KumarNivat.PairedStructureRayChainAgreement
+module
+
+public import KumarNivat.PairedStructureRayChainAgreement
+
+@[expose] public section
 
 namespace KumarNivat
 

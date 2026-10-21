@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureWords
-import KumarNivat.OrientedPairedData
-import KumarNivat.PeriodBinomials
+module
+
+public import KumarNivat.PairedStructureWords
+public import KumarNivat.OrientedPairedData
+public import KumarNivat.PeriodBinomials
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureFiberLocal
-import KumarNivat.FactorDeletion
-import KumarNivat.BoundaryLineRecurrences
+module
+
+public import KumarNivat.PairedStructureFiberLocal
+public import KumarNivat.FactorDeletion
+public import KumarNivat.BoundaryLineRecurrences
+
+@[expose] public section
 
 namespace KumarNivat
 

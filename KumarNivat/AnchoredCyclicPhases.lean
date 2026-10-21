@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredEnvelopeTranslation
-import KumarNivat.AnchoredChainWalk
-import KumarNivat.AnchoredSubsequences
-import KumarNivat.AnchoredMaximalGeometry
+module
+
+public import KumarNivat.AnchoredEnvelopeTranslation
+public import KumarNivat.AnchoredChainWalk
+public import KumarNivat.AnchoredSubsequences
+public import KumarNivat.AnchoredMaximalGeometry
+
+@[expose] public section
 
 open Filter Topology
 

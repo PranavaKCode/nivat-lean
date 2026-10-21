@@ -1,6 +1,10 @@
-import KumarNivat.RayChainRelaxationRealCones
-import KumarNivat.RayChainRelaxationNormals
-import KumarNivat.NewtonSingleRayFacetsSegmentRotation
+module
+
+public import KumarNivat.RayChainRelaxationRealCones
+public import KumarNivat.RayChainRelaxationNormals
+public import KumarNivat.NewtonSingleRayFacetsSegmentRotation
+
+@[expose] public section
 
 namespace KumarNivat
 

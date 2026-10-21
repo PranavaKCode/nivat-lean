@@ -1,6 +1,10 @@
-import KumarNivat.PatternExtensions
-import KumarNivat.TuplePatternPeriods
-import KumarNivat.FiniteWordDynamics
+module
+
+public import KumarNivat.PatternExtensions
+public import KumarNivat.TuplePatternPeriods
+public import KumarNivat.FiniteWordDynamics
+
+@[expose] public section
 
 namespace KumarNivat
 

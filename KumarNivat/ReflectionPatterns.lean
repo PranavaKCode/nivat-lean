@@ -1,6 +1,10 @@
-import KumarNivat.ReflectionBasics
-import KumarNivat.PatternExtensions
-import KumarNivat.TuplePatternPeriods
+module
+
+public import KumarNivat.ReflectionBasics
+public import KumarNivat.PatternExtensions
+public import KumarNivat.TuplePatternPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

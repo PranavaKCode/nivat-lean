@@ -1,6 +1,10 @@
-import KumarNivat.RowFrames
-import KumarNivat.StableRegions
-import KumarNivat.PolyhedralRays
+module
+
+public import KumarNivat.RowFrames
+public import KumarNivat.StableRegions
+public import KumarNivat.PolyhedralRays
+
+@[expose] public section
 
 namespace KumarNivat
 

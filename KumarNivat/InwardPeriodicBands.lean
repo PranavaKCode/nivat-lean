@@ -1,7 +1,11 @@
-import KumarNivat.FiniteBandPlacement
-import KumarNivat.RepeatedRowBands
-import KumarNivat.MinkowskiStencilFit
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.FiniteBandPlacement
+public import KumarNivat.RepeatedRowBands
+public import KumarNivat.MinkowskiStencilFit
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

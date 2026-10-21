@@ -1,5 +1,9 @@
-import KumarNivat.HalfStripTuplePeriods
-import KumarNivat.LatticeRowRuns
+module
+
+public import KumarNivat.HalfStripTuplePeriods
+public import KumarNivat.LatticeRowRuns
+
+@[expose] public section
 
 namespace KumarNivat
 

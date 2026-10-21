@@ -1,5 +1,9 @@
-import KumarNivat.LatticeRowRuns
-import KumarNivat.TuplePatternPeriods
+module
+
+public import KumarNivat.LatticeRowRuns
+public import KumarNivat.TuplePatternPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

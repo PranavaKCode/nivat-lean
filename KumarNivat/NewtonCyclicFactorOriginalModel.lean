@@ -1,7 +1,11 @@
-import KumarNivat.NewtonCyclicFactorOriginalSigning
-import KumarNivat.NewtonCyclicFactorFan
-import KumarNivat.NewtonCyclicFactorHull
-import KumarNivat.NewtonCyclicFactorCorners
+module
+
+public import KumarNivat.NewtonCyclicFactorOriginalSigning
+public import KumarNivat.NewtonCyclicFactorFan
+public import KumarNivat.NewtonCyclicFactorHull
+public import KumarNivat.NewtonCyclicFactorCorners
+
+@[expose] public section
 
 namespace KumarNivat
 

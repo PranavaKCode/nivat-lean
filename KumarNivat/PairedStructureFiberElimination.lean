@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureFiberAlgebra
-import KumarNivat.PairedStructureFiberLift
-import Mathlib.Data.Fin.Tuple.Basic
+module
+
+public import KumarNivat.PairedStructureFiberAlgebra
+public import KumarNivat.PairedStructureFiberLift
+public import Mathlib.Data.Fin.Tuple.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

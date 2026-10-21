@@ -1,5 +1,9 @@
-import KumarNivat.PolyhedralFailureLayers
-import KumarNivat.AnchoredRelaxedChainUnions
+module
+
+public import KumarNivat.PolyhedralFailureLayers
+public import KumarNivat.AnchoredRelaxedChainUnions
+
+@[expose] public section
 
 namespace KumarNivat
 

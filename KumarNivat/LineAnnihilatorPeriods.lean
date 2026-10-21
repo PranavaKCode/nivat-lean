@@ -1,6 +1,10 @@
-import KumarNivat.FiniteRecurrence
-import KumarNivat.LineOperators
-import KumarNivat.PeriodBinomials
+module
+
+public import KumarNivat.FiniteRecurrence
+public import KumarNivat.LineOperators
+public import KumarNivat.PeriodBinomials
+
+@[expose] public section
 
 namespace KumarNivat
 

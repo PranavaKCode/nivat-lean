@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredActualSequences
-import KumarNivat.PairedStructureBoundaryLimit
-import KumarNivat.SquarefreeProducts
-import Mathlib.Topology.Instances.Int
+module
+
+public import KumarNivat.AnchoredActualSequences
+public import KumarNivat.PairedStructureBoundaryLimit
+public import KumarNivat.SquarefreeProducts
+public import Mathlib.Topology.Instances.Int
+
+@[expose] public section
 
 namespace KumarNivat
 

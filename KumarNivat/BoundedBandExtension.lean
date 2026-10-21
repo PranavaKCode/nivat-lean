@@ -1,7 +1,11 @@
-import KumarNivat.GeneratedBandExtension
-import KumarNivat.GeneratingBandPeriods
-import KumarNivat.PatternRowPeriods
-import KumarNivat.RestrictedExtensionCounts
+module
+
+public import KumarNivat.GeneratedBandExtension
+public import KumarNivat.GeneratingBandPeriods
+public import KumarNivat.PatternRowPeriods
+public import KumarNivat.RestrictedExtensionCounts
+
+@[expose] public section
 
 namespace KumarNivat
 

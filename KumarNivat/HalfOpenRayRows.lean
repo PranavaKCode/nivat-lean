@@ -1,5 +1,9 @@
-import KumarNivat.LocalParallelograms
-import KumarNivat.PrimitiveRealLines
+module
+
+public import KumarNivat.LocalParallelograms
+public import KumarNivat.PrimitiveRealLines
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredActualSequences
-import KumarNivat.AnchoredResidualConvexity
-import KumarNivat.AnchoredChainRecession
+module
+
+public import KumarNivat.AnchoredActualSequences
+public import KumarNivat.AnchoredResidualConvexity
+public import KumarNivat.AnchoredChainRecession
+
+@[expose] public section
 
 open Filter Topology
 

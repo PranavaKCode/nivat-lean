@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredMaximalCyclic
-import KumarNivat.NewtonEnvelopeAffine
+module
+
+public import KumarNivat.AnchoredMaximalCyclic
+public import KumarNivat.NewtonEnvelopeAffine
+
+@[expose] public section
 
 namespace KumarNivat
 

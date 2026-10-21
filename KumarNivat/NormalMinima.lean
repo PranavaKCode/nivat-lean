@@ -1,6 +1,10 @@
-import KumarNivat.GeneratedHalfplanes
-import KumarNivat.SupportExtrema
-import KumarNivat.DistinctDirectionProducts
+module
+
+public import KumarNivat.GeneratedHalfplanes
+public import KumarNivat.SupportExtrema
+public import KumarNivat.DistinctDirectionProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

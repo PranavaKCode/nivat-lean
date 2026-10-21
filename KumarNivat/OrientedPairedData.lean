@@ -1,4 +1,8 @@
-import KumarNivat.PairedDirections
+module
+
+public import KumarNivat.PairedDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

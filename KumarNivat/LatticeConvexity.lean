@@ -1,7 +1,11 @@
-import KumarNivat.PrimitiveDirections
-import KumarNivat.RectangleQuotient
-import Mathlib.Analysis.Convex.Extreme
-import Mathlib.Basic.Real.Basic
+module
+
+public import KumarNivat.PrimitiveDirections
+public import KumarNivat.RectangleQuotient
+public import Mathlib.Analysis.Convex.Extreme
+public import Mathlib.Basic.Real.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.AffineLineOperators
-import KumarNivat.HalfplaneRecurrence
+module
+
+public import KumarNivat.AffineLineOperators
+public import KumarNivat.HalfplaneRecurrence
+
+@[expose] public section
 
 namespace KumarNivat
 

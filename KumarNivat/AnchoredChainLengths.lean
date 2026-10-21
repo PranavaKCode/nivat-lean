@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredSubsequences
-import Mathlib.Topology.Algebra.Order.Archimedean
+module
+
+public import KumarNivat.AnchoredSubsequences
+public import Mathlib.Topology.Algebra.Order.Archimedean
+
+@[expose] public section
 
 open Filter Topology
 

@@ -1,4 +1,8 @@
-import KumarNivat.AffineDependence
+module
+
+public import KumarNivat.AffineDependence
+
+@[expose] public section
 
 namespace KumarNivat
 

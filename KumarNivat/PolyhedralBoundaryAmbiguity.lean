@@ -1,7 +1,11 @@
-import KumarNivat.PolyhedralRays
-import KumarNivat.FailedRayContinuation
-import KumarNivat.ExposedPolygonFaces
-import KumarNivat.BoundaryAmbiguity
+module
+
+public import KumarNivat.PolyhedralRays
+public import KumarNivat.FailedRayContinuation
+public import KumarNivat.ExposedPolygonFaces
+public import KumarNivat.BoundaryAmbiguity
+
+@[expose] public section
 
 namespace KumarNivat
 

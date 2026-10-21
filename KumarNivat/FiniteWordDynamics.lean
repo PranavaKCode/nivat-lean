@@ -1,8 +1,12 @@
-import KumarNivat.Statement
-import Mathlib.Algebra.Ring.Periodic
-import Mathlib.Logic.Function.Basic
-import Mathlib.Data.Fintype.Pigeonhole
-import Lean.Elab.Tactic.Omega
+module
+
+public import KumarNivat.Statement
+public import Mathlib.Algebra.Ring.Periodic
+public import Mathlib.Logic.Function.Basic
+public import Mathlib.Data.Fintype.Pigeonhole
+public import Lean.Elab.Tactic.Omega
+
+@[expose] public section
 
 namespace KumarNivat
 

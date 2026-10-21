@@ -1,6 +1,10 @@
-import KumarNivat.PeriodBinomials
-import KumarNivat.FilteredPeriods
-import KumarNivat.LineFactorCoefficients
+module
+
+public import KumarNivat.PeriodBinomials
+public import KumarNivat.FilteredPeriods
+public import KumarNivat.LineFactorCoefficients
+
+@[expose] public section
 
 namespace KumarNivat
 

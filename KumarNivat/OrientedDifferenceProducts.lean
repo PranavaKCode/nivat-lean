@@ -1,4 +1,8 @@
-import KumarNivat.NormalMinima
+module
+
+public import KumarNivat.NormalMinima
+
+@[expose] public section
 
 namespace KumarNivat
 

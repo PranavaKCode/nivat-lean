@@ -1,4 +1,8 @@
-import KumarNivat.SupportingFaceGeometry
+module
+
+public import KumarNivat.SupportingFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

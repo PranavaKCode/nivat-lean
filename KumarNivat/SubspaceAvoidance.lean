@@ -1,4 +1,8 @@
-import Mathlib.Algebra.Module.Submodule.Union
+module
+
+public import Mathlib.Algebra.Module.Submodule.Union
+
+@[expose] public section
 
 namespace KumarNivat
 

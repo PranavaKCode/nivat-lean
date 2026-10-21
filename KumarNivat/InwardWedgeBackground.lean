@@ -1,7 +1,11 @@
-import KumarNivat.FiniteBandPlacement
-import KumarNivat.RegionalBackground
-import KumarNivat.TangentNormals
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.FiniteBandPlacement
+public import KumarNivat.RegionalBackground
+public import KumarNivat.TangentNormals
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

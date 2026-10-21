@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredMaximalOrbit
-import KumarNivat.NewtonCyclicFacets
+module
+
+public import KumarNivat.AnchoredMaximalOrbit
+public import KumarNivat.NewtonCyclicFacets
+
+@[expose] public section
 
 namespace KumarNivat
 

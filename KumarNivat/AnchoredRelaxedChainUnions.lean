@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredActualSequences
-import KumarNivat.AnchoredIntegerExpansionLayers
+module
+
+public import KumarNivat.AnchoredActualSequences
+public import KumarNivat.AnchoredIntegerExpansionLayers
+
+@[expose] public section
 
 open Filter Topology
 

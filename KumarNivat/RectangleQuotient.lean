@@ -1,4 +1,8 @@
-import KumarNivat.SupportExtrema
+module
+
+public import KumarNivat.SupportExtrema
+
+@[expose] public section
 
 namespace KumarNivat
 

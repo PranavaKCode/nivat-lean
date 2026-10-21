@@ -1,7 +1,11 @@
-import KumarNivat.PairedStructureFiberDirections
-import KumarNivat.PairedStructureExpansivity
-import KumarNivat.KariSzabados
-import Mathlib.Topology.Instances.Int
+module
+
+public import KumarNivat.PairedStructureFiberDirections
+public import KumarNivat.PairedStructureExpansivity
+public import KumarNivat.KariSzabados
+public import Mathlib.Topology.Instances.Int
+
+@[expose] public section
 
 namespace KumarNivat
 

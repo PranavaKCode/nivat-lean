@@ -1,4 +1,8 @@
-import KumarNivat.PeriodicRemainder
+module
+
+public import KumarNivat.PeriodicRemainder
+
+@[expose] public section
 
 namespace KumarNivat
 

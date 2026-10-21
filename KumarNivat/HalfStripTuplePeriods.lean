@@ -1,4 +1,8 @@
-import KumarNivat.TuplePatternPeriods
+module
+
+public import KumarNivat.TuplePatternPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

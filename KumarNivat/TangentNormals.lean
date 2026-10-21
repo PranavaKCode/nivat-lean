@@ -1,4 +1,8 @@
-import KumarNivat.PeriodLattice
+module
+
+public import KumarNivat.PeriodLattice
+
+@[expose] public section
 
 namespace KumarNivat
 

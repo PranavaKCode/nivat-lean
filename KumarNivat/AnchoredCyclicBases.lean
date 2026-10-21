@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredPolygonTransport
-import KumarNivat.NewtonEnvelopeBases
+module
+
+public import KumarNivat.AnchoredPolygonTransport
+public import KumarNivat.NewtonEnvelopeBases
+
+@[expose] public section
 
 namespace KumarNivat
 

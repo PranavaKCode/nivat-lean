@@ -1,4 +1,8 @@
-import KumarNivat.PairedStructureRayChainFacetLimits
+module
+
+public import KumarNivat.PairedStructureRayChainFacetLimits
+
+@[expose] public section
 
 namespace KumarNivat
 

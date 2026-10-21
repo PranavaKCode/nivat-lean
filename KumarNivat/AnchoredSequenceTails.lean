@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredActualSequences
-import KumarNivat.AnchoredCyclicFacesRelaxation
+module
+
+public import KumarNivat.AnchoredActualSequences
+public import KumarNivat.AnchoredCyclicFacesRelaxation
+
+@[expose] public section
 
 open Filter Topology
 

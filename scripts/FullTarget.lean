@@ -1,4 +1,8 @@
-import KumarNivat
+module
+
+public import KumarNivat
+
+@[expose] public section
 
 universe u
 

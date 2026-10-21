@@ -1,6 +1,10 @@
-import KumarNivat.LatticeConvexity
-import KumarNivat.PatternRestriction
-import Mathlib.Data.Finset.Powerset
+module
+
+public import KumarNivat.LatticeConvexity
+public import KumarNivat.PatternRestriction
+public import Mathlib.Data.Finset.Powerset
+
+@[expose] public section
 
 namespace KumarNivat
 

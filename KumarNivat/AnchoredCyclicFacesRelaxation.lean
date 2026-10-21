@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredEnvelopeLengths
+module
+
+public import KumarNivat.AnchoredEnvelopeLengths
+
+@[expose] public section
 
 open Filter Topology
 

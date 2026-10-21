@@ -1,5 +1,9 @@
-import KumarNivat.BinomialCoprime
-import KumarNivat.LineFactorCoefficients
+module
+
+public import KumarNivat.BinomialCoprime
+public import KumarNivat.LineFactorCoefficients
+
+@[expose] public section
 
 namespace KumarNivat
 

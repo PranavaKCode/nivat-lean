@@ -1,5 +1,9 @@
-import KumarNivat.MinkowskiStencilFit
-import Mathlib.Analysis.Convex.Combination
+module
+
+public import KumarNivat.MinkowskiStencilFit
+public import Mathlib.Analysis.Convex.Combination
+
+@[expose] public section
 
 namespace KumarNivat
 

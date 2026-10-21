@@ -1,5 +1,9 @@
-import KumarNivat.DilationInterpolation
-import KumarNivat.IntegerAnnihilator
+module
+
+public import KumarNivat.DilationInterpolation
+public import KumarNivat.IntegerAnnihilator
+
+@[expose] public section
 
 namespace KumarNivat
 

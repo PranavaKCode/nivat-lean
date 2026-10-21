@@ -1,8 +1,12 @@
-import KumarNivat.AxisOperators
-import KumarNivat.Alphabets
-import KumarNivat.LocalAnnihilator
-import KumarNivat.LineFactorCoefficients
-import KumarNivat.LaurentNormalization
+module
+
+public import KumarNivat.AxisOperators
+public import KumarNivat.Alphabets
+public import KumarNivat.LocalAnnihilator
+public import KumarNivat.LineFactorCoefficients
+public import KumarNivat.LaurentNormalization
+
+@[expose] public section
 
 namespace KumarNivat
 

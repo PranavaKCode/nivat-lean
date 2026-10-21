@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicFactorOriginalModel
-import KumarNivat.PairedStructureRayChainFan
+module
+
+public import KumarNivat.NewtonCyclicFactorOriginalModel
+public import KumarNivat.PairedStructureRayChainFan
+
+@[expose] public section
 
 namespace KumarNivat
 

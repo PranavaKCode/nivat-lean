@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredChainSupports
-import KumarNivat.AnchoredChainSelection
-import KumarNivat.AnchoredRegionUnions
-import KumarNivat.InwardBackwardCofinality
+module
+
+public import KumarNivat.AnchoredChainSupports
+public import KumarNivat.AnchoredChainSelection
+public import KumarNivat.AnchoredRegionUnions
+public import KumarNivat.InwardBackwardCofinality
+
+@[expose] public section
 
 open Filter Topology
 

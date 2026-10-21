@@ -1,4 +1,8 @@
-import KumarNivat.DirectionalLineFactors
+module
+
+public import KumarNivat.DirectionalLineFactors
+
+@[expose] public section
 
 namespace KumarNivat
 

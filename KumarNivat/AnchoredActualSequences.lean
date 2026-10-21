@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredMaximalTransport
-import KumarNivat.AnchoredCyclicPhases
-import KumarNivat.AnchoredExhaustionWidths
-import KumarNivat.AnchoredChainUnion
+module
+
+public import KumarNivat.AnchoredMaximalTransport
+public import KumarNivat.AnchoredCyclicPhases
+public import KumarNivat.AnchoredExhaustionWidths
+public import KumarNivat.AnchoredChainUnion
+
+@[expose] public section
 
 open Filter Topology
 

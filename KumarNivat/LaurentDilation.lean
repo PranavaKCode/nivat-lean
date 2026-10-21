@@ -1,4 +1,8 @@
-import KumarNivat.LaurentMaps
+module
+
+public import KumarNivat.LaurentMaps
+
+@[expose] public section
 
 namespace KumarNivat
 

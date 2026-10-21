@@ -1,5 +1,9 @@
-import KumarNivat.RayBoundaryStencilFit
-import KumarNivat.BoundaryLineRecurrences
+module
+
+public import KumarNivat.RayBoundaryStencilFit
+public import KumarNivat.BoundaryLineRecurrences
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,7 +1,11 @@
-import KumarNivat.NewtonCyclicFactorSort
-import KumarNivat.PrimitiveDirections
-import KumarNivat.OrientedNormals
-import Mathlib.Data.List.OfFn
+module
+
+public import KumarNivat.NewtonCyclicFactorSort
+public import KumarNivat.PrimitiveDirections
+public import KumarNivat.OrientedNormals
+public import Mathlib.Data.List.OfFn
+
+@[expose] public section
 
 namespace KumarNivat
 

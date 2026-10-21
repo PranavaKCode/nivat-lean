@@ -1,5 +1,9 @@
-import KumarNivat.LineOperators
-import KumarNivat.RectangleQuotient
+module
+
+public import KumarNivat.LineOperators
+public import KumarNivat.RectangleQuotient
+
+@[expose] public section
 
 namespace KumarNivat
 

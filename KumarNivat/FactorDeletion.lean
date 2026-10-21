@@ -1,4 +1,8 @@
-import KumarNivat.DistinctDirectionProducts
+module
+
+public import KumarNivat.DistinctDirectionProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

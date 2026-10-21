@@ -1,5 +1,9 @@
-import KumarNivat.NewtonEnvelopeSaturation
-import KumarNivat.PrimitiveRealLines
+module
+
+public import KumarNivat.NewtonEnvelopeSaturation
+public import KumarNivat.PrimitiveRealLines
+
+@[expose] public section
 
 namespace KumarNivat
 

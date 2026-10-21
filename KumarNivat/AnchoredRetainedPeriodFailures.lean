@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredSeedFailureLayers
-import KumarNivat.RegionalBackground
+module
+
+public import KumarNivat.AnchoredSeedFailureLayers
+public import KumarNivat.RegionalBackground
+
+@[expose] public section
 
 namespace KumarNivat
 

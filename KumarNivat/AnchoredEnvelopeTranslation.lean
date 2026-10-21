@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredPolygonTransport
+module
+
+public import KumarNivat.AnchoredPolygonTransport
+
+@[expose] public section
 
 namespace KumarNivat
 

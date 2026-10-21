@@ -1,6 +1,10 @@
-import KumarNivat.SupportingFaceGeometry
-import KumarNivat.LineFaceGeometry
-import KumarNivat.PairedDirections
+module
+
+public import KumarNivat.SupportingFaceGeometry
+public import KumarNivat.LineFaceGeometry
+public import KumarNivat.PairedDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

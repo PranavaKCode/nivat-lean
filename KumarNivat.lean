@@ -1,338 +1,342 @@
-import KumarNivat.Statement
-import KumarNivat.Operators
-import KumarNivat.ConeObstruction
-import KumarNivat.RetainedDisagreement
-import KumarNivat.DimensionCount
-import KumarNivat.RationalCone
-import KumarNivat.AffineDependence
-import KumarNivat.LocalAnnihilator
-import KumarNivat.ObservableCount
-import KumarNivat.LaurentAlgebra
-import KumarNivat.Alphabets
-import KumarNivat.IntegerAnnihilator
-import KumarNivat.QuadraticOperator
-import KumarNivat.SupportExtrema
-import KumarNivat.RectangleQuotient
-import KumarNivat.WindowRelations
-import KumarNivat.FilterCount
-import KumarNivat.OrbitLanguage
-import KumarNivat.FilteredPeriods
-import KumarNivat.PeriodLattice
-import KumarNivat.DefectHalfplanes
-import KumarNivat.WedgeSaturation
-import KumarNivat.FilteredWedge
-import KumarNivat.LineRecurrence
-import KumarNivat.FactorBoxGeometry
-import KumarNivat.LineOperators
-import KumarNivat.FactorBoxPlacement
-import KumarNivat.TangentNormals
-import KumarNivat.DefectRecurrences
-import KumarNivat.WedgeCount
-import KumarNivat.PeriodBinomials
-import KumarNivat.FactorBoxes
-import KumarNivat.WedgeFactorAssembly
-import KumarNivat.RecurrenceEquality
-import KumarNivat.FiniteRecurrence
-import KumarNivat.LineAnnihilatorPeriods
-import KumarNivat.LineFactorCoefficients
-import KumarNivat.RegionalBackground
-import KumarNivat.LaurentMaps
-import KumarNivat.LaurentDilation
-import KumarNivat.PrimeDilation
-import KumarNivat.DilationInterpolation
-import KumarNivat.IntegerProductAnnihilator
-import KumarNivat.ParallelDifferences
-import KumarNivat.DistinctDirectionProducts
-import KumarNivat.KariSzabados
-import KumarNivat.LaurentFactorization
-import KumarNivat.SubspaceAvoidance
-import KumarNivat.AnnihilatorIdeal
-import KumarNivat.SquarefreeDivisibility
-import KumarNivat.CommonAnnihilatorDivisor
-import KumarNivat.EulerOperators
-import KumarNivat.BinomialCoprime
-import KumarNivat.SquarefreeProducts
-import KumarNivat.AffineCommonDivisor
-import KumarNivat.LocalizationCoprime
-import KumarNivat.CoefficientLocalization
-import KumarNivat.LaurentBezout
-import KumarNivat.LaurentEliminant
-import KumarNivat.LaurentBlocks
-import KumarNivat.AxisOperators
-import KumarNivat.CoordinateEliminants
-import KumarNivat.CoprimePeriods
-import KumarNivat.PeriodicRemainder
-import KumarNivat.DivisorPeriods
-import KumarNivat.LaurentUnits
-import KumarNivat.DirectionalGrouping
-import KumarNivat.PrimitiveDirections
-import KumarNivat.DirectionalLineFactors
-import KumarNivat.LaurentNormalization
-import KumarNivat.PeriodicWedgeBound
-import KumarNivat.ThinRectangles
-import KumarNivat.FinalDeduction
-import KumarNivat.PrimitiveRetention
-import KumarNivat.PatternRestriction
-import KumarNivat.LatticeConvexity
-import KumarNivat.MinimalDiscrepancy
-import KumarNivat.NoncollinearSites
-import KumarNivat.GeneratingSets
-import KumarNivat.PatternExtensions
-import KumarNivat.GeneratedHalfplanes
-import KumarNivat.SupportingFaces
-import KumarNivat.NormalMinima
-import KumarNivat.AnnihilatorDirections
-import KumarNivat.OrientedNormals
-import KumarNivat.PairedDirections
-import KumarNivat.HalfplaneRecurrence
-import KumarNivat.TangentPeriods
-import KumarNivat.PartialRecurrences
-import KumarNivat.FacetRecurrences
-import KumarNivat.AffineLineOperators
-import KumarNivat.ExposedOperators
-import KumarNivat.ExposedFaceData
-import KumarNivat.MinkowskiStencilFit
-import KumarNivat.SupportingFaceGeometry
-import KumarNivat.LineFaceGeometry
-import KumarNivat.GeometricFacetContinuation
-import KumarNivat.ExposedFacetGeometry
-import KumarNivat.FiniteWordDynamics
-import KumarNivat.WordComplexity
-import KumarNivat.TuplePatternPeriods
-import KumarNivat.HalfStripTuplePeriods
-import KumarNivat.FixedGapRepetitions
-import KumarNivat.BoundaryEdgeAgreement
-import KumarNivat.BoundaryAmbiguity
-import KumarNivat.LatticeRowRuns
-import KumarNivat.PrimitiveRealLines
-import KumarNivat.ConvexNormalSlices
-import KumarNivat.PolygonStripPeriods
-import KumarNivat.PolygonNormalBands
-import KumarNivat.PrimitiveLineSpans
-import KumarNivat.SegmentSummandGeometry
-import KumarNivat.GeneratingBandPeriods
-import KumarNivat.BoundaryLineRecurrences
-import KumarNivat.SupportingFaceVertices
-import KumarNivat.ExposedPolygonFaces
-import KumarNivat.ShiftedConfigurations
-import KumarNivat.FirstDisagreement
-import KumarNivat.PlacedEdgeAmbiguity
-import KumarNivat.InitialPeriodicBand
-import KumarNivat.OrientedPairedData
-import KumarNivat.LowComplexityInitialBand
-import KumarNivat.PeriodicBlocks
-import KumarNivat.GeneratedEdgeAgreement
-import KumarNivat.RestrictedExtensionCounts
-import KumarNivat.GeneratedBandExtension
-import KumarNivat.PatternRowPeriods
-import KumarNivat.BoundedBandExtension
-import KumarNivat.TranslatedBandExtension
-import KumarNivat.OutwardBandPeriods
-import KumarNivat.GlobalPeriodsFromBands
-import KumarNivat.HalfplaneBackgrounds
-import KumarNivat.PeriodicReferenceChoice
-import KumarNivat.LowComplexityPeriodicReference
-import KumarNivat.PolyhedralRays
-import KumarNivat.RayBoundaryStencilFit
-import KumarNivat.FailedRayContinuation
-import KumarNivat.PolyhedralBoundaryAmbiguity
-import KumarNivat.LocalParallelograms
-import KumarNivat.LocalRowSelection
-import KumarNivat.LocalHalfStripPeriods
-import KumarNivat.HalfOpenRayRows
-import KumarNivat.HighHalfStripRows
-import KumarNivat.RegionalRowAgreement
-import KumarNivat.WedgeSlabPropagation
-import KumarNivat.RowFrames
-import KumarNivat.StableRegions
-import KumarNivat.FiniteBandPlacement
-import KumarNivat.RepeatedRowBands
-import KumarNivat.InwardPeriodicBands
-import KumarNivat.TransportedSeedEqualities
-import KumarNivat.GeneratedRegionalRows
-import KumarNivat.BandSweepSteps
-import KumarNivat.FarSeedBlocks
-import KumarNivat.RegionalBandSweeps
-import KumarNivat.SecondPeriodFromHalfStrip
-import KumarNivat.SecondRegionalPeriod
-import KumarNivat.InwardWedgeBackground
-import KumarNivat.WedgeFromAmbiguousEdge
-import KumarNivat.FactorDeletion
-import KumarNivat.ForwardTransverseDefects
-import KumarNivat.OrientedDifferenceProducts
-import KumarNivat.PositiveProductSupport
-import KumarNivat.ExtremalSlopeFactors
-import KumarNivat.TransverseWedgeOperators
-import KumarNivat.PolygonHalfStrips
-import KumarNivat.HalfStripSlabs
-import KumarNivat.SlopedHalfStripPropagation
-import KumarNivat.OrientedProductUnits
-import KumarNivat.TangentNewtonEndpoints
-import KumarNivat.PrimitiveUnitSegments
-import KumarNivat.TangentNewtonSummands
-import KumarNivat.MonomialNewtonTranslation
-import KumarNivat.NewtonHalfStripBases
-import KumarNivat.NewtonWedgePlacement
-import KumarNivat.InitialWedgeFromHalfStrip
-import KumarNivat.AdjoinedFacetRegions
-import KumarNivat.AnchoredCompactness
-import KumarNivat.AnchoredFacetArithmetic
-import KumarNivat.AnchoredFacetWitness
-import KumarNivat.AnchoredNonperiodicLimit
-import KumarNivat.AnchoredPhaseLimits
-import KumarNivat.AnchoredRegionUnions
-import KumarNivat.AnchoredStableSeeds
-import KumarNivat.AnchoredSubsequences
-import KumarNivat.FailedFacetWedge
-import KumarNivat.FirstFailedFacetWedge
-import KumarNivat.FirstFailedRegionPeriods
-import KumarNivat.InwardBackwardCofinality
-import KumarNivat.NewtonEnvelopeAffine
-import KumarNivat.NewtonEnvelopeBases
-import KumarNivat.NewtonEnvelopeCentering
-import KumarNivat.NewtonEnvelopeDilates
-import KumarNivat.NewtonEnvelopeResidual
-import KumarNivat.NewtonEnvelopeSaturation
-import KumarNivat.NewtonEnvelopeSupport
-import KumarNivat.NewtonProductGeometry
-import KumarNivat.NewtonProductZonotope
-import KumarNivat.PairedStructureBalls
-import KumarNivat.PairedStructureExpansivity
-import KumarNivat.PairedStructureLimits
-import KumarNivat.PairedStructureLocality
-import KumarNivat.PairedStructureMinimal
-import KumarNivat.PairedStructureNormals
-import KumarNivat.PairedStructureOrbit
-import KumarNivat.PairedStructurePeriodic
-import KumarNivat.PairedStructureRows
-import KumarNivat.PairedStructureStrips
-import KumarNivat.PairedStructureWords
-import KumarNivat.PolyhedralFailureLayers
-import KumarNivat.PolyhedralLimits
-import KumarNivat.AnchoredChainFan
-import KumarNivat.AnchoredChainLengths
-import KumarNivat.AnchoredChainRecession
-import KumarNivat.AnchoredChainSelection
-import KumarNivat.AnchoredChainSupports
-import KumarNivat.AnchoredChainUnion
-import KumarNivat.AnchoredChainWalk
-import KumarNivat.AnchoredCyclicBases
-import KumarNivat.AnchoredCyclicRotation
-import KumarNivat.AnchoredExhaustionWidths
-import KumarNivat.AnchoredMaximalCoordinates
-import KumarNivat.AnchoredMaximalCyclic
-import KumarNivat.AnchoredMaximalGeometry
-import KumarNivat.AnchoredMaximalOrbit
-import KumarNivat.AnchoredMaximalPolygons
-import KumarNivat.AnchoredPolygonExhaustion
-import KumarNivat.AnchoredPolygonTransport
-import KumarNivat.FailedFacetWedgeNegative
-import KumarNivat.FirstFailedFacetWedgeNegative
-import KumarNivat.NewtonCyclicFacets
-import KumarNivat.NewtonCyclicFactorCoordinates
-import KumarNivat.NewtonCyclicFactorDouble
-import KumarNivat.NewtonCyclicFactorFan
-import KumarNivat.NewtonCyclicFactorHull
-import KumarNivat.NewtonCyclicFactorOrientation
-import KumarNivat.NewtonCyclicFactorPrimitive
-import KumarNivat.NewtonCyclicFactorSort
-import KumarNivat.NewtonCyclicFactorWalk
-import KumarNivat.NewtonCyclicMinkowski
-import KumarNivat.NewtonCyclicNormals
-import KumarNivat.NewtonCyclicOrder
-import KumarNivat.PairedStructureBoundaryBlocks
-import KumarNivat.PairedStructureBoundaryLimit
-import KumarNivat.PairedStructureBoundaryTransport
-import KumarNivat.PairedStructureFiberAlgebra
-import KumarNivat.PairedStructureFiberCard
-import KumarNivat.PairedStructureFiberDirections
-import KumarNivat.PairedStructureFiberElimination
-import KumarNivat.PairedStructureFiberLift
-import KumarNivat.PairedStructureFiberLimits
-import KumarNivat.PairedStructureFiberLocal
-import KumarNivat.PairedStructureFiberSymmetry
-import KumarNivat.PairedStructureWideStripBackground
-import KumarNivat.PairedStructureWideStripGeometry
-import KumarNivat.PairedStructureWideStripMatching
-import KumarNivat.ReflectionBackgrounds
-import KumarNivat.ReflectionBasics
-import KumarNivat.ReflectionGeometry
-import KumarNivat.ReflectionPatterns
-import KumarNivat.ReflectionPeriods
-import KumarNivat.SecondRegionalPeriodNegative
-import KumarNivat.WedgeFromAmbiguousEdgeNegative
-import KumarNivat.AnchoredActualSequences
-import KumarNivat.AnchoredConstructedChain
-import KumarNivat.AnchoredCyclicFaces
-import KumarNivat.AnchoredCyclicFacesNonnegative
-import KumarNivat.AnchoredCyclicFacesRelaxation
-import KumarNivat.AnchoredCyclicFacesResidual
-import KumarNivat.AnchoredCyclicPhases
-import KumarNivat.AnchoredEnvelopeLengths
-import KumarNivat.AnchoredEnvelopeLengthsResidual
-import KumarNivat.AnchoredEnvelopeLengthsScaled
-import KumarNivat.AnchoredEnvelopeTranslation
-import KumarNivat.AnchoredExpansionFailures
-import KumarNivat.AnchoredMaximalTransport
-import KumarNivat.AnchoredResidualConvexity
-import KumarNivat.AnchoredSequenceLimits
-import KumarNivat.AnchoredSourceSequences
-import KumarNivat.NewtonCyclicFactorCorners
-import KumarNivat.NewtonCyclicFactorOriginalAligned
-import KumarNivat.NewtonCyclicFactorOriginalModel
-import KumarNivat.NewtonCyclicFactorOriginalSigning
-import KumarNivat.NewtonCyclicFactorOriginalTruncations
-import KumarNivat.NonperiodicProductLengths
-import KumarNivat.PairedStructureRayChainAgreement
-import KumarNivat.PairedStructureRayChainAgreementStages
-import KumarNivat.PairedStructureRayChainCones
-import KumarNivat.PairedStructureRayChainFacetLimits
-import KumarNivat.PairedStructureRayChainFacets
-import KumarNivat.PairedStructureRayChainFan
-import KumarNivat.PairedStructureRayChainMatching
-import KumarNivat.PairedStructureRayChainNormals
-import KumarNivat.PairedStructureRayChainRealMinkowski
-import KumarNivat.PairedStructureRayChainRealOrder
-import KumarNivat.PairedStructureRayChainRegions
-import KumarNivat.PairedStructureRayChainSlopes
-import KumarNivat.PairedStructureRayChainTruncationUnions
-import KumarNivat.AnchoredCyclicSeedFailures
-import KumarNivat.AnchoredCyclicSeedFailuresSequence
-import KumarNivat.AnchoredFailedPeriodWedge
-import KumarNivat.AnchoredIntegerExpansion
-import KumarNivat.AnchoredIntegerExpansionFailures
-import KumarNivat.AnchoredIntegerExpansionHalfStrips
-import KumarNivat.AnchoredIntegerExpansionLayers
-import KumarNivat.AnchoredIntegerExpansionSupports
-import KumarNivat.AnchoredNonperiodicChainSelection
-import KumarNivat.AnchoredPreparedChains
-import KumarNivat.AnchoredRelaxedChainUnions
-import KumarNivat.AnchoredRelaxedChainUnionsResidual
-import KumarNivat.AnchoredRetainedFailures
-import KumarNivat.AnchoredRetainedPeriodFailures
-import KumarNivat.AnchoredSeedFailureLayers
-import KumarNivat.AnchoredSequenceTails
-import KumarNivat.ColleAnchoredPreparationData
-import KumarNivat.ColleAnchoredPreparationEndpoint
-import KumarNivat.ColleAnchoredPreparationSource
-import KumarNivat.ColleAnchoredRetainedFacet
-import KumarNivat.CollePairedDirection
-import KumarNivat.CyclicExposedFacetData
-import KumarNivat.IntegerWedgeSelectionProof
-import KumarNivat.MainMatchingBackgroundActual
-import KumarNivat.MainMatchingBackgroundFan
-import KumarNivat.MainMatchingBackgroundHalfStrip
-import KumarNivat.NewtonEnvelopeUnitSegments
-import KumarNivat.NewtonSingleRayFacets
-import KumarNivat.NewtonSingleRayFacetsSegment
-import KumarNivat.NewtonSingleRayFacetsSegmentRotation
-import KumarNivat.Nivat
-import KumarNivat.NoMatchingWedgeSelection
-import KumarNivat.OriginalEnvelopeHalfStrips
-import KumarNivat.RayChainPairedActual
-import KumarNivat.RayChainPairedFacets
-import KumarNivat.RayChainPairedLimit
-import KumarNivat.RayChainPairedNoHalfStrip
-import KumarNivat.RayChainRelaxationMinkowski
-import KumarNivat.RayChainRelaxationNormals
-import KumarNivat.RayChainRelaxationRealCones
+module
+
+public import KumarNivat.Statement
+public import KumarNivat.Operators
+public import KumarNivat.ConeObstruction
+public import KumarNivat.RetainedDisagreement
+public import KumarNivat.DimensionCount
+public import KumarNivat.RationalCone
+public import KumarNivat.AffineDependence
+public import KumarNivat.LocalAnnihilator
+public import KumarNivat.ObservableCount
+public import KumarNivat.LaurentAlgebra
+public import KumarNivat.Alphabets
+public import KumarNivat.IntegerAnnihilator
+public import KumarNivat.QuadraticOperator
+public import KumarNivat.SupportExtrema
+public import KumarNivat.RectangleQuotient
+public import KumarNivat.WindowRelations
+public import KumarNivat.FilterCount
+public import KumarNivat.OrbitLanguage
+public import KumarNivat.FilteredPeriods
+public import KumarNivat.PeriodLattice
+public import KumarNivat.DefectHalfplanes
+public import KumarNivat.WedgeSaturation
+public import KumarNivat.FilteredWedge
+public import KumarNivat.LineRecurrence
+public import KumarNivat.FactorBoxGeometry
+public import KumarNivat.LineOperators
+public import KumarNivat.FactorBoxPlacement
+public import KumarNivat.TangentNormals
+public import KumarNivat.DefectRecurrences
+public import KumarNivat.WedgeCount
+public import KumarNivat.PeriodBinomials
+public import KumarNivat.FactorBoxes
+public import KumarNivat.WedgeFactorAssembly
+public import KumarNivat.RecurrenceEquality
+public import KumarNivat.FiniteRecurrence
+public import KumarNivat.LineAnnihilatorPeriods
+public import KumarNivat.LineFactorCoefficients
+public import KumarNivat.RegionalBackground
+public import KumarNivat.LaurentMaps
+public import KumarNivat.LaurentDilation
+public import KumarNivat.PrimeDilation
+public import KumarNivat.DilationInterpolation
+public import KumarNivat.IntegerProductAnnihilator
+public import KumarNivat.ParallelDifferences
+public import KumarNivat.DistinctDirectionProducts
+public import KumarNivat.KariSzabados
+public import KumarNivat.LaurentFactorization
+public import KumarNivat.SubspaceAvoidance
+public import KumarNivat.AnnihilatorIdeal
+public import KumarNivat.SquarefreeDivisibility
+public import KumarNivat.CommonAnnihilatorDivisor
+public import KumarNivat.EulerOperators
+public import KumarNivat.BinomialCoprime
+public import KumarNivat.SquarefreeProducts
+public import KumarNivat.AffineCommonDivisor
+public import KumarNivat.LocalizationCoprime
+public import KumarNivat.CoefficientLocalization
+public import KumarNivat.LaurentBezout
+public import KumarNivat.LaurentEliminant
+public import KumarNivat.LaurentBlocks
+public import KumarNivat.AxisOperators
+public import KumarNivat.CoordinateEliminants
+public import KumarNivat.CoprimePeriods
+public import KumarNivat.PeriodicRemainder
+public import KumarNivat.DivisorPeriods
+public import KumarNivat.LaurentUnits
+public import KumarNivat.DirectionalGrouping
+public import KumarNivat.PrimitiveDirections
+public import KumarNivat.DirectionalLineFactors
+public import KumarNivat.LaurentNormalization
+public import KumarNivat.PeriodicWedgeBound
+public import KumarNivat.ThinRectangles
+public import KumarNivat.FinalDeduction
+public import KumarNivat.PrimitiveRetention
+public import KumarNivat.PatternRestriction
+public import KumarNivat.LatticeConvexity
+public import KumarNivat.MinimalDiscrepancy
+public import KumarNivat.NoncollinearSites
+public import KumarNivat.GeneratingSets
+public import KumarNivat.PatternExtensions
+public import KumarNivat.GeneratedHalfplanes
+public import KumarNivat.SupportingFaces
+public import KumarNivat.NormalMinima
+public import KumarNivat.AnnihilatorDirections
+public import KumarNivat.OrientedNormals
+public import KumarNivat.PairedDirections
+public import KumarNivat.HalfplaneRecurrence
+public import KumarNivat.TangentPeriods
+public import KumarNivat.PartialRecurrences
+public import KumarNivat.FacetRecurrences
+public import KumarNivat.AffineLineOperators
+public import KumarNivat.ExposedOperators
+public import KumarNivat.ExposedFaceData
+public import KumarNivat.MinkowskiStencilFit
+public import KumarNivat.SupportingFaceGeometry
+public import KumarNivat.LineFaceGeometry
+public import KumarNivat.GeometricFacetContinuation
+public import KumarNivat.ExposedFacetGeometry
+public import KumarNivat.FiniteWordDynamics
+public import KumarNivat.WordComplexity
+public import KumarNivat.TuplePatternPeriods
+public import KumarNivat.HalfStripTuplePeriods
+public import KumarNivat.FixedGapRepetitions
+public import KumarNivat.BoundaryEdgeAgreement
+public import KumarNivat.BoundaryAmbiguity
+public import KumarNivat.LatticeRowRuns
+public import KumarNivat.PrimitiveRealLines
+public import KumarNivat.ConvexNormalSlices
+public import KumarNivat.PolygonStripPeriods
+public import KumarNivat.PolygonNormalBands
+public import KumarNivat.PrimitiveLineSpans
+public import KumarNivat.SegmentSummandGeometry
+public import KumarNivat.GeneratingBandPeriods
+public import KumarNivat.BoundaryLineRecurrences
+public import KumarNivat.SupportingFaceVertices
+public import KumarNivat.ExposedPolygonFaces
+public import KumarNivat.ShiftedConfigurations
+public import KumarNivat.FirstDisagreement
+public import KumarNivat.PlacedEdgeAmbiguity
+public import KumarNivat.InitialPeriodicBand
+public import KumarNivat.OrientedPairedData
+public import KumarNivat.LowComplexityInitialBand
+public import KumarNivat.PeriodicBlocks
+public import KumarNivat.GeneratedEdgeAgreement
+public import KumarNivat.RestrictedExtensionCounts
+public import KumarNivat.GeneratedBandExtension
+public import KumarNivat.PatternRowPeriods
+public import KumarNivat.BoundedBandExtension
+public import KumarNivat.TranslatedBandExtension
+public import KumarNivat.OutwardBandPeriods
+public import KumarNivat.GlobalPeriodsFromBands
+public import KumarNivat.HalfplaneBackgrounds
+public import KumarNivat.PeriodicReferenceChoice
+public import KumarNivat.LowComplexityPeriodicReference
+public import KumarNivat.PolyhedralRays
+public import KumarNivat.RayBoundaryStencilFit
+public import KumarNivat.FailedRayContinuation
+public import KumarNivat.PolyhedralBoundaryAmbiguity
+public import KumarNivat.LocalParallelograms
+public import KumarNivat.LocalRowSelection
+public import KumarNivat.LocalHalfStripPeriods
+public import KumarNivat.HalfOpenRayRows
+public import KumarNivat.HighHalfStripRows
+public import KumarNivat.RegionalRowAgreement
+public import KumarNivat.WedgeSlabPropagation
+public import KumarNivat.RowFrames
+public import KumarNivat.StableRegions
+public import KumarNivat.FiniteBandPlacement
+public import KumarNivat.RepeatedRowBands
+public import KumarNivat.InwardPeriodicBands
+public import KumarNivat.TransportedSeedEqualities
+public import KumarNivat.GeneratedRegionalRows
+public import KumarNivat.BandSweepSteps
+public import KumarNivat.FarSeedBlocks
+public import KumarNivat.RegionalBandSweeps
+public import KumarNivat.SecondPeriodFromHalfStrip
+public import KumarNivat.SecondRegionalPeriod
+public import KumarNivat.InwardWedgeBackground
+public import KumarNivat.WedgeFromAmbiguousEdge
+public import KumarNivat.FactorDeletion
+public import KumarNivat.ForwardTransverseDefects
+public import KumarNivat.OrientedDifferenceProducts
+public import KumarNivat.PositiveProductSupport
+public import KumarNivat.ExtremalSlopeFactors
+public import KumarNivat.TransverseWedgeOperators
+public import KumarNivat.PolygonHalfStrips
+public import KumarNivat.HalfStripSlabs
+public import KumarNivat.SlopedHalfStripPropagation
+public import KumarNivat.OrientedProductUnits
+public import KumarNivat.TangentNewtonEndpoints
+public import KumarNivat.PrimitiveUnitSegments
+public import KumarNivat.TangentNewtonSummands
+public import KumarNivat.MonomialNewtonTranslation
+public import KumarNivat.NewtonHalfStripBases
+public import KumarNivat.NewtonWedgePlacement
+public import KumarNivat.InitialWedgeFromHalfStrip
+public import KumarNivat.AdjoinedFacetRegions
+public import KumarNivat.AnchoredCompactness
+public import KumarNivat.AnchoredFacetArithmetic
+public import KumarNivat.AnchoredFacetWitness
+public import KumarNivat.AnchoredNonperiodicLimit
+public import KumarNivat.AnchoredPhaseLimits
+public import KumarNivat.AnchoredRegionUnions
+public import KumarNivat.AnchoredStableSeeds
+public import KumarNivat.AnchoredSubsequences
+public import KumarNivat.FailedFacetWedge
+public import KumarNivat.FirstFailedFacetWedge
+public import KumarNivat.FirstFailedRegionPeriods
+public import KumarNivat.InwardBackwardCofinality
+public import KumarNivat.NewtonEnvelopeAffine
+public import KumarNivat.NewtonEnvelopeBases
+public import KumarNivat.NewtonEnvelopeCentering
+public import KumarNivat.NewtonEnvelopeDilates
+public import KumarNivat.NewtonEnvelopeResidual
+public import KumarNivat.NewtonEnvelopeSaturation
+public import KumarNivat.NewtonEnvelopeSupport
+public import KumarNivat.NewtonProductGeometry
+public import KumarNivat.NewtonProductZonotope
+public import KumarNivat.PairedStructureBalls
+public import KumarNivat.PairedStructureExpansivity
+public import KumarNivat.PairedStructureLimits
+public import KumarNivat.PairedStructureLocality
+public import KumarNivat.PairedStructureMinimal
+public import KumarNivat.PairedStructureNormals
+public import KumarNivat.PairedStructureOrbit
+public import KumarNivat.PairedStructurePeriodic
+public import KumarNivat.PairedStructureRows
+public import KumarNivat.PairedStructureStrips
+public import KumarNivat.PairedStructureWords
+public import KumarNivat.PolyhedralFailureLayers
+public import KumarNivat.PolyhedralLimits
+public import KumarNivat.AnchoredChainFan
+public import KumarNivat.AnchoredChainLengths
+public import KumarNivat.AnchoredChainRecession
+public import KumarNivat.AnchoredChainSelection
+public import KumarNivat.AnchoredChainSupports
+public import KumarNivat.AnchoredChainUnion
+public import KumarNivat.AnchoredChainWalk
+public import KumarNivat.AnchoredCyclicBases
+public import KumarNivat.AnchoredCyclicRotation
+public import KumarNivat.AnchoredExhaustionWidths
+public import KumarNivat.AnchoredMaximalCoordinates
+public import KumarNivat.AnchoredMaximalCyclic
+public import KumarNivat.AnchoredMaximalGeometry
+public import KumarNivat.AnchoredMaximalOrbit
+public import KumarNivat.AnchoredMaximalPolygons
+public import KumarNivat.AnchoredPolygonExhaustion
+public import KumarNivat.AnchoredPolygonTransport
+public import KumarNivat.FailedFacetWedgeNegative
+public import KumarNivat.FirstFailedFacetWedgeNegative
+public import KumarNivat.NewtonCyclicFacets
+public import KumarNivat.NewtonCyclicFactorCoordinates
+public import KumarNivat.NewtonCyclicFactorDouble
+public import KumarNivat.NewtonCyclicFactorFan
+public import KumarNivat.NewtonCyclicFactorHull
+public import KumarNivat.NewtonCyclicFactorOrientation
+public import KumarNivat.NewtonCyclicFactorPrimitive
+public import KumarNivat.NewtonCyclicFactorSort
+public import KumarNivat.NewtonCyclicFactorWalk
+public import KumarNivat.NewtonCyclicMinkowski
+public import KumarNivat.NewtonCyclicNormals
+public import KumarNivat.NewtonCyclicOrder
+public import KumarNivat.PairedStructureBoundaryBlocks
+public import KumarNivat.PairedStructureBoundaryLimit
+public import KumarNivat.PairedStructureBoundaryTransport
+public import KumarNivat.PairedStructureFiberAlgebra
+public import KumarNivat.PairedStructureFiberCard
+public import KumarNivat.PairedStructureFiberDirections
+public import KumarNivat.PairedStructureFiberElimination
+public import KumarNivat.PairedStructureFiberLift
+public import KumarNivat.PairedStructureFiberLimits
+public import KumarNivat.PairedStructureFiberLocal
+public import KumarNivat.PairedStructureFiberSymmetry
+public import KumarNivat.PairedStructureWideStripBackground
+public import KumarNivat.PairedStructureWideStripGeometry
+public import KumarNivat.PairedStructureWideStripMatching
+public import KumarNivat.ReflectionBackgrounds
+public import KumarNivat.ReflectionBasics
+public import KumarNivat.ReflectionGeometry
+public import KumarNivat.ReflectionPatterns
+public import KumarNivat.ReflectionPeriods
+public import KumarNivat.SecondRegionalPeriodNegative
+public import KumarNivat.WedgeFromAmbiguousEdgeNegative
+public import KumarNivat.AnchoredActualSequences
+public import KumarNivat.AnchoredConstructedChain
+public import KumarNivat.AnchoredCyclicFaces
+public import KumarNivat.AnchoredCyclicFacesNonnegative
+public import KumarNivat.AnchoredCyclicFacesRelaxation
+public import KumarNivat.AnchoredCyclicFacesResidual
+public import KumarNivat.AnchoredCyclicPhases
+public import KumarNivat.AnchoredEnvelopeLengths
+public import KumarNivat.AnchoredEnvelopeLengthsResidual
+public import KumarNivat.AnchoredEnvelopeLengthsScaled
+public import KumarNivat.AnchoredEnvelopeTranslation
+public import KumarNivat.AnchoredExpansionFailures
+public import KumarNivat.AnchoredMaximalTransport
+public import KumarNivat.AnchoredResidualConvexity
+public import KumarNivat.AnchoredSequenceLimits
+public import KumarNivat.AnchoredSourceSequences
+public import KumarNivat.NewtonCyclicFactorCorners
+public import KumarNivat.NewtonCyclicFactorOriginalAligned
+public import KumarNivat.NewtonCyclicFactorOriginalModel
+public import KumarNivat.NewtonCyclicFactorOriginalSigning
+public import KumarNivat.NewtonCyclicFactorOriginalTruncations
+public import KumarNivat.NonperiodicProductLengths
+public import KumarNivat.PairedStructureRayChainAgreement
+public import KumarNivat.PairedStructureRayChainAgreementStages
+public import KumarNivat.PairedStructureRayChainCones
+public import KumarNivat.PairedStructureRayChainFacetLimits
+public import KumarNivat.PairedStructureRayChainFacets
+public import KumarNivat.PairedStructureRayChainFan
+public import KumarNivat.PairedStructureRayChainMatching
+public import KumarNivat.PairedStructureRayChainNormals
+public import KumarNivat.PairedStructureRayChainRealMinkowski
+public import KumarNivat.PairedStructureRayChainRealOrder
+public import KumarNivat.PairedStructureRayChainRegions
+public import KumarNivat.PairedStructureRayChainSlopes
+public import KumarNivat.PairedStructureRayChainTruncationUnions
+public import KumarNivat.AnchoredCyclicSeedFailures
+public import KumarNivat.AnchoredCyclicSeedFailuresSequence
+public import KumarNivat.AnchoredFailedPeriodWedge
+public import KumarNivat.AnchoredIntegerExpansion
+public import KumarNivat.AnchoredIntegerExpansionFailures
+public import KumarNivat.AnchoredIntegerExpansionHalfStrips
+public import KumarNivat.AnchoredIntegerExpansionLayers
+public import KumarNivat.AnchoredIntegerExpansionSupports
+public import KumarNivat.AnchoredNonperiodicChainSelection
+public import KumarNivat.AnchoredPreparedChains
+public import KumarNivat.AnchoredRelaxedChainUnions
+public import KumarNivat.AnchoredRelaxedChainUnionsResidual
+public import KumarNivat.AnchoredRetainedFailures
+public import KumarNivat.AnchoredRetainedPeriodFailures
+public import KumarNivat.AnchoredSeedFailureLayers
+public import KumarNivat.AnchoredSequenceTails
+public import KumarNivat.ColleAnchoredPreparationData
+public import KumarNivat.ColleAnchoredPreparationEndpoint
+public import KumarNivat.ColleAnchoredPreparationSource
+public import KumarNivat.ColleAnchoredRetainedFacet
+public import KumarNivat.CollePairedDirection
+public import KumarNivat.CyclicExposedFacetData
+public import KumarNivat.IntegerWedgeSelectionProof
+public import KumarNivat.MainMatchingBackgroundActual
+public import KumarNivat.MainMatchingBackgroundFan
+public import KumarNivat.MainMatchingBackgroundHalfStrip
+public import KumarNivat.NewtonEnvelopeUnitSegments
+public import KumarNivat.NewtonSingleRayFacets
+public import KumarNivat.NewtonSingleRayFacetsSegment
+public import KumarNivat.NewtonSingleRayFacetsSegmentRotation
+public import KumarNivat.Nivat
+public import KumarNivat.NoMatchingWedgeSelection
+public import KumarNivat.OriginalEnvelopeHalfStrips
+public import KumarNivat.RayChainPairedActual
+public import KumarNivat.RayChainPairedFacets
+public import KumarNivat.RayChainPairedLimit
+public import KumarNivat.RayChainPairedNoHalfStrip
+public import KumarNivat.RayChainRelaxationMinkowski
+public import KumarNivat.RayChainRelaxationNormals
+public import KumarNivat.RayChainRelaxationRealCones
+
+@[expose] public section

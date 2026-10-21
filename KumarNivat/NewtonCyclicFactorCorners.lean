@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicFacets
-import KumarNivat.SupportingFaceVertices
+module
+
+public import KumarNivat.NewtonCyclicFacets
+public import KumarNivat.SupportingFaceVertices
+
+@[expose] public section
 
 namespace KumarNivat
 

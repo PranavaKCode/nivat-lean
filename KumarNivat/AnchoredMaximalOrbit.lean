@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredMaximalPolygons
-import KumarNivat.OrbitLanguage
+module
+
+public import KumarNivat.AnchoredMaximalPolygons
+public import KumarNivat.OrbitLanguage
+
+@[expose] public section
 
 namespace KumarNivat
 

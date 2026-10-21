@@ -1,6 +1,10 @@
-import KumarNivat.SegmentSummandGeometry
-import KumarNivat.ExposedPolygonFaces
-import KumarNivat.LatticeRowRuns
+module
+
+public import KumarNivat.SegmentSummandGeometry
+public import KumarNivat.ExposedPolygonFaces
+public import KumarNivat.LatticeRowRuns
+
+@[expose] public section
 
 namespace KumarNivat
 

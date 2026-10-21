@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredFacetWitness
-import KumarNivat.PrimitiveRealLines
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import KumarNivat.AnchoredFacetWitness
+public import KumarNivat.PrimitiveRealLines
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.OrientedProductUnits
-import KumarNivat.MinkowskiStencilFit
+module
+
+public import KumarNivat.OrientedProductUnits
+public import KumarNivat.MinkowskiStencilFit
+
+@[expose] public section
 
 namespace KumarNivat
 

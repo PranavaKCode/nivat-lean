@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureRayChainTruncationUnions
-import KumarNivat.PairedStructureRayChainRegions
-import KumarNivat.NewtonCyclicFactorOriginalTruncations
+module
+
+public import KumarNivat.PairedStructureRayChainTruncationUnions
+public import KumarNivat.PairedStructureRayChainRegions
+public import KumarNivat.NewtonCyclicFactorOriginalTruncations
+
+@[expose] public section
 
 namespace KumarNivat
 

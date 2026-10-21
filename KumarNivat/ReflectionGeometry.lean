@@ -1,5 +1,9 @@
-import KumarNivat.ReflectionPatterns
-import KumarNivat.PolyhedralRays
+module
+
+public import KumarNivat.ReflectionPatterns
+public import KumarNivat.PolyhedralRays
+
+@[expose] public section
 
 namespace KumarNivat
 

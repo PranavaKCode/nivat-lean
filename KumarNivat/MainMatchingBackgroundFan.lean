@@ -1,7 +1,11 @@
-import KumarNivat.RayChainRelaxationMinkowski
-import KumarNivat.RayChainPairedFacets
-import KumarNivat.FirstFailedFacetWedge
-import KumarNivat.SquarefreeProducts
+module
+
+public import KumarNivat.RayChainRelaxationMinkowski
+public import KumarNivat.RayChainPairedFacets
+public import KumarNivat.FirstFailedFacetWedge
+public import KumarNivat.SquarefreeProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

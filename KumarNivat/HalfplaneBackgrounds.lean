@@ -1,7 +1,11 @@
-import KumarNivat.RegionalBackground
-import KumarNivat.PrimitiveRetention
-import KumarNivat.TangentNormals
-import KumarNivat.HalfplaneRecurrence
+module
+
+public import KumarNivat.RegionalBackground
+public import KumarNivat.PrimitiveRetention
+public import KumarNivat.TangentNormals
+public import KumarNivat.HalfplaneRecurrence
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,4 +1,8 @@
-import KumarNivat.StableRegions
+module
+
+public import KumarNivat.StableRegions
+
+@[expose] public section
 
 namespace KumarNivat
 

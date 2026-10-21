@@ -1,4 +1,8 @@
-import KumarNivat.NewtonEnvelopeAffine
+module
+
+public import KumarNivat.NewtonEnvelopeAffine
+
+@[expose] public section
 
 namespace KumarNivat
 

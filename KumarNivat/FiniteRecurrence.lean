@@ -1,6 +1,10 @@
-import KumarNivat.RecurrenceEquality
-import KumarNivat.PeriodLattice
-import Mathlib.Data.Nat.Factorial.Basic
+module
+
+public import KumarNivat.RecurrenceEquality
+public import KumarNivat.PeriodLattice
+public import Mathlib.Data.Nat.Factorial.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

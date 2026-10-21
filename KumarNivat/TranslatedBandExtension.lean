@@ -1,4 +1,8 @@
-import KumarNivat.BoundedBandExtension
+module
+
+public import KumarNivat.BoundedBandExtension
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,4 +1,8 @@
-import KumarNivat.PositiveProductSupport
+module
+
+public import KumarNivat.PositiveProductSupport
+
+@[expose] public section
 
 namespace KumarNivat
 

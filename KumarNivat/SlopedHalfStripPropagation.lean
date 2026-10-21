@@ -1,6 +1,10 @@
-import KumarNivat.HalfStripSlabs
-import KumarNivat.ExtremalSlopeFactors
-import KumarNivat.WedgeSlabPropagation
+module
+
+public import KumarNivat.HalfStripSlabs
+public import KumarNivat.ExtremalSlopeFactors
+public import KumarNivat.WedgeSlabPropagation
+
+@[expose] public section
 
 namespace KumarNivat
 

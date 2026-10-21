@@ -1,6 +1,10 @@
-import KumarNivat.DirectionalGrouping
-import KumarNivat.LaurentNormalization
-import KumarNivat.WedgeFactorAssembly
+module
+
+public import KumarNivat.DirectionalGrouping
+public import KumarNivat.LaurentNormalization
+public import KumarNivat.WedgeFactorAssembly
+
+@[expose] public section
 
 namespace KumarNivat
 

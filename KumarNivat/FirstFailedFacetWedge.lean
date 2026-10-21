@@ -1,6 +1,10 @@
-import KumarNivat.PolyhedralFailureLayers
-import KumarNivat.FailedFacetWedge
-import KumarNivat.StableRegions
+module
+
+public import KumarNivat.PolyhedralFailureLayers
+public import KumarNivat.FailedFacetWedge
+public import KumarNivat.StableRegions
+
+@[expose] public section
 
 namespace KumarNivat
 

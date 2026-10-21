@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainRealMinkowski
-import KumarNivat.PairedStructureRayChainFacets
+module
+
+public import KumarNivat.PairedStructureRayChainRealMinkowski
+public import KumarNivat.PairedStructureRayChainFacets
+
+@[expose] public section
 
 open Filter Topology
 

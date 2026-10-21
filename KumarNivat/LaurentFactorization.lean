@@ -1,8 +1,12 @@
-import KumarNivat.LaurentAlgebra
-import Mathlib.Algebra.Polynomial.Laurent
-import Mathlib.RingTheory.Polynomial.UniqueFactorization
-import Mathlib.GroupTheory.MonoidLocalization.UniqueFactorization
-import Mathlib.RingTheory.UniqueFactorizationDomain.GCDMonoid
+module
+
+public import KumarNivat.LaurentAlgebra
+public import Mathlib.Algebra.Polynomial.Laurent
+public import Mathlib.RingTheory.Polynomial.UniqueFactorization
+public import Mathlib.GroupTheory.MonoidLocalization.UniqueFactorization
+public import Mathlib.RingTheory.UniqueFactorizationDomain.GCDMonoid
+
+@[expose] public section
 
 namespace KumarNivat
 

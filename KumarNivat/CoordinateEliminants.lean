@@ -1,5 +1,9 @@
-import KumarNivat.LaurentEliminant
-import KumarNivat.AxisOperators
+module
+
+public import KumarNivat.LaurentEliminant
+public import KumarNivat.AxisOperators
+
+@[expose] public section
 
 namespace KumarNivat
 

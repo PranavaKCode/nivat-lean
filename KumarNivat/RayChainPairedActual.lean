@@ -1,7 +1,11 @@
-import KumarNivat.RayChainPairedLimit
-import KumarNivat.NewtonCyclicFactorOriginalAligned
-import KumarNivat.PairedStructureRayChainMatching
-import KumarNivat.PairedStructureWideStripMatching
+module
+
+public import KumarNivat.RayChainPairedLimit
+public import KumarNivat.NewtonCyclicFactorOriginalAligned
+public import KumarNivat.PairedStructureRayChainMatching
+public import KumarNivat.PairedStructureWideStripMatching
+
+@[expose] public section
 
 namespace KumarNivat
 

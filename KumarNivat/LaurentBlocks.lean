@@ -1,5 +1,9 @@
-import KumarNivat.LaurentFactorization
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import KumarNivat.LaurentFactorization
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 namespace KumarNivat
 

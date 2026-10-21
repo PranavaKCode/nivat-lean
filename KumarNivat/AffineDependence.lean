@@ -1,7 +1,11 @@
-import KumarNivat.Statement
-import KumarNivat.DimensionCount
-import Mathlib.Data.Set.Finite.Range
-import Mathlib.Tactic.Ring
+module
+
+public import KumarNivat.Statement
+public import KumarNivat.DimensionCount
+public import Mathlib.Data.Set.Finite.Range
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace KumarNivat
 

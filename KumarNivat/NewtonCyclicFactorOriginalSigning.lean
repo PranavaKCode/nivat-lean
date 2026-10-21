@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicFactorSort
-import KumarNivat.MonomialNewtonTranslation
+module
+
+public import KumarNivat.NewtonCyclicFactorSort
+public import KumarNivat.MonomialNewtonTranslation
+
+@[expose] public section
 
 namespace KumarNivat
 

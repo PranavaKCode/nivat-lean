@@ -1,6 +1,10 @@
-import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
-import Mathlib.LinearAlgebra.Dimension.Constructions
-import Lean.Elab.Tactic.Omega
+module
+
+public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+public import Mathlib.LinearAlgebra.Dimension.Constructions
+public import Lean.Elab.Tactic.Omega
+
+@[expose] public section
 
 namespace KumarNivat
 

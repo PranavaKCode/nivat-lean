@@ -1,5 +1,9 @@
-import KumarNivat.LocalAnnihilator
-import KumarNivat.DimensionCount
+module
+
+public import KumarNivat.LocalAnnihilator
+public import KumarNivat.DimensionCount
+
+@[expose] public section
 
 namespace KumarNivat
 

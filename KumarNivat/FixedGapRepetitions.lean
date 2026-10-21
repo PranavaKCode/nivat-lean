@@ -1,6 +1,10 @@
-import KumarNivat.FiniteWordDynamics
-import KumarNivat.OrbitLanguage
-import Mathlib.Order.Interval.Finset.Basic
+module
+
+public import KumarNivat.FiniteWordDynamics
+public import KumarNivat.OrbitLanguage
+public import Mathlib.Order.Interval.Finset.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

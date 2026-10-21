@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredChainFan
+module
+
+public import KumarNivat.AnchoredChainFan
+
+@[expose] public section
 
 namespace KumarNivat
 

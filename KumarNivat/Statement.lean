@@ -1,8 +1,12 @@
-import Mathlib.Data.Set.Card
-import Mathlib.Data.Int.Interval
-import Mathlib.Data.Finset.Prod
-import Mathlib.Algebra.Group.Prod
-import Mathlib.Data.Fintype.Pi
+module
+
+public import Mathlib.Data.Set.Card
+public import Mathlib.Data.Int.Interval
+public import Mathlib.Data.Finset.Prod
+public import Mathlib.Algebra.Group.Prod
+public import Mathlib.Data.Fintype.Pi
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.OrientedDifferenceProducts
-import KumarNivat.LaurentNormalization
+module
+
+public import KumarNivat.OrientedDifferenceProducts
+public import KumarNivat.LaurentNormalization
+
+@[expose] public section
 
 namespace KumarNivat
 

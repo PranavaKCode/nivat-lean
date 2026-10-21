@@ -1,5 +1,9 @@
-import KumarNivat.OutwardBandPeriods
-import KumarNivat.TangentPeriods
+module
+
+public import KumarNivat.OutwardBandPeriods
+public import KumarNivat.TangentPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

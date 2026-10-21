@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainFacets
-import KumarNivat.RayChainRelaxationNormals
+module
+
+public import KumarNivat.PairedStructureRayChainFacets
+public import KumarNivat.RayChainRelaxationNormals
+
+@[expose] public section
 
 namespace KumarNivat
 

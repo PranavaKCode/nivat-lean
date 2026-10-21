@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredCyclicSeedFailuresSequence
-import KumarNivat.AnchoredRelaxedChainUnions
-import KumarNivat.AnchoredSequenceLimits
+module
+
+public import KumarNivat.AnchoredCyclicSeedFailuresSequence
+public import KumarNivat.AnchoredRelaxedChainUnions
+public import KumarNivat.AnchoredSequenceLimits
+
+@[expose] public section
 
 open Filter Topology
 

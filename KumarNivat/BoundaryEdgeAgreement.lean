@@ -1,5 +1,9 @@
-import KumarNivat.TuplePatternPeriods
-import KumarNivat.GeneratedHalfplanes
+module
+
+public import KumarNivat.TuplePatternPeriods
+public import KumarNivat.GeneratedHalfplanes
+
+@[expose] public section
 
 namespace KumarNivat
 

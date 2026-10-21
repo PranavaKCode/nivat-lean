@@ -1,7 +1,11 @@
-import KumarNivat.NewtonHalfStripBases
-import KumarNivat.FactorDeletion
-import KumarNivat.PolygonHalfStrips
-import KumarNivat.AnchoredMaximalCyclic
+module
+
+public import KumarNivat.NewtonHalfStripBases
+public import KumarNivat.FactorDeletion
+public import KumarNivat.PolygonHalfStrips
+public import KumarNivat.AnchoredMaximalCyclic
+
+@[expose] public section
 
 namespace KumarNivat
 

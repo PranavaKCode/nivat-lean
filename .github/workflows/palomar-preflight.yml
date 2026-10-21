@@ -1,0 +1,31 @@
+name: Palomar mechanical preflight
+run-name: Palomar preflight for ${{ inputs.commit || github.sha }}
+
+# check branch pushes or a manually chosen public source snapshot.
+on:
+  push:
+    branches:
+      - palomar-submission
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Full 40-character commit SHA of the public source to verify
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  # the pinned verifier selects its runner, limits, sandbox, and kernel checks.
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@be7c1ad8f7c142dfd7a6abd65d40b5cbb310db0e
+    with:
+      repository: PranavaKCode/nivat-lean
+      commit: ${{ inputs.commit || github.sha }}
+      pipeline_commit: be7c1ad8f7c142dfd7a6abd65d40b5cbb310db0e
+      request_id: preflight001
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: >-
+        {"project_path":"","comparator_config_path":"comparator.json","formalization_metadata_path":"formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}

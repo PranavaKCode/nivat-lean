@@ -1,5 +1,9 @@
-import KumarNivat.LaurentBlocks
-import KumarNivat.LineAnnihilatorPeriods
+module
+
+public import KumarNivat.LaurentBlocks
+public import KumarNivat.LineAnnihilatorPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

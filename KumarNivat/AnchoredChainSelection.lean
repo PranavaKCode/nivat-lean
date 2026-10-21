@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredChainWalk
-import KumarNivat.AnchoredChainFan
+module
+
+public import KumarNivat.AnchoredChainWalk
+public import KumarNivat.AnchoredChainFan
+
+@[expose] public section
 
 open Filter Topology
 

@@ -1,6 +1,10 @@
-import KumarNivat.AdjoinedFacetRegions
-import KumarNivat.PolyhedralBoundaryAmbiguity
-import KumarNivat.WedgeFromAmbiguousEdgeNegative
+module
+
+public import KumarNivat.AdjoinedFacetRegions
+public import KumarNivat.PolyhedralBoundaryAmbiguity
+public import KumarNivat.WedgeFromAmbiguousEdgeNegative
+
+@[expose] public section
 
 namespace KumarNivat
 

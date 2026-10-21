@@ -1,4 +1,8 @@
-import KumarNivat.NewtonCyclicFacets
+module
+
+public import KumarNivat.NewtonCyclicFacets
+
+@[expose] public section
 
 namespace KumarNivat
 

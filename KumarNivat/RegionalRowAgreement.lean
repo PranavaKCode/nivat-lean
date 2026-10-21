@@ -1,5 +1,9 @@
-import KumarNivat.RegionalBackground
-import KumarNivat.PrimitiveDirections
+module
+
+public import KumarNivat.RegionalBackground
+public import KumarNivat.PrimitiveDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

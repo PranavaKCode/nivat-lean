@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredCyclicSeedFailures
-import KumarNivat.AnchoredIntegerExpansionFailures
-import KumarNivat.BoundaryLineRecurrences
-import KumarNivat.ShiftedConfigurations
+module
+
+public import KumarNivat.AnchoredCyclicSeedFailures
+public import KumarNivat.AnchoredIntegerExpansionFailures
+public import KumarNivat.BoundaryLineRecurrences
+public import KumarNivat.ShiftedConfigurations
+
+@[expose] public section
 
 namespace KumarNivat
 

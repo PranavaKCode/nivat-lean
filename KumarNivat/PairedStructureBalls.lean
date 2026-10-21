@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureOrbit
-import Mathlib.Analysis.Real.Sqrt
+module
+
+public import KumarNivat.PairedStructureOrbit
+public import Mathlib.Analysis.Real.Sqrt
+
+@[expose] public section
 
 namespace KumarNivat
 

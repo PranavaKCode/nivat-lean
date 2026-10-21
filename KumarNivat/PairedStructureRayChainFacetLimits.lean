@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainNormals
-import KumarNivat.PolyhedralLimits
+module
+
+public import KumarNivat.PairedStructureRayChainNormals
+public import KumarNivat.PolyhedralLimits
+
+@[expose] public section
 
 open Filter Topology
 

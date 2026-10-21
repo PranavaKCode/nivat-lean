@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureLocality
-import KumarNivat.PairedStructureRows
-import KumarNivat.RowFrames
+module
+
+public import KumarNivat.PairedStructureLocality
+public import KumarNivat.PairedStructureRows
+public import KumarNivat.RowFrames
+
+@[expose] public section
 
 namespace KumarNivat
 

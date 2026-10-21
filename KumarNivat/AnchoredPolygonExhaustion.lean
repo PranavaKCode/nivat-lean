@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredCyclicBases
+module
+
+public import KumarNivat.AnchoredCyclicBases
+
+@[expose] public section
 
 namespace KumarNivat
 

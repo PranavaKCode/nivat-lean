@@ -1,8 +1,12 @@
-import KumarNivat.Operators
-import Mathlib.Data.Set.Finite.Lemmas
-import Mathlib.Algebra.BigOperators.Finsupp.Basic
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.Linarith
+module
+
+public import KumarNivat.Operators
+public import Mathlib.Data.Set.Finite.Lemmas
+public import Mathlib.Algebra.BigOperators.Finsupp.Basic
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
+
+@[expose] public section
 
 namespace KumarNivat
 

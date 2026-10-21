@@ -1,4 +1,8 @@
-import KumarNivat
+module
+
+public import KumarNivat
+
+@[expose] public section
 
 -- inspect the requested proposition without mistaking it for a proved theorem.
 #print KumarNivat.FullNivat

@@ -1,5 +1,9 @@
-import KumarNivat.SecondRegionalPeriod
-import KumarNivat.InwardWedgeBackground
+module
+
+public import KumarNivat.SecondRegionalPeriod
+public import KumarNivat.InwardWedgeBackground
+
+@[expose] public section
 
 namespace KumarNivat
 

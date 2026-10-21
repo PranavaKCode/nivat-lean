@@ -1,8 +1,12 @@
-import KumarNivat.FilterCount
-import KumarNivat.FilteredWedge
-import KumarNivat.FactorBoxPlacement
-import KumarNivat.TangentNormals
-import KumarNivat.DefectRecurrences
+module
+
+public import KumarNivat.FilterCount
+public import KumarNivat.FilteredWedge
+public import KumarNivat.FactorBoxPlacement
+public import KumarNivat.TangentNormals
+public import KumarNivat.DefectRecurrences
+
+@[expose] public section
 
 namespace KumarNivat
 

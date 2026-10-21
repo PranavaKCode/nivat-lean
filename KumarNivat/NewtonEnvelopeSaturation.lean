@@ -1,5 +1,9 @@
-import KumarNivat.NewtonProductZonotope
-import Mathlib.Data.Int.Interval
+module
+
+public import KumarNivat.NewtonProductZonotope
+public import Mathlib.Data.Int.Interval
+
+@[expose] public section
 
 namespace KumarNivat
 

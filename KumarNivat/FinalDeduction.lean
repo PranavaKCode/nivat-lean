@@ -1,8 +1,12 @@
-import KumarNivat.PeriodicWedgeBound
-import KumarNivat.ThinRectangles
-import KumarNivat.OrbitLanguage
-import KumarNivat.KariSzabados
-import Mathlib.Topology.Instances.Int
+module
+
+public import KumarNivat.PeriodicWedgeBound
+public import KumarNivat.ThinRectangles
+public import KumarNivat.OrbitLanguage
+public import KumarNivat.KariSzabados
+public import Mathlib.Topology.Instances.Int
+
+@[expose] public section
 
 namespace KumarNivat
 

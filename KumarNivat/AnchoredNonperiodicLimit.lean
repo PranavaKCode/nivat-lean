@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredPhaseLimits
-import KumarNivat.PrimitiveRetention
-import KumarNivat.ShiftedConfigurations
+module
+
+public import KumarNivat.AnchoredPhaseLimits
+public import KumarNivat.PrimitiveRetention
+public import KumarNivat.ShiftedConfigurations
+
+@[expose] public section
 
 open Filter Topology
 

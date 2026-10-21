@@ -1,4 +1,8 @@
-import KumarNivat.FiniteWordDynamics
+module
+
+public import KumarNivat.FiniteWordDynamics
+
+@[expose] public section
 
 namespace KumarNivat
 

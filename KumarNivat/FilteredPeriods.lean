@@ -1,4 +1,8 @@
-import KumarNivat.LaurentAlgebra
+module
+
+public import KumarNivat.LaurentAlgebra
+
+@[expose] public section
 
 namespace KumarNivat
 

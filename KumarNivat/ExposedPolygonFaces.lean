@@ -1,6 +1,10 @@
-import KumarNivat.SupportingFaceVertices
-import KumarNivat.ExposedFaceData
-import KumarNivat.ThinRectangles
+module
+
+public import KumarNivat.SupportingFaceVertices
+public import KumarNivat.ExposedFaceData
+public import KumarNivat.ThinRectangles
+
+@[expose] public section
 
 namespace KumarNivat
 

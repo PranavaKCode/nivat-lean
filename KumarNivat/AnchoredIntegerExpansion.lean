@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredCyclicFacesResidual
-import Mathlib.Algebra.Group.Torsion
+module
+
+public import KumarNivat.AnchoredCyclicFacesResidual
+public import Mathlib.Algebra.Group.Torsion
+
+@[expose] public section
 
 namespace KumarNivat
 

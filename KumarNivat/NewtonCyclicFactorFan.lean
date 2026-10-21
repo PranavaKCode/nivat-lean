@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicFactorPrimitive
-import KumarNivat.NewtonCyclicFactorDouble
+module
+
+public import KumarNivat.NewtonCyclicFactorPrimitive
+public import KumarNivat.NewtonCyclicFactorDouble
+
+@[expose] public section
 
 namespace KumarNivat
 

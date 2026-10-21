@@ -1,7 +1,11 @@
-import KumarNivat.NewtonCyclicFactorWalk
-import KumarNivat.NewtonCyclicMinkowski
-import KumarNivat.NewtonCyclicFacets
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.NewtonCyclicFactorWalk
+public import KumarNivat.NewtonCyclicMinkowski
+public import KumarNivat.NewtonCyclicFacets
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

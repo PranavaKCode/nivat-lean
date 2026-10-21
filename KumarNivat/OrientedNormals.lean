@@ -1,4 +1,8 @@
-import KumarNivat.SupportingFaces
+module
+
+public import KumarNivat.SupportingFaces
+
+@[expose] public section
 
 namespace KumarNivat
 

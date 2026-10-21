@@ -1,6 +1,10 @@
-import KumarNivat.RayChainPairedActual
-import KumarNivat.NewtonEnvelopeUnitSegments
-import KumarNivat.FilterCount
+module
+
+public import KumarNivat.RayChainPairedActual
+public import KumarNivat.NewtonEnvelopeUnitSegments
+public import KumarNivat.FilterCount
+
+@[expose] public section
 
 namespace KumarNivat
 

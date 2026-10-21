@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredChainFan
-import KumarNivat.AnchoredChainWalk
-import KumarNivat.PolyhedralLimits
-import KumarNivat.NewtonCyclicFacets
+module
+
+public import KumarNivat.AnchoredChainFan
+public import KumarNivat.AnchoredChainWalk
+public import KumarNivat.PolyhedralLimits
+public import KumarNivat.NewtonCyclicFacets
+
+@[expose] public section
 
 open Filter Topology
 

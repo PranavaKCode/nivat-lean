@@ -1,6 +1,10 @@
-import KumarNivat.ExposedPolygonFaces
-import KumarNivat.BoundaryLineRecurrences
-import KumarNivat.BoundaryAmbiguity
+module
+
+public import KumarNivat.ExposedPolygonFaces
+public import KumarNivat.BoundaryLineRecurrences
+public import KumarNivat.BoundaryAmbiguity
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.PrimitiveRealLines
-import KumarNivat.PolygonStripPeriods
-import KumarNivat.ConvexNormalSlices
+module
+
+public import KumarNivat.PrimitiveRealLines
+public import KumarNivat.PolygonStripPeriods
+public import KumarNivat.ConvexNormalSlices
+
+@[expose] public section
 
 namespace KumarNivat
 

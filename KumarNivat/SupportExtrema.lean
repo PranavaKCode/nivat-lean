@@ -1,6 +1,10 @@
-import KumarNivat.LaurentAlgebra
-import Mathlib.Algebra.Order.Monoid.Prod
-import Mathlib.Algebra.MonoidAlgebra.Support
+module
+
+public import KumarNivat.LaurentAlgebra
+public import Mathlib.Algebra.Order.Monoid.Prod
+public import Mathlib.Algebra.MonoidAlgebra.Support
+
+@[expose] public section
 
 namespace KumarNivat
 

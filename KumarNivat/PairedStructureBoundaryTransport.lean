@@ -1,5 +1,9 @@
-import KumarNivat.PolyhedralRays
-import KumarNivat.AnchoredCompactness
+module
+
+public import KumarNivat.PolyhedralRays
+public import KumarNivat.AnchoredCompactness
+
+@[expose] public section
 
 open Filter Topology
 

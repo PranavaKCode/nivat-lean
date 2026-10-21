@@ -1,6 +1,10 @@
-import KumarNivat.Operators
-import Mathlib.Data.Int.AbsoluteValue
-import Mathlib.Tactic.Linarith
+module
+
+public import KumarNivat.Operators
+public import Mathlib.Data.Int.AbsoluteValue
+public import Mathlib.Tactic.Linarith
+
+@[expose] public section
 
 namespace KumarNivat
 

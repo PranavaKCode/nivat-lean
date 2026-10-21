@@ -1,6 +1,10 @@
-import KumarNivat.ForwardTransverseDefects
-import KumarNivat.TransverseWedgeOperators
-import KumarNivat.WedgeSlabPropagation
+module
+
+public import KumarNivat.ForwardTransverseDefects
+public import KumarNivat.TransverseWedgeOperators
+public import KumarNivat.WedgeSlabPropagation
+
+@[expose] public section
 
 namespace KumarNivat
 

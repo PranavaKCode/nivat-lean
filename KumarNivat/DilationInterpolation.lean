@@ -1,5 +1,9 @@
-import KumarNivat.PrimeDilation
-import Mathlib.Algebra.Polynomial.Eval.Defs
+module
+
+public import KumarNivat.PrimeDilation
+public import Mathlib.Algebra.Polynomial.Eval.Defs
+
+@[expose] public section
 
 namespace KumarNivat
 

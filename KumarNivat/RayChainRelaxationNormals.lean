@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainNormals
-import KumarNivat.AdjoinedFacetRegions
+module
+
+public import KumarNivat.PairedStructureRayChainNormals
+public import KumarNivat.AdjoinedFacetRegions
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,4 +1,8 @@
-import KumarNivat.IntegerWedgeSelectionProof
+module
+
+public import KumarNivat.IntegerWedgeSelectionProof
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,9 +1,13 @@
-import KumarNivat.RayChainRelaxationMinkowski
-import KumarNivat.RayChainPairedFacets
-import KumarNivat.PairedStructureRayChainAgreementStages
-import KumarNivat.PairedStructureBoundaryLimit
-import KumarNivat.PolyhedralFailureLayers
-import KumarNivat.SquarefreeProducts
+module
+
+public import KumarNivat.RayChainRelaxationMinkowski
+public import KumarNivat.RayChainPairedFacets
+public import KumarNivat.PairedStructureRayChainAgreementStages
+public import KumarNivat.PairedStructureBoundaryLimit
+public import KumarNivat.PolyhedralFailureLayers
+public import KumarNivat.SquarefreeProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.GeneratingSets
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
+module
+
+public import KumarNivat.GeneratingSets
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+
+@[expose] public section
 
 namespace KumarNivat
 

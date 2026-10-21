@@ -1,6 +1,10 @@
-import KumarNivat.HalfplaneRecurrence
-import KumarNivat.RegionalBackground
-import KumarNivat.FactorDeletion
+module
+
+public import KumarNivat.HalfplaneRecurrence
+public import KumarNivat.RegionalBackground
+public import KumarNivat.FactorDeletion
+
+@[expose] public section
 
 namespace KumarNivat
 

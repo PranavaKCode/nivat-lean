@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredCyclicFaces
-import KumarNivat.AnchoredMaximalCyclic
+module
+
+public import KumarNivat.AnchoredCyclicFaces
+public import KumarNivat.AnchoredMaximalCyclic
+
+@[expose] public section
 
 namespace KumarNivat
 

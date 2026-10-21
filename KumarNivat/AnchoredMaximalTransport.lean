@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredEnvelopeTranslation
+module
+
+public import KumarNivat.AnchoredEnvelopeTranslation
+
+@[expose] public section
 
 namespace KumarNivat
 

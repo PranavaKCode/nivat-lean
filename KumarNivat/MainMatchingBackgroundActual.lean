@@ -1,6 +1,10 @@
-import KumarNivat.MainMatchingBackgroundFan
-import KumarNivat.NewtonCyclicFactorOriginalAligned
-import KumarNivat.PairedStructureRayChainMatching
+module
+
+public import KumarNivat.MainMatchingBackgroundFan
+public import KumarNivat.NewtonCyclicFactorOriginalAligned
+public import KumarNivat.PairedStructureRayChainMatching
+
+@[expose] public section
 
 namespace KumarNivat
 

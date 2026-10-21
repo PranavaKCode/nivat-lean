@@ -1,7 +1,11 @@
-import KumarNivat.ConeObstruction
-import Mathlib.NumberTheory.Real.Irrational
-import Mathlib.Data.Set.Finite.Lattice
-import Mathlib.Tactic.FieldSimp
+module
+
+public import KumarNivat.ConeObstruction
+public import Mathlib.NumberTheory.Real.Irrational
+public import Mathlib.Data.Set.Finite.Lattice
+public import Mathlib.Tactic.FieldSimp
+
+@[expose] public section
 
 namespace KumarNivat
 

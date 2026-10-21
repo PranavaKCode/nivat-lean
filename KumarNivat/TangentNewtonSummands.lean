@@ -1,6 +1,10 @@
-import KumarNivat.TangentNewtonEndpoints
-import KumarNivat.PrimitiveUnitSegments
-import KumarNivat.TransverseWedgeOperators
+module
+
+public import KumarNivat.TangentNewtonEndpoints
+public import KumarNivat.PrimitiveUnitSegments
+public import KumarNivat.TransverseWedgeOperators
+
+@[expose] public section
 
 namespace KumarNivat
 

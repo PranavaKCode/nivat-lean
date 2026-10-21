@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredSourceSequences
-import KumarNivat.NewtonEnvelopeUnitSegments
-import KumarNivat.InitialWedgeFromHalfStrip
+module
+
+public import KumarNivat.AnchoredSourceSequences
+public import KumarNivat.NewtonEnvelopeUnitSegments
+public import KumarNivat.InitialWedgeFromHalfStrip
+
+@[expose] public section
 
 namespace KumarNivat
 

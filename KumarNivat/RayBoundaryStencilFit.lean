@@ -1,7 +1,11 @@
-import KumarNivat.ExposedFacetGeometry
-import KumarNivat.MinkowskiStencilFit
-import KumarNivat.SupportingFaceGeometry
-import KumarNivat.PairedDirections
+module
+
+public import KumarNivat.ExposedFacetGeometry
+public import KumarNivat.MinkowskiStencilFit
+public import KumarNivat.SupportingFaceGeometry
+public import KumarNivat.PairedDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

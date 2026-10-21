@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureLimits
-import KumarNivat.PairedStructureBalls
+module
+
+public import KumarNivat.PairedStructureLimits
+public import KumarNivat.PairedStructureBalls
+
+@[expose] public section
 
 open Filter Topology
 

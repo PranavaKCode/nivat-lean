@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredCompactness
-import KumarNivat.LatticeConvexity
+module
+
+public import KumarNivat.AnchoredCompactness
+public import KumarNivat.LatticeConvexity
+
+@[expose] public section
 
 open Filter Topology
 

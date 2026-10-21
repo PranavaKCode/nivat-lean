@@ -1,5 +1,9 @@
-import KumarNivat.ReflectionGeometry
-import KumarNivat.RegionalBackground
+module
+
+public import KumarNivat.ReflectionGeometry
+public import KumarNivat.RegionalBackground
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,4 +1,8 @@
-import KumarNivat.LineRecurrence
+module
+
+public import KumarNivat.LineRecurrence
+
+@[expose] public section
 
 namespace KumarNivat
 

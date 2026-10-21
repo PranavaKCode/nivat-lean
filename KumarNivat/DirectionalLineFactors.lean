@@ -1,6 +1,10 @@
-import KumarNivat.PrimitiveDirections
-import KumarNivat.AffineLineOperators
-import KumarNivat.LaurentUnits
+module
+
+public import KumarNivat.PrimitiveDirections
+public import KumarNivat.AffineLineOperators
+public import KumarNivat.LaurentUnits
+
+@[expose] public section
 
 namespace KumarNivat
 

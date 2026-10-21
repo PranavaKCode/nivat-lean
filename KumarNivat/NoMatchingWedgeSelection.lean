@@ -1,9 +1,13 @@
-import KumarNivat.AnchoredSourceSequences
-import KumarNivat.AnchoredNonperiodicChainSelection
-import KumarNivat.AnchoredNonperiodicLimit
-import KumarNivat.AnchoredRetainedPeriodFailures
-import KumarNivat.AnchoredFailedPeriodWedge
-import Mathlib.Topology.Instances.Int
+module
+
+public import KumarNivat.AnchoredSourceSequences
+public import KumarNivat.AnchoredNonperiodicChainSelection
+public import KumarNivat.AnchoredNonperiodicLimit
+public import KumarNivat.AnchoredRetainedPeriodFailures
+public import KumarNivat.AnchoredFailedPeriodWedge
+public import Mathlib.Topology.Instances.Int
+
+@[expose] public section
 
 namespace KumarNivat
 

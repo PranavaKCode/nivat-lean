@@ -1,6 +1,10 @@
-import KumarNivat.NewtonCyclicFactorFan
-import KumarNivat.AnchoredCyclicRotation
-import KumarNivat.PrimitiveDirections
+module
+
+public import KumarNivat.NewtonCyclicFactorFan
+public import KumarNivat.AnchoredCyclicRotation
+public import KumarNivat.PrimitiveDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

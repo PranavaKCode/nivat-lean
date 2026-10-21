@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredIntegerExpansion
-import KumarNivat.AnchoredExhaustionWidths
+module
+
+public import KumarNivat.AnchoredIntegerExpansion
+public import KumarNivat.AnchoredExhaustionWidths
+
+@[expose] public section
 
 namespace KumarNivat
 

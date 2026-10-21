@@ -1,7 +1,11 @@
-import KumarNivat.NewtonCyclicFactorWalk
-import KumarNivat.NewtonProductZonotope
-import Mathlib.Algebra.Group.Pointwise.Set.BigOperators
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import KumarNivat.NewtonCyclicFactorWalk
+public import KumarNivat.NewtonProductZonotope
+public import Mathlib.Algebra.Group.Pointwise.Set.BigOperators
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 namespace KumarNivat
 

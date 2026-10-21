@@ -1,7 +1,11 @@
-import KumarNivat.InitialPeriodicBand
-import KumarNivat.OrientedPairedData
-import KumarNivat.KariSzabados
-import KumarNivat.SquarefreeProducts
+module
+
+public import KumarNivat.InitialPeriodicBand
+public import KumarNivat.OrientedPairedData
+public import KumarNivat.KariSzabados
+public import KumarNivat.SquarefreeProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicMinkowski
-import KumarNivat.AnchoredChainLengths
+module
+
+public import KumarNivat.NewtonCyclicMinkowski
+public import KumarNivat.AnchoredChainLengths
+
+@[expose] public section
 
 open Filter Topology
 

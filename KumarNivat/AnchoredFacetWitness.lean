@@ -1,4 +1,8 @@
-import KumarNivat.GeometricFacetContinuation
+module
+
+public import KumarNivat.GeometricFacetContinuation
+
+@[expose] public section
 
 namespace KumarNivat
 

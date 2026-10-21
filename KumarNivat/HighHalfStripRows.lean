@@ -1,6 +1,10 @@
-import KumarNivat.HalfOpenRayRows
-import KumarNivat.LocalRowSelection
-import KumarNivat.HalfStripTuplePeriods
+module
+
+public import KumarNivat.HalfOpenRayRows
+public import KumarNivat.LocalRowSelection
+public import KumarNivat.HalfStripTuplePeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

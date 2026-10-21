@@ -1,5 +1,9 @@
-import KumarNivat.LineRecurrence
-import KumarNivat.LaurentAlgebra
+module
+
+public import KumarNivat.LineRecurrence
+public import KumarNivat.LaurentAlgebra
+
+@[expose] public section
 
 namespace KumarNivat
 

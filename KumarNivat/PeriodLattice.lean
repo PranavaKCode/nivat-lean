@@ -1,5 +1,9 @@
-import KumarNivat.RetainedDisagreement
-import KumarNivat.FilteredPeriods
+module
+
+public import KumarNivat.RetainedDisagreement
+public import KumarNivat.FilteredPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

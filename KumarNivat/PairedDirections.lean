@@ -1,5 +1,9 @@
-import KumarNivat.OrientedNormals
-import KumarNivat.AnnihilatorDirections
+module
+
+public import KumarNivat.OrientedNormals
+public import KumarNivat.AnnihilatorDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

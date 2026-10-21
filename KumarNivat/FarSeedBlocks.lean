@@ -1,4 +1,8 @@
-import KumarNivat.TransportedSeedEqualities
+module
+
+public import KumarNivat.TransportedSeedEqualities
+
+@[expose] public section
 
 namespace KumarNivat
 

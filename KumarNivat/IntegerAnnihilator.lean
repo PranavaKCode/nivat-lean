@@ -1,7 +1,11 @@
-import KumarNivat.Alphabets
-import KumarNivat.LocalAnnihilator
-import Mathlib.Data.Rat.Defs
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import KumarNivat.Alphabets
+public import KumarNivat.LocalAnnihilator
+public import Mathlib.Data.Rat.Defs
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.AffineDependence
-import KumarNivat.ConeObstruction
+module
+
+public import KumarNivat.AffineDependence
+public import KumarNivat.ConeObstruction
+
+@[expose] public section
 
 namespace KumarNivat
 

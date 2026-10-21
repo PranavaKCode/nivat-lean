@@ -1,5 +1,9 @@
-import KumarNivat.OrbitLanguage
-import Mathlib.Data.Nat.Find
+module
+
+public import KumarNivat.OrbitLanguage
+public import Mathlib.Data.Nat.Find
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.SupportExtrema
-import KumarNivat.TangentNormals
-import KumarNivat.EulerOperators
+module
+
+public import KumarNivat.SupportExtrema
+public import KumarNivat.TangentNormals
+public import KumarNivat.EulerOperators
+
+@[expose] public section
 
 namespace KumarNivat
 

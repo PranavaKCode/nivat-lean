@@ -1,4 +1,8 @@
-import KumarNivat.PairedStructureFiberCard
+module
+
+public import KumarNivat.PairedStructureFiberCard
+
+@[expose] public section
 
 open Filter Topology
 

@@ -1,7 +1,11 @@
-import KumarNivat.DefectHalfplanes
-import KumarNivat.PeriodLattice
-import Mathlib.Data.Rat.Floor
-import Mathlib.Tactic.FieldSimp
+module
+
+public import KumarNivat.DefectHalfplanes
+public import KumarNivat.PeriodLattice
+public import Mathlib.Data.Rat.Floor
+public import Mathlib.Tactic.FieldSimp
+
+@[expose] public section
 
 namespace KumarNivat
 

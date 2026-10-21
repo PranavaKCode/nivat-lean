@@ -1,6 +1,10 @@
-import KumarNivat.CoefficientLocalization
-import KumarNivat.LocalizationCoprime
-import KumarNivat.LaurentBezout
+module
+
+public import KumarNivat.CoefficientLocalization
+public import KumarNivat.LocalizationCoprime
+public import KumarNivat.LaurentBezout
+
+@[expose] public section
 
 namespace KumarNivat
 

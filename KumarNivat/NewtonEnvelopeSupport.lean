@@ -1,8 +1,12 @@
-import KumarNivat.FactorDeletion
-import KumarNivat.MonomialNewtonTranslation
-import KumarNivat.TangentNewtonEndpoints
-import KumarNivat.TransverseWedgeOperators
-import KumarNivat.HalfplaneRecurrence
+module
+
+public import KumarNivat.FactorDeletion
+public import KumarNivat.MonomialNewtonTranslation
+public import KumarNivat.TangentNewtonEndpoints
+public import KumarNivat.TransverseWedgeOperators
+public import KumarNivat.HalfplaneRecurrence
+
+@[expose] public section
 
 namespace KumarNivat
 

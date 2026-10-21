@@ -1,5 +1,9 @@
-import KumarNivat.Operators
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import KumarNivat.Operators
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 namespace KumarNivat
 

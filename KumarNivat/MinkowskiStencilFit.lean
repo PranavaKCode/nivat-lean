@@ -1,5 +1,9 @@
-import KumarNivat.ExposedFaceData
-import KumarNivat.FacetRecurrences
+module
+
+public import KumarNivat.ExposedFaceData
+public import KumarNivat.FacetRecurrences
+
+@[expose] public section
 
 namespace KumarNivat
 

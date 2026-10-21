@@ -1,5 +1,9 @@
-import KumarNivat.LaurentFactorization
-import Mathlib.RingTheory.Localization.FractionRing
+module
+
+public import KumarNivat.LaurentFactorization
+public import Mathlib.RingTheory.Localization.FractionRing
+
+@[expose] public section
 
 namespace KumarNivat
 

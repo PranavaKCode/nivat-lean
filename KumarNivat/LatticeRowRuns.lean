@@ -1,6 +1,10 @@
-import KumarNivat.LineFaceGeometry
-import Mathlib.Algebra.Order.Floor.Ring
-import Mathlib.Tactic.Choose
+module
+
+public import KumarNivat.LineFaceGeometry
+public import Mathlib.Algebra.Order.Floor.Ring
+public import Mathlib.Tactic.Choose
+
+@[expose] public section
 
 namespace KumarNivat
 

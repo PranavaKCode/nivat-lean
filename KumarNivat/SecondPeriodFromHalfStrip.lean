@@ -1,7 +1,11 @@
-import KumarNivat.RegionalBandSweeps
-import KumarNivat.FarSeedBlocks
-import KumarNivat.InwardPeriodicBands
-import KumarNivat.PrimitiveRetention
+module
+
+public import KumarNivat.RegionalBandSweeps
+public import KumarNivat.FarSeedBlocks
+public import KumarNivat.InwardPeriodicBands
+public import KumarNivat.PrimitiveRetention
+
+@[expose] public section
 
 namespace KumarNivat
 

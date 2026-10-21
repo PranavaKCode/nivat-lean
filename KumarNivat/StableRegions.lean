@@ -1,6 +1,10 @@
-import KumarNivat.ShiftedConfigurations
-import KumarNivat.RegionalBackground
-import KumarNivat.HalfplaneRecurrence
+module
+
+public import KumarNivat.ShiftedConfigurations
+public import KumarNivat.RegionalBackground
+public import KumarNivat.HalfplaneRecurrence
+
+@[expose] public section
 
 namespace KumarNivat
 

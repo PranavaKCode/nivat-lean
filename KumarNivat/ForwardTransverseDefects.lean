@@ -1,7 +1,11 @@
-import KumarNivat.FactorDeletion
-import KumarNivat.HalfplaneRecurrence
-import KumarNivat.PrimitiveDirections
-import KumarNivat.StableRegions
+module
+
+public import KumarNivat.FactorDeletion
+public import KumarNivat.HalfplaneRecurrence
+public import KumarNivat.PrimitiveDirections
+public import KumarNivat.StableRegions
+
+@[expose] public section
 
 namespace KumarNivat
 

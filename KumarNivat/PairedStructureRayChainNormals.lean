@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainCones
-import KumarNivat.PairedStructureRayChainSlopes
+module
+
+public import KumarNivat.PairedStructureRayChainCones
+public import KumarNivat.PairedStructureRayChainSlopes
+
+@[expose] public section
 
 namespace KumarNivat
 

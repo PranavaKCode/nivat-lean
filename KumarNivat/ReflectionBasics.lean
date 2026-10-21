@@ -1,5 +1,9 @@
-import KumarNivat.MinkowskiStencilFit
-import KumarNivat.GeneratingSets
+module
+
+public import KumarNivat.MinkowskiStencilFit
+public import KumarNivat.GeneratingSets
+
+@[expose] public section
 
 namespace KumarNivat
 

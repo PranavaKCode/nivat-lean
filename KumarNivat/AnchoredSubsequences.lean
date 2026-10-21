@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredCompactness
-import Mathlib.Order.WellQuasiOrder
+module
+
+public import KumarNivat.AnchoredCompactness
+public import Mathlib.Order.WellQuasiOrder
+
+@[expose] public section
 
 open Filter Topology
 

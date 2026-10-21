@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainCones
-import KumarNivat.FirstFailedRegionPeriods
+module
+
+public import KumarNivat.PairedStructureRayChainCones
+public import KumarNivat.FirstFailedRegionPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

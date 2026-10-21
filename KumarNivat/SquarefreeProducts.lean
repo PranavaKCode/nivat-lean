@@ -1,8 +1,12 @@
-import KumarNivat.BinomialCoprime
-import KumarNivat.DistinctDirectionProducts
-import KumarNivat.LaurentFactorization
-import KumarNivat.CommonAnnihilatorDivisor
-import KumarNivat.KariSzabados
+module
+
+public import KumarNivat.BinomialCoprime
+public import KumarNivat.DistinctDirectionProducts
+public import KumarNivat.LaurentFactorization
+public import KumarNivat.CommonAnnihilatorDivisor
+public import KumarNivat.KariSzabados
+
+@[expose] public section
 
 namespace KumarNivat
 

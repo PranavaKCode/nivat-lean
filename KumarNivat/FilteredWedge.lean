@@ -1,4 +1,8 @@
-import KumarNivat.WedgeSaturation
+module
+
+public import KumarNivat.WedgeSaturation
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredChainUnion
+module
+
+public import KumarNivat.AnchoredChainUnion
+
+@[expose] public section
 
 namespace KumarNivat
 

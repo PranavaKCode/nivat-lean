@@ -1,5 +1,9 @@
-import KumarNivat.ReflectionPeriods
-import KumarNivat.SecondRegionalPeriod
+module
+
+public import KumarNivat.ReflectionPeriods
+public import KumarNivat.SecondRegionalPeriod
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.NewtonProductGeometry
-import Mathlib.Data.ZMod.Basic
+module
+
+public import KumarNivat.NewtonProductGeometry
+public import Mathlib.Data.ZMod.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

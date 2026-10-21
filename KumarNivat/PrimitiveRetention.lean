@@ -1,5 +1,9 @@
-import KumarNivat.PrimitiveDirections
-import KumarNivat.PeriodBinomials
+module
+
+public import KumarNivat.PrimitiveDirections
+public import KumarNivat.PeriodBinomials
+
+@[expose] public section
 
 namespace KumarNivat
 

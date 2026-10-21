@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureFiberLocal
-import KumarNivat.PairedStructureMinimal
-import Mathlib.Data.Nat.Find
+module
+
+public import KumarNivat.PairedStructureFiberLocal
+public import KumarNivat.PairedStructureMinimal
+public import Mathlib.Data.Nat.Find
+
+@[expose] public section
 
 namespace KumarNivat
 

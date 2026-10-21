@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureBalls
-import Mathlib.Topology.Instances.Real.Lemmas
+module
+
+public import KumarNivat.PairedStructureBalls
+public import Mathlib.Topology.Instances.Real.Lemmas
+
+@[expose] public section
 
 open Filter Topology
 

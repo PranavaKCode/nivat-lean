@@ -1,5 +1,9 @@
-import KumarNivat.BinomialCoprime
-import Mathlib.Data.Int.GCD
+module
+
+public import KumarNivat.BinomialCoprime
+public import Mathlib.Data.Int.GCD
+
+@[expose] public section
 
 namespace KumarNivat
 

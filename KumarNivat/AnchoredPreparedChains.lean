@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredSequenceTails
+module
+
+public import KumarNivat.AnchoredSequenceTails
+
+@[expose] public section
 
 open Filter Topology
 

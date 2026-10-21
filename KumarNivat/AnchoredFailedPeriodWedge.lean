@@ -1,7 +1,11 @@
-import KumarNivat.AnchoredChainFan
-import KumarNivat.FailedFacetWedgeNegative
-import KumarNivat.OrientedPairedData
-import KumarNivat.SquarefreeProducts
+module
+
+public import KumarNivat.AnchoredChainFan
+public import KumarNivat.FailedFacetWedgeNegative
+public import KumarNivat.OrientedPairedData
+public import KumarNivat.SquarefreeProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

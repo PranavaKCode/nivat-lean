@@ -1,5 +1,9 @@
-import KumarNivat.PartialRecurrences
-import KumarNivat.LineOperators
+module
+
+public import KumarNivat.PartialRecurrences
+public import KumarNivat.LineOperators
+
+@[expose] public section
 
 namespace KumarNivat
 

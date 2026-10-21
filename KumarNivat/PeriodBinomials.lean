@@ -1,5 +1,9 @@
-import KumarNivat.PeriodLattice
-import Mathlib.Algebra.Ring.GeomSum
+module
+
+public import KumarNivat.PeriodLattice
+public import Mathlib.Algebra.Ring.GeomSum
+
+@[expose] public section
 
 namespace KumarNivat
 

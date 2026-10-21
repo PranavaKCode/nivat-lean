@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureRayChainRegions
-import KumarNivat.PairedStructureRayChainSlopes
-import KumarNivat.SquarefreeProducts
+module
+
+public import KumarNivat.PairedStructureRayChainRegions
+public import KumarNivat.PairedStructureRayChainSlopes
+public import KumarNivat.SquarefreeProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

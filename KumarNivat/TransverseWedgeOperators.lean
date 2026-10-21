@@ -1,7 +1,11 @@
-import KumarNivat.OrientedDifferenceProducts
-import KumarNivat.PositiveProductSupport
-import KumarNivat.ExtremalSlopeFactors
-import Mathlib.Algebra.Order.BigOperators.Group.List
+module
+
+public import KumarNivat.OrientedDifferenceProducts
+public import KumarNivat.PositiveProductSupport
+public import KumarNivat.ExtremalSlopeFactors
+public import Mathlib.Algebra.Order.BigOperators.Group.List
+
+@[expose] public section
 
 namespace KumarNivat
 

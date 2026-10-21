@@ -1,5 +1,9 @@
-import KumarNivat.WindowRelations
-import KumarNivat.QuadraticOperator
+module
+
+public import KumarNivat.WindowRelations
+public import KumarNivat.QuadraticOperator
+
+@[expose] public section
 
 namespace KumarNivat
 

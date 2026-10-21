@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredRelaxedChainUnions
-import KumarNivat.AnchoredEnvelopeLengthsResidual
-import KumarNivat.AnchoredResidualConvexity
+module
+
+public import KumarNivat.AnchoredRelaxedChainUnions
+public import KumarNivat.AnchoredEnvelopeLengthsResidual
+public import KumarNivat.AnchoredResidualConvexity
+
+@[expose] public section
 
 open Filter Topology
 

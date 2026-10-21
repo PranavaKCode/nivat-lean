@@ -1,5 +1,9 @@
-import KumarNivat.OrientedNormals
-import KumarNivat.LatticeConvexity
+module
+
+public import KumarNivat.OrientedNormals
+public import KumarNivat.LatticeConvexity
+
+@[expose] public section
 
 namespace KumarNivat
 

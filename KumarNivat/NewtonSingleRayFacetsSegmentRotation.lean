@@ -1,5 +1,9 @@
-import KumarNivat.NewtonSingleRayFacetsSegment
-import KumarNivat.AnchoredCyclicRotation
+module
+
+public import KumarNivat.NewtonSingleRayFacetsSegment
+public import KumarNivat.AnchoredCyclicRotation
+
+@[expose] public section
 
 namespace KumarNivat
 

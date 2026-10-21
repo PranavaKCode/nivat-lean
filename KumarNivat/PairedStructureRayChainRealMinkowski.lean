@@ -1,4 +1,8 @@
-import KumarNivat.PairedStructureRayChainRealOrder
+module
+
+public import KumarNivat.PairedStructureRayChainRealOrder
+
+@[expose] public section
 
 namespace KumarNivat
 

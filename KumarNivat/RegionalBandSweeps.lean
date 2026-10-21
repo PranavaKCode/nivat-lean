@@ -1,4 +1,8 @@
-import KumarNivat.BandSweepSteps
+module
+
+public import KumarNivat.BandSweepSteps
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.HalfplaneBackgrounds
-import KumarNivat.GlobalPeriodsFromBands
-import KumarNivat.InitialPeriodicBand
+module
+
+public import KumarNivat.HalfplaneBackgrounds
+public import KumarNivat.GlobalPeriodsFromBands
+public import KumarNivat.InitialPeriodicBand
+
+@[expose] public section
 
 namespace KumarNivat
 

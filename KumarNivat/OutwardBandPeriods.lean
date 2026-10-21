@@ -1,6 +1,10 @@
-import KumarNivat.TranslatedBandExtension
-import KumarNivat.RegionalBackground
-import Mathlib.Data.Nat.Factorial.Basic
+module
+
+public import KumarNivat.TranslatedBandExtension
+public import KumarNivat.RegionalBackground
+public import Mathlib.Data.Nat.Factorial.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredConstructedChain
-import KumarNivat.PrimitiveRetention
-import KumarNivat.OrbitLanguage
+module
+
+public import KumarNivat.AnchoredConstructedChain
+public import KumarNivat.PrimitiveRetention
+public import KumarNivat.OrbitLanguage
+
+@[expose] public section
 
 open Filter Topology
 

@@ -1,5 +1,9 @@
-import KumarNivat.CoordinateEliminants
-import KumarNivat.LaurentMaps
+module
+
+public import KumarNivat.CoordinateEliminants
+public import KumarNivat.LaurentMaps
+
+@[expose] public section
 
 namespace KumarNivat
 

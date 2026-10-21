@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredIntegerExpansionHalfStrips
-import KumarNivat.AnchoredIntegerExpansionLayers
-import KumarNivat.AnchoredExpansionFailures
+module
+
+public import KumarNivat.AnchoredIntegerExpansionHalfStrips
+public import KumarNivat.AnchoredIntegerExpansionLayers
+public import KumarNivat.AnchoredExpansionFailures
+
+@[expose] public section
 
 namespace KumarNivat
 

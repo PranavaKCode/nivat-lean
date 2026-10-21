@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredActualSequences
+module
+
+public import KumarNivat.AnchoredActualSequences
+
+@[expose] public section
 
 namespace KumarNivat
 

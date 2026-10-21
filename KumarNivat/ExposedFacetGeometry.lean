@@ -1,4 +1,8 @@
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

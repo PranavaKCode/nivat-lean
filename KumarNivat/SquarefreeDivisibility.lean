@@ -1,4 +1,8 @@
-import Mathlib.Algebra.Squarefree.Basic
+module
+
+public import Mathlib.Algebra.Squarefree.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,7 +1,11 @@
-import KumarNivat.NewtonEnvelopeCentering
-import KumarNivat.NewtonEnvelopeDilates
-import KumarNivat.NewtonEnvelopeResidual
-import KumarNivat.NewtonEnvelopeSupport
+module
+
+public import KumarNivat.NewtonEnvelopeCentering
+public import KumarNivat.NewtonEnvelopeDilates
+public import KumarNivat.NewtonEnvelopeResidual
+public import KumarNivat.NewtonEnvelopeSupport
+
+@[expose] public section
 
 namespace KumarNivat
 

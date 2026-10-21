@@ -1,7 +1,11 @@
-import KumarNivat.OrbitLanguage
-import Mathlib.Topology.Sequences
-import Mathlib.Topology.Compactness.Compact
-import Mathlib.Order.Filter.Finite
+module
+
+public import KumarNivat.OrbitLanguage
+public import Mathlib.Topology.Sequences
+public import Mathlib.Topology.Compactness.Compact
+public import Mathlib.Order.Filter.Finite
+
+@[expose] public section
 
 open Filter Topology
 

@@ -1,5 +1,9 @@
-import KumarNivat.ColleAnchoredPreparationEndpoint
-import KumarNivat.ColleAnchoredRetainedFacet
+module
+
+public import KumarNivat.ColleAnchoredPreparationEndpoint
+public import KumarNivat.ColleAnchoredRetainedFacet
+
+@[expose] public section
 
 namespace KumarNivat
 

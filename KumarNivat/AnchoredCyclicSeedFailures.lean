@@ -1,7 +1,11 @@
-import KumarNivat.CyclicExposedFacetData
-import KumarNivat.AnchoredCyclicFacesResidual
-import KumarNivat.AnchoredIntegerExpansionLayers
-import KumarNivat.AnchoredStableSeeds
+module
+
+public import KumarNivat.CyclicExposedFacetData
+public import KumarNivat.AnchoredCyclicFacesResidual
+public import KumarNivat.AnchoredIntegerExpansionLayers
+public import KumarNivat.AnchoredStableSeeds
+
+@[expose] public section
 
 namespace KumarNivat
 

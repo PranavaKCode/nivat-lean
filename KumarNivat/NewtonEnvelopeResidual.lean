@@ -1,4 +1,8 @@
-import KumarNivat.NewtonEnvelopeSaturation
+module
+
+public import KumarNivat.NewtonEnvelopeSaturation
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.ReflectionPeriods
-import KumarNivat.InwardWedgeBackground
+module
+
+public import KumarNivat.ReflectionPeriods
+public import KumarNivat.InwardWedgeBackground
+
+@[expose] public section
 
 namespace KumarNivat
 

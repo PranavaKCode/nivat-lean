@@ -1,5 +1,9 @@
-import KumarNivat.MinimalDiscrepancy
-import KumarNivat.NoncollinearSites
+module
+
+public import KumarNivat.MinimalDiscrepancy
+public import KumarNivat.NoncollinearSites
+
+@[expose] public section
 
 namespace KumarNivat
 

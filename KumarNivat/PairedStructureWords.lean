@@ -1,4 +1,8 @@
-import KumarNivat.WordComplexity
+module
+
+public import KumarNivat.WordComplexity
+
+@[expose] public section
 
 namespace KumarNivat
 

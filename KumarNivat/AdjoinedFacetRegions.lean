@@ -1,4 +1,8 @@
-import KumarNivat.PolyhedralRays
+module
+
+public import KumarNivat.PolyhedralRays
+
+@[expose] public section
 
 namespace KumarNivat
 

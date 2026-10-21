@@ -1,6 +1,10 @@
-import KumarNivat.ObservableCount
-import Mathlib.Algebra.MonoidAlgebra.Basic
-import Mathlib.Algebra.MonoidAlgebra.NoZeroDivisors
+module
+
+public import KumarNivat.ObservableCount
+public import Mathlib.Algebra.MonoidAlgebra.Basic
+public import Mathlib.Algebra.MonoidAlgebra.NoZeroDivisors
+
+@[expose] public section
 
 namespace KumarNivat
 

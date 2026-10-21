@@ -1,6 +1,10 @@
-import KumarNivat.PatternRestriction
-import KumarNivat.OrbitLanguage
-import Mathlib.Topology.Instances.Real.Lemmas
+module
+
+public import KumarNivat.PatternRestriction
+public import KumarNivat.OrbitLanguage
+public import Mathlib.Topology.Instances.Real.Lemmas
+
+@[expose] public section
 
 namespace KumarNivat
 

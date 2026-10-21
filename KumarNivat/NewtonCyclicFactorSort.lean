@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicFactorOrientation
-import Mathlib.Data.List.Sort
+module
+
+public import KumarNivat.NewtonCyclicFactorOrientation
+public import Mathlib.Data.List.Sort
+
+@[expose] public section
 
 namespace KumarNivat
 

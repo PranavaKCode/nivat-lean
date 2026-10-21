@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureOrbit
-import KumarNivat.AnchoredCompactness
-import Mathlib.Order.Zorn
+module
+
+public import KumarNivat.PairedStructureOrbit
+public import KumarNivat.AnchoredCompactness
+public import Mathlib.Order.Zorn
+
+@[expose] public section
 
 namespace KumarNivat
 

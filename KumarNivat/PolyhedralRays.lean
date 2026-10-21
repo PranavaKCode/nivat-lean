@@ -1,5 +1,9 @@
-import KumarNivat.LatticeConvexity
-import KumarNivat.HalfplaneBackgrounds
+module
+
+public import KumarNivat.LatticeConvexity
+public import KumarNivat.HalfplaneBackgrounds
+
+@[expose] public section
 
 namespace KumarNivat
 

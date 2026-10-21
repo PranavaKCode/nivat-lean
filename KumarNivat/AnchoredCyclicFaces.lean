@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredCyclicFacesNonnegative
+module
+
+public import KumarNivat.AnchoredCyclicFacesNonnegative
+
+@[expose] public section
 
 namespace KumarNivat
 

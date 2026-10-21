@@ -1,5 +1,9 @@
-import KumarNivat.OrientedNormals
-import Mathlib.Algebra.Order.Field.Rat
+module
+
+public import KumarNivat.OrientedNormals
+public import Mathlib.Algebra.Order.Field.Rat
+
+@[expose] public section
 
 namespace KumarNivat
 

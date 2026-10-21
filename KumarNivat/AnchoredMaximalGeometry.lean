@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredMaximalOrbit
+module
+
+public import KumarNivat.AnchoredMaximalOrbit
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.SecondPeriodFromHalfStrip
-import KumarNivat.LocalHalfStripPeriods
-import KumarNivat.HighHalfStripRows
+module
+
+public import KumarNivat.SecondPeriodFromHalfStrip
+public import KumarNivat.LocalHalfStripPeriods
+public import KumarNivat.HighHalfStripRows
+
+@[expose] public section
 
 namespace KumarNivat
 

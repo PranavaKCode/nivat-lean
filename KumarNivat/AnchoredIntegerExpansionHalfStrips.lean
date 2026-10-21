@@ -1,6 +1,10 @@
-import KumarNivat.AnchoredIntegerExpansionSupports
-import KumarNivat.NewtonSingleRayFacets
-import KumarNivat.NewtonEnvelopeUnitSegments
+module
+
+public import KumarNivat.AnchoredIntegerExpansionSupports
+public import KumarNivat.NewtonSingleRayFacets
+public import KumarNivat.NewtonEnvelopeUnitSegments
+
+@[expose] public section
 
 namespace KumarNivat
 

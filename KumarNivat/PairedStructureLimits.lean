@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureOrbit
-import KumarNivat.AnchoredCompactness
+module
+
+public import KumarNivat.PairedStructureOrbit
+public import KumarNivat.AnchoredCompactness
+
+@[expose] public section
 
 open Filter Topology
 

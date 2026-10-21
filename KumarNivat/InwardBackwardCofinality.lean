@@ -1,5 +1,9 @@
-import KumarNivat.PolyhedralRays
-import KumarNivat.PrimitiveRetention
+module
+
+public import KumarNivat.PolyhedralRays
+public import KumarNivat.PrimitiveRetention
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.PrimitiveLineSpans
-import KumarNivat.ConvexNormalSlices
-import KumarNivat.PairedDirections
+module
+
+public import KumarNivat.PrimitiveLineSpans
+public import KumarNivat.ConvexNormalSlices
+public import KumarNivat.PairedDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

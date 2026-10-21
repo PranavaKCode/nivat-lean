@@ -1,7 +1,11 @@
-import KumarNivat.PlacedEdgeAmbiguity
-import KumarNivat.FirstDisagreement
-import KumarNivat.ShiftedConfigurations
-import KumarNivat.GeneratingBandPeriods
+module
+
+public import KumarNivat.PlacedEdgeAmbiguity
+public import KumarNivat.FirstDisagreement
+public import KumarNivat.ShiftedConfigurations
+public import KumarNivat.GeneratingBandPeriods
+
+@[expose] public section
 
 namespace KumarNivat
 

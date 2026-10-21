@@ -1,7 +1,11 @@
-import KumarNivat.ForwardTransverseDefects
-import KumarNivat.NewtonHalfStripBases
-import KumarNivat.NewtonWedgePlacement
-import KumarNivat.SlopedHalfStripPropagation
+module
+
+public import KumarNivat.ForwardTransverseDefects
+public import KumarNivat.NewtonHalfStripBases
+public import KumarNivat.NewtonWedgePlacement
+public import KumarNivat.SlopedHalfStripPropagation
+
+@[expose] public section
 
 namespace KumarNivat
 

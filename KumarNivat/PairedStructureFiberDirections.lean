@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureFiberElimination
-import KumarNivat.OrientedDifferenceProducts
+module
+
+public import KumarNivat.PairedStructureFiberElimination
+public import KumarNivat.OrientedDifferenceProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

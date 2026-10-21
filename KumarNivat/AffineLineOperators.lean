@@ -1,5 +1,9 @@
-import KumarNivat.AxisOperators
-import KumarNivat.LineFactorCoefficients
+module
+
+public import KumarNivat.AxisOperators
+public import KumarNivat.LineFactorCoefficients
+
+@[expose] public section
 
 namespace KumarNivat
 

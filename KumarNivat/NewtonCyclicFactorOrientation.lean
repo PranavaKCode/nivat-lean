@@ -1,6 +1,10 @@
-import KumarNivat.NewtonCyclicOrder
-import Mathlib.Algebra.Order.Field.Rat
-import Mathlib.Order.WithBot
+module
+
+public import KumarNivat.NewtonCyclicOrder
+public import Mathlib.Algebra.Order.Field.Rat
+public import Mathlib.Order.WithBot
+
+@[expose] public section
 
 namespace KumarNivat
 

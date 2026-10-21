@@ -1,6 +1,10 @@
-import KumarNivat.PrimitiveRealLines
-import KumarNivat.LineFaceGeometry
-import Mathlib.Data.Finset.Max
+module
+
+public import KumarNivat.PrimitiveRealLines
+public import KumarNivat.LineFaceGeometry
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 namespace KumarNivat
 

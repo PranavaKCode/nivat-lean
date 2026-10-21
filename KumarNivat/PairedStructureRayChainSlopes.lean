@@ -1,4 +1,8 @@
-import KumarNivat.PairedStructureRayChainFan
+module
+
+public import KumarNivat.PairedStructureRayChainFan
+
+@[expose] public section
 
 namespace KumarNivat
 

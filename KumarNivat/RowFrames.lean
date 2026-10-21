@@ -1,5 +1,9 @@
-import KumarNivat.PrimitiveDirections
-import Mathlib.Data.Finset.Image
+module
+
+public import KumarNivat.PrimitiveDirections
+public import Mathlib.Data.Finset.Image
+
+@[expose] public section
 
 namespace KumarNivat
 

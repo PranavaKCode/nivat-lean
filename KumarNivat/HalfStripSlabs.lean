@@ -1,6 +1,10 @@
-import KumarNivat.PolygonHalfStrips
-import KumarNivat.PolygonNormalBands
-import KumarNivat.HighHalfStripRows
+module
+
+public import KumarNivat.PolygonHalfStrips
+public import KumarNivat.PolygonNormalBands
+public import KumarNivat.HighHalfStripRows
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicFactorDouble
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import KumarNivat.NewtonCyclicFactorDouble
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

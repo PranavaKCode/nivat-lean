@@ -1,4 +1,8 @@
-import KumarNivat.AnchoredMaximalCoordinates
+module
+
+public import KumarNivat.AnchoredMaximalCoordinates
+
+@[expose] public section
 
 namespace KumarNivat
 

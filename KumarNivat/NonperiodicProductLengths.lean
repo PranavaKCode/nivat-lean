@@ -1,4 +1,8 @@
-import KumarNivat.KariSzabados
+module
+
+public import KumarNivat.KariSzabados
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.NewtonSingleRayFacetsSegment
-import KumarNivat.PairedStructureRayChainRealMinkowski
-import KumarNivat.PolyhedralLimits
+module
+
+public import KumarNivat.NewtonSingleRayFacetsSegment
+public import KumarNivat.PairedStructureRayChainRealMinkowski
+public import KumarNivat.PolyhedralLimits
+
+@[expose] public section
 
 open Filter Topology
 

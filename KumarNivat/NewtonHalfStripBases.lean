@@ -1,5 +1,9 @@
-import KumarNivat.MonomialNewtonTranslation
-import KumarNivat.TangentNewtonSummands
+module
+
+public import KumarNivat.MonomialNewtonTranslation
+public import KumarNivat.TangentNewtonSummands
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicNormals
-import KumarNivat.AnchoredMaximalPolygons
+module
+
+public import KumarNivat.NewtonCyclicNormals
+public import KumarNivat.AnchoredMaximalPolygons
+
+@[expose] public section
 
 namespace KumarNivat
 

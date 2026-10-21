@@ -1,4 +1,8 @@
-import KumarNivat.GeneratedRegionalRows
+module
+
+public import KumarNivat.GeneratedRegionalRows
+
+@[expose] public section
 
 namespace KumarNivat
 

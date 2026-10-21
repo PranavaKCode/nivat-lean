@@ -1,4 +1,8 @@
-import KumarNivat.ExposedOperators
+module
+
+public import KumarNivat.ExposedOperators
+
+@[expose] public section
 
 namespace KumarNivat
 

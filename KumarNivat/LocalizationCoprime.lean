@@ -1,4 +1,8 @@
-import Mathlib.GroupTheory.MonoidLocalization.UniqueFactorization
+module
+
+public import Mathlib.GroupTheory.MonoidLocalization.UniqueFactorization
+
+@[expose] public section
 
 namespace KumarNivat
 

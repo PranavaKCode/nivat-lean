@@ -1,5 +1,9 @@
-import KumarNivat.DivisorPeriods
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import KumarNivat.DivisorPeriods
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 namespace KumarNivat
 

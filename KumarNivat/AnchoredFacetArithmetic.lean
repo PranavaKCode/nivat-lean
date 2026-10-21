@@ -1,5 +1,9 @@
-import KumarNivat.PrimitiveRealLines
-import Mathlib.Data.Int.Basic
+module
+
+public import KumarNivat.PrimitiveRealLines
+public import Mathlib.Data.Int.Basic
+
+@[expose] public section
 
 namespace KumarNivat
 

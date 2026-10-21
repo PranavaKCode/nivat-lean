@@ -1,5 +1,9 @@
-import KumarNivat.PolygonNormalBands
-import KumarNivat.SegmentSummandGeometry
+module
+
+public import KumarNivat.PolygonNormalBands
+public import KumarNivat.SegmentSummandGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,4 +1,8 @@
-import KumarNivat.FailedRayContinuation
+module
+
+public import KumarNivat.FailedRayContinuation
+
+@[expose] public section
 
 namespace KumarNivat
 

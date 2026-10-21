@@ -1,5 +1,9 @@
-import KumarNivat.PolygonHalfStrips
-import KumarNivat.PrimitiveRealLines
+module
+
+public import KumarNivat.PolygonHalfStrips
+public import KumarNivat.PrimitiveRealLines
+
+@[expose] public section
 
 namespace KumarNivat
 

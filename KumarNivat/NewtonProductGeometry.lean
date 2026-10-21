@@ -1,8 +1,12 @@
-import KumarNivat.SupportExtrema
-import KumarNivat.MinkowskiStencilFit
-import Mathlib.Analysis.Convex.Combination
-import Mathlib.Analysis.Convex.Topology
-import Mathlib.Analysis.LocallyConvex.Separation
+module
+
+public import KumarNivat.SupportExtrema
+public import KumarNivat.MinkowskiStencilFit
+public import Mathlib.Analysis.Convex.Combination
+public import Mathlib.Analysis.Convex.Topology
+public import Mathlib.Analysis.LocallyConvex.Separation
+
+@[expose] public section
 
 namespace KumarNivat
 

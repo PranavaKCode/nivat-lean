@@ -1,5 +1,9 @@
-import KumarNivat.PeriodicReferenceChoice
-import KumarNivat.LowComplexityInitialBand
+module
+
+public import KumarNivat.PeriodicReferenceChoice
+public import KumarNivat.LowComplexityInitialBand
+
+@[expose] public section
 
 namespace KumarNivat
 

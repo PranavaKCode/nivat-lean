@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredPolygonExhaustion
-import KumarNivat.AnchoredChainFan
+module
+
+public import KumarNivat.AnchoredPolygonExhaustion
+public import KumarNivat.AnchoredChainFan
+
+@[expose] public section
 
 open Filter Topology
 

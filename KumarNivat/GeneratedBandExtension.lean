@@ -1,7 +1,11 @@
-import KumarNivat.GeneratedEdgeAgreement
-import KumarNivat.ExposedPolygonFaces
-import KumarNivat.PolygonNormalBands
-import KumarNivat.ShiftedConfigurations
+module
+
+public import KumarNivat.GeneratedEdgeAgreement
+public import KumarNivat.ExposedPolygonFaces
+public import KumarNivat.PolygonNormalBands
+public import KumarNivat.ShiftedConfigurations
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredEnvelopeLengths
-import KumarNivat.ExposedFacetGeometry
+module
+
+public import KumarNivat.AnchoredEnvelopeLengths
+public import KumarNivat.ExposedFacetGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.NewtonCyclicOrder
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.NewtonCyclicOrder
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

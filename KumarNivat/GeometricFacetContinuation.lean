@@ -1,6 +1,10 @@
-import KumarNivat.LineFaceGeometry
-import KumarNivat.PairedDirections
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import KumarNivat.LineFaceGeometry
+public import KumarNivat.PairedDirections
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 namespace KumarNivat
 

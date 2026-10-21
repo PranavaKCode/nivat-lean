@@ -1,5 +1,9 @@
-import KumarNivat.ParallelDifferences
-import Mathlib.Data.List.Pairwise
+module
+
+public import KumarNivat.ParallelDifferences
+public import Mathlib.Data.List.Pairwise
+
+@[expose] public section
 
 namespace KumarNivat
 

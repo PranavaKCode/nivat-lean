@@ -1,8 +1,12 @@
-import KumarNivat.MainMatchingBackgroundActual
-import KumarNivat.InitialWedgeFromHalfStrip
-import KumarNivat.NewtonEnvelopeUnitSegments
-import KumarNivat.AnchoredSourceSequences
-import KumarNivat.FilterCount
+module
+
+public import KumarNivat.MainMatchingBackgroundActual
+public import KumarNivat.InitialWedgeFromHalfStrip
+public import KumarNivat.NewtonEnvelopeUnitSegments
+public import KumarNivat.AnchoredSourceSequences
+public import KumarNivat.FilterCount
+
+@[expose] public section
 
 namespace KumarNivat
 

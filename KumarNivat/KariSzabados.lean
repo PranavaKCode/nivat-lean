@@ -1,5 +1,9 @@
-import KumarNivat.IntegerProductAnnihilator
-import KumarNivat.DistinctDirectionProducts
+module
+
+public import KumarNivat.IntegerProductAnnihilator
+public import KumarNivat.DistinctDirectionProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

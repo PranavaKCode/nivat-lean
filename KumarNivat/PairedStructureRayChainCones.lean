@@ -1,6 +1,10 @@
-import KumarNivat.PairedStructureRayChainFan
-import KumarNivat.PairedStructureWideStripGeometry
-import KumarNivat.NewtonCyclicNormals
+module
+
+public import KumarNivat.PairedStructureRayChainFan
+public import KumarNivat.PairedStructureWideStripGeometry
+public import KumarNivat.NewtonCyclicNormals
+
+@[expose] public section
 
 namespace KumarNivat
 

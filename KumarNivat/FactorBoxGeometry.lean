@@ -1,6 +1,10 @@
-import KumarNivat.LineRecurrence
-import KumarNivat.WedgeSaturation
-import KumarNivat.RectangleQuotient
+module
+
+public import KumarNivat.LineRecurrence
+public import KumarNivat.WedgeSaturation
+public import KumarNivat.RectangleQuotient
+
+@[expose] public section
 
 namespace KumarNivat
 

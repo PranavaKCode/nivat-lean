@@ -1,4 +1,8 @@
-import KumarNivat.BoundaryEdgeAgreement
+module
+
+public import KumarNivat.BoundaryEdgeAgreement
+
+@[expose] public section
 
 namespace KumarNivat
 

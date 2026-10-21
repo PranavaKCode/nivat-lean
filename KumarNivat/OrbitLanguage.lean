@@ -1,7 +1,11 @@
-import KumarNivat.LaurentAlgebra
-import Mathlib.Topology.Constructions
-import Mathlib.Topology.Instances.Discrete
-import Mathlib.Topology.Closure
+module
+
+public import KumarNivat.LaurentAlgebra
+public import Mathlib.Topology.Constructions
+public import Mathlib.Topology.Instances.Discrete
+public import Mathlib.Topology.Closure
+
+@[expose] public section
 
 namespace KumarNivat
 

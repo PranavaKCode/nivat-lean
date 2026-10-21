@@ -1,4 +1,8 @@
-import KumarNivat.ColleAnchoredPreparationSource
+module
+
+public import KumarNivat.ColleAnchoredPreparationSource
+
+@[expose] public section
 
 namespace KumarNivat
 

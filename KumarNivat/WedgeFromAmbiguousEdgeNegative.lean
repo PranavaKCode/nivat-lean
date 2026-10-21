@@ -1,5 +1,9 @@
-import KumarNivat.SecondRegionalPeriodNegative
-import KumarNivat.ReflectionBackgrounds
+module
+
+public import KumarNivat.SecondRegionalPeriodNegative
+public import KumarNivat.ReflectionBackgrounds
+
+@[expose] public section
 
 namespace KumarNivat
 

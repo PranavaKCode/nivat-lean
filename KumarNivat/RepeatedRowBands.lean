@@ -1,8 +1,12 @@
-import KumarNivat.RowFrames
-import KumarNivat.StableRegions
-import KumarNivat.RegionalRowAgreement
-import KumarNivat.FixedGapRepetitions
-import KumarNivat.HalfplaneBackgrounds
+module
+
+public import KumarNivat.RowFrames
+public import KumarNivat.StableRegions
+public import KumarNivat.RegionalRowAgreement
+public import KumarNivat.FixedGapRepetitions
+public import KumarNivat.HalfplaneBackgrounds
+
+@[expose] public section
 
 namespace KumarNivat
 

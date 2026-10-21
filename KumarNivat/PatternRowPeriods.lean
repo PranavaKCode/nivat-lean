@@ -1,5 +1,9 @@
-import KumarNivat.PolygonStripPeriods
-import KumarNivat.PeriodicBlocks
+module
+
+public import KumarNivat.PolygonStripPeriods
+public import KumarNivat.PeriodicBlocks
+
+@[expose] public section
 
 namespace KumarNivat
 

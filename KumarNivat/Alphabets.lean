@@ -1,5 +1,9 @@
-import KumarNivat.Operators
-import Mathlib.Data.Fintype.EquivFin
+module
+
+public import KumarNivat.Operators
+public import Mathlib.Data.Fintype.EquivFin
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,5 +1,9 @@
-import KumarNivat.ThinRectangles
-import KumarNivat.PrimitiveDirections
+module
+
+public import KumarNivat.ThinRectangles
+public import KumarNivat.PrimitiveDirections
+
+@[expose] public section
 
 namespace KumarNivat
 

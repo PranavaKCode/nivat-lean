@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureWideStripBackground
-import KumarNivat.SquarefreeProducts
+module
+
+public import KumarNivat.PairedStructureWideStripBackground
+public import KumarNivat.SquarefreeProducts
+
+@[expose] public section
 
 namespace KumarNivat
 

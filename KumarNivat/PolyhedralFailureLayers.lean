@@ -1,5 +1,9 @@
-import KumarNivat.PolyhedralRays
-import Mathlib.Data.Nat.Find
+module
+
+public import KumarNivat.PolyhedralRays
+public import Mathlib.Data.Nat.Find
+
+@[expose] public section
 
 namespace KumarNivat
 

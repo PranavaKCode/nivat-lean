@@ -1,4 +1,8 @@
-import KumarNivat.NewtonCyclicOrder
+module
+
+public import KumarNivat.NewtonCyclicOrder
+
+@[expose] public section
 
 namespace KumarNivat
 

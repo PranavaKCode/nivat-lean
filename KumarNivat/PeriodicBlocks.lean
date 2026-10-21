@@ -1,7 +1,11 @@
-import Mathlib.Algebra.Ring.Periodic
-import Mathlib.Data.Int.Interval
-import Mathlib.Data.Set.Card
-import Lean.Elab.Tactic.Omega
+module
+
+public import Mathlib.Algebra.Ring.Periodic
+public import Mathlib.Data.Int.Interval
+public import Mathlib.Data.Set.Card
+public import Lean.Elab.Tactic.Omega
+
+@[expose] public section
 
 namespace KumarNivat
 

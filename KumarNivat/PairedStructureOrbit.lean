@@ -1,6 +1,10 @@
-import KumarNivat.PairedDirections
-import KumarNivat.ShiftedConfigurations
-import KumarNivat.PeriodLattice
+module
+
+public import KumarNivat.PairedDirections
+public import KumarNivat.ShiftedConfigurations
+public import KumarNivat.PeriodLattice
+
+@[expose] public section
 
 namespace KumarNivat
 

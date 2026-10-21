@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredConstructedChain
-import KumarNivat.NewtonCyclicFactorOriginalAligned
+module
+
+public import KumarNivat.AnchoredConstructedChain
+public import KumarNivat.NewtonCyclicFactorOriginalAligned
+
+@[expose] public section
 
 namespace KumarNivat
 

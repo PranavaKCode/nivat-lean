@@ -1,4 +1,8 @@
-import KumarNivat.SegmentSummandGeometry
+module
+
+public import KumarNivat.SegmentSummandGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

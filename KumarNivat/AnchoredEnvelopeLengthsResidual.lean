@@ -1,5 +1,9 @@
-import KumarNivat.AnchoredEnvelopeLengthsScaled
-import KumarNivat.NewtonCyclicMinkowski
+module
+
+public import KumarNivat.AnchoredEnvelopeLengthsScaled
+public import KumarNivat.NewtonCyclicMinkowski
+
+@[expose] public section
 
 namespace KumarNivat
 

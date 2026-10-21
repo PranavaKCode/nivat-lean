@@ -1,6 +1,10 @@
-import KumarNivat.CoprimePeriods
-import KumarNivat.CommonAnnihilatorDivisor
-import KumarNivat.AffineCommonDivisor
+module
+
+public import KumarNivat.CoprimePeriods
+public import KumarNivat.CommonAnnihilatorDivisor
+public import KumarNivat.AffineCommonDivisor
+
+@[expose] public section
 
 namespace KumarNivat
 

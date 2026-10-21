@@ -1,5 +1,9 @@
-import KumarNivat.LaurentFactorization
-import Mathlib.Algebra.Polynomial.FieldDivision
+module
+
+public import KumarNivat.LaurentFactorization
+public import Mathlib.Algebra.Polynomial.FieldDivision
+
+@[expose] public section
 
 namespace KumarNivat
 

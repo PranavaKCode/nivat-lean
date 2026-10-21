@@ -1,5 +1,9 @@
-import KumarNivat.LaurentAlgebra
-import KumarNivat.RationalCone
+module
+
+public import KumarNivat.LaurentAlgebra
+public import KumarNivat.RationalCone
+
+@[expose] public section
 
 namespace KumarNivat
 

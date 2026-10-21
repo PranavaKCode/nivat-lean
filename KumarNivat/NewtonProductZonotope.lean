@@ -1,7 +1,11 @@
-import KumarNivat.NewtonProductGeometry
-import KumarNivat.NormalMinima
-import KumarNivat.SquarefreeProducts
-import KumarNivat.LineFaceGeometry
+module
+
+public import KumarNivat.NewtonProductGeometry
+public import KumarNivat.NormalMinima
+public import KumarNivat.SquarefreeProducts
+public import KumarNivat.LineFaceGeometry
+
+@[expose] public section
 
 namespace KumarNivat
 

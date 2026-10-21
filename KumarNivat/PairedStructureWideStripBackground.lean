@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureWideStripGeometry
-import KumarNivat.PairedStructureBoundaryLimit
+module
+
+public import KumarNivat.PairedStructureWideStripGeometry
+public import KumarNivat.PairedStructureBoundaryLimit
+
+@[expose] public section
 
 open Filter Topology
 

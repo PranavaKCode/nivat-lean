@@ -1,5 +1,9 @@
-import KumarNivat.FactorBoxGeometry
-import KumarNivat.LineOperators
+module
+
+public import KumarNivat.FactorBoxGeometry
+public import KumarNivat.LineOperators
+
+@[expose] public section
 
 namespace KumarNivat
 

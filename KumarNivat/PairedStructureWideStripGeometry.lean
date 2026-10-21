@@ -1,5 +1,9 @@
-import KumarNivat.InitialWedgeFromHalfStrip
-import KumarNivat.PrimitiveRealLines
+module
+
+public import KumarNivat.InitialWedgeFromHalfStrip
+public import KumarNivat.PrimitiveRealLines
+
+@[expose] public section
 
 namespace KumarNivat
 

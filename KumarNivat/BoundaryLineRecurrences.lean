@@ -1,5 +1,9 @@
-import KumarNivat.ExposedOperators
-import KumarNivat.FacetRecurrences
+module
+
+public import KumarNivat.ExposedOperators
+public import KumarNivat.FacetRecurrences
+
+@[expose] public section
 
 namespace KumarNivat
 

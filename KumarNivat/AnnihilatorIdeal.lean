@@ -1,7 +1,11 @@
-import KumarNivat.LaurentMaps
-import KumarNivat.SubspaceAvoidance
-import Mathlib.RingTheory.Ideal.Span
-import Mathlib.Algebra.Module.Submodule.RestrictScalars
+module
+
+public import KumarNivat.LaurentMaps
+public import KumarNivat.SubspaceAvoidance
+public import Mathlib.RingTheory.Ideal.Span
+public import Mathlib.Algebra.Module.Submodule.RestrictScalars
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,6 +1,10 @@
-import KumarNivat.PolyhedralRays
-import Mathlib.Order.Filter.AtTopBot.Tendsto
-import Mathlib.Order.Filter.Finite
+module
+
+public import KumarNivat.PolyhedralRays
+public import Mathlib.Order.Filter.AtTopBot.Tendsto
+public import Mathlib.Order.Filter.Finite
+
+@[expose] public section
 
 open Filter Topology
 

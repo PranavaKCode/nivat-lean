@@ -1,6 +1,10 @@
-import KumarNivat.AnnihilatorIdeal
-import KumarNivat.LaurentFactorization
-import KumarNivat.SquarefreeDivisibility
+module
+
+public import KumarNivat.AnnihilatorIdeal
+public import KumarNivat.LaurentFactorization
+public import KumarNivat.SquarefreeDivisibility
+
+@[expose] public section
 
 namespace KumarNivat
 

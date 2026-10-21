@@ -1,5 +1,9 @@
-import KumarNivat.NormalMinima
-import KumarNivat.OrientedNormals
+module
+
+public import KumarNivat.NormalMinima
+public import KumarNivat.OrientedNormals
+
+@[expose] public section
 
 namespace KumarNivat
 

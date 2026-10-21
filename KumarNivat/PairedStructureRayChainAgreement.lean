@@ -1,5 +1,9 @@
-import KumarNivat.PairedStructureRayChainRegions
-import KumarNivat.PairedStructureWideStripBackground
+module
+
+public import KumarNivat.PairedStructureRayChainRegions
+public import KumarNivat.PairedStructureWideStripBackground
+
+@[expose] public section
 
 namespace KumarNivat
 

@@ -1,9 +1,13 @@
-import KumarNivat.Statement
-import Mathlib.Data.Set.Finite.Range
-import Mathlib.Data.Fintype.Pigeonhole
-import Mathlib.Tactic.Abel
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
+module
+
+public import KumarNivat.Statement
+public import Mathlib.Data.Set.Finite.Range
+public import Mathlib.Data.Fintype.Pigeonhole
+public import Mathlib.Tactic.Abel
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.NormNum
+
+@[expose] public section
 
 namespace KumarNivat
 
