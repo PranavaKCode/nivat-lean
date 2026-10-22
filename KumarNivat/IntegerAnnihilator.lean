@@ -4,6 +4,8 @@ public import KumarNivat.Alphabets
 public import KumarNivat.LocalAnnihilator
 public import Mathlib.Data.Rat.Defs
 public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+-- the ordered product lemma now needs its defining module explicitly.
+public import Mathlib.Algebra.Order.BigOperators.GroupWithZero.Finset
 
 @[expose] public section
 
