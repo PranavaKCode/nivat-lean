@@ -39,6 +39,8 @@ This branch pins Lean **v4.35.0-rc2** and canonical Mathlib commit **`065356127b
 
 [`comparator.json`](comparator.json) requires the Challenge and Solution declarations to agree. The pinned official [Palomar mechanical workflow](.github/workflows/palomar-preflight.yml) runs in `full` mode on each push to `palomar-submission`. Consult the [Actions run](https://github.com/PranavaKCode/nivat-lean/actions/workflows/palomar-preflight.yml) and its `mechanical-report-preflight001` artifact for the result on an exact commit. A result for the earlier toolchain does not certify the upgraded snapshot. Registry registration is a separate final action.
 
+The companion `manuscript-audit` job builds all 339 proof-library modules, validates all 923 principal axiom reports, and checks both the expanded target and the Solution's axiom dependencies. Its `manuscript-audit-<run_id>-<attempt>` artifact contains the complete logs and a report bound to the source commit.
+
 With Elan installed, the compiler checks are:
 
 ```text

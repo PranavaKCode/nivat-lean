@@ -29,3 +29,195 @@ jobs:
       execution_profile: palomar-standard-v1
       options: >-
         {"project_path":"","comparator_config_path":"comparator.json","formalization_metadata_path":"formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}
+
+  # build the umbrella as well as the selected theorem's dependency closure.
+  manuscript-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      SOURCE_COMMIT: ${{ inputs.commit || github.sha }}
+      LEAN_NUM_THREADS: "2"
+    steps:
+      - name: Check out the exact source snapshot
+        id: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: PranavaKCode/nivat-lean
+          ref: ${{ inputs.commit || github.sha }}
+          persist-credentials: false
+
+      - name: Initialize the manuscript audit report
+        id: initialize
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYTHON'
+          import json, os, pathlib, re, subprocess
+          directory = pathlib.Path(os.environ["RUNNER_TEMP"], "manuscript-audit")
+          directory.mkdir(parents=True, exist_ok=True)
+          requested = os.environ["SOURCE_COMMIT"]
+          actual = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          report = {"status": "incomplete", "requested_commit": requested, "source_commit": actual}
+          (directory / "report.json").write_text(json.dumps(report, indent=2) + "\n")
+          if not re.fullmatch(r"[0-9a-f]{40}", requested) or actual != requested:
+              raise SystemExit("the checkout must equal the requested full source commit")
+          PYTHON
+
+      # use the verifier's predefined cleanup before installing lean or caches.
+      - name: Free runner disk space
+        id: cleanup
+        uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: false
+          docker-images: true
+          swap-storage: false
+
+      - name: Set up the pinned Lean toolchain
+        id: setup
+        uses: leanprover/lean-action@a2cd0b8fd34c304895595abb5f1cfb892e2b50d8
+        with:
+          auto-config: "false"
+          build: "false"
+          use-mathlib-cache: "false"
+          use-github-cache: "false"
+
+      - name: Build every library module and validate all theorem audits
+        id: manuscript
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u - <<'PYTHON'
+          import collections, datetime, json, os, pathlib, re, subprocess, sys
+          directory = pathlib.Path(os.environ["RUNNER_TEMP"], "manuscript-audit")
+          report_path = directory / "report.json"
+          report = json.loads(report_path.read_text())
+          report.update(status="incomplete", commands={}, audits={})
+          report["lean_toolchain"] = pathlib.Path("lean-toolchain").read_text().strip()
+          allowed = {"propext", "Classical.choice", "Quot.sound"}
+
+          # keep a complete report even if a later command fails or is interrupted.
+          def save_report():
+              report["updated_at_utc"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+              temporary = directory / "report.json.tmp"
+              temporary.write_text(json.dumps(report, indent=2) + "\n")
+              temporary.replace(report_path)
+
+          # stream each process directly so no pipeline can hide its exit status.
+          def run_logged(label, arguments):
+              report["commands"][label] = {"arguments": arguments, "status": "running"}
+              save_report()
+              with (directory / (label + ".log")).open("w", encoding="utf-8") as log:
+                  process = subprocess.Popen(arguments, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                             text=True, encoding="utf-8", errors="replace", bufsize=1)
+                  for line in process.stdout:
+                      log.write(line)
+                      log.flush()
+                      print(line, end="", flush=True)
+                  code = process.wait()
+              report["commands"][label].update(returncode=code, status="pass" if code == 0 else "fail")
+              save_report()
+              return code
+
+          # require one ordinary-axiom result for every requested declaration.
+          def validate_axioms(log_path, expected):
+              text = log_path.read_text(encoding="utf-8")
+              records = re.findall(r"'([^']+)' (?:depends on axioms:\s*\[([^\]]*)\]|does not depend on any axioms)", text)
+              if not expected or len(set(expected)) != len(expected):
+                  raise ValueError("the audit declaration list is empty or contains duplicates")
+              reported = [name for name, _ in records]
+              if collections.Counter(reported) != collections.Counter(expected):
+                  missing = sorted(set(expected) - set(reported))
+                  extra = sorted(set(reported) - set(expected))
+                  raise ValueError(f"incomplete or duplicate axiom results: missing={missing}, extra={extra}")
+              used = {name.strip() for _, axioms in records for name in axioms.split(",") if name.strip()}
+              if used - allowed or "sorryAx" in text:
+                  raise ValueError("a theorem has a nonordinary axiom dependency: " + repr(sorted(used - allowed)))
+              return {"expected_count": len(expected), "reported_count": len(records), "ordinary_axioms": sorted(used)}
+
+          try:
+              names = re.findall(r"(?m)^#print axioms (\S+)", pathlib.Path("scripts/Audit.lean").read_text())
+              if len(names) != 923 or len(set(names)) != 923:
+                  raise ValueError("the manuscript audit must request exactly 923 distinct declarations")
+              tracked = subprocess.check_output(["git", "ls-files", "--", "*.lean"], text=True).splitlines()
+              roots = set()
+              for source in tracked:
+                  for line in pathlib.Path(source).read_text(encoding="utf-8").splitlines():
+                      match = re.match(r"^\s*(?:public\s+)?import\s+(.+)", line)
+                      if match:
+                          roots.update(name for name in match[1].split("--", 1)[0].split() if name.startswith("Mathlib."))
+              if not roots:
+                  raise ValueError("no direct Mathlib imports were found for selective caching")
+              roots = sorted(roots)
+              (directory / "mathlib-imports.txt").write_text("\n".join(roots) + "\n")
+              report["mathlib_cache_root_count"] = len(roots)
+              save_report()
+              if run_logged("cache", ["lake", "exe", "cache", "get", *roots]) != 0:
+                  raise RuntimeError("selective Mathlib cache retrieval failed")
+              if run_logged("build", ["lake", "build", "KumarNivat", "Challenge", "Solution"]) != 0:
+                  raise RuntimeError("the complete manuscript library or submission interface did not build")
+              pathlib.Path("tmp").mkdir(exist_ok=True)
+              solution_audit = pathlib.Path("tmp/PalomarSolutionAudit.lean")
+              solution_audit.write_text("module\n\npublic import Solution\n\n#print axioms PalomarNivat.nivat\n")
+              checks = [
+                  ("axioms", "scripts/Audit.lean", names),
+                  ("full-target", "scripts/FullTarget.lean", ["KumarNivat.nivat"]),
+                  ("solution-axioms", str(solution_audit), ["PalomarNivat.nivat"]),
+              ]
+              problems = []
+              for label, source, expected in checks:
+                  code = run_logged(label, ["lake", "env", "lean", source])
+                  if code != 0:
+                      problems.append(f"{label} compiler exit status: {code}")
+                  try:
+                      report["audits"][label] = validate_axioms(directory / (label + ".log"), expected)
+                  except Exception as error:
+                      problems.append(f"{label}: {error}")
+              if problems:
+                  raise RuntimeError("; ".join(problems))
+              report["status"] = "pass"
+          except Exception as error:
+              report.update(status="fail", error=str(error))
+              print("::error::" + str(error), flush=True)
+          finally:
+              save_report()
+          sys.exit(0 if report["status"] == "pass" else 1)
+          PYTHON
+
+      - name: Finalize and gate the manuscript audit report
+        if: always()
+        env:
+          AUDIT_STEPS: ${{ toJSON(steps) }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYTHON'
+          import json, os, pathlib, sys
+          directory = pathlib.Path(os.environ["RUNNER_TEMP"], "manuscript-audit")
+          directory.mkdir(parents=True, exist_ok=True)
+          path = directory / "report.json"
+          try:
+              report = json.loads(path.read_text())
+          except (OSError, ValueError):
+              report = {"status": "incomplete", "requested_commit": os.environ["SOURCE_COMMIT"]}
+          steps = json.loads(os.environ["AUDIT_STEPS"])
+          required = ["checkout", "initialize", "cleanup", "setup", "manuscript"]
+          report["step_outcomes"] = {name: steps.get(name, {}).get("outcome", "missing") for name in required}
+          if any(outcome != "success" for outcome in report["step_outcomes"].values()):
+              report["status"] = "fail"
+          path.write_text(json.dumps(report, indent=2) + "\n")
+          print(json.dumps(report, indent=2))
+          sys.exit(0 if report.get("status") == "pass" else 1)
+          PYTHON
+
+      - name: Upload manuscript audit logs and report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: manuscript-audit-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/manuscript-audit/
+          if-no-files-found: error
+          retention-days: 90
