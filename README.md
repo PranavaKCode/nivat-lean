@@ -1,4 +1,4 @@
-# Nivat manuscript formalization
+# Nivat's conjecture
 
 This repository formalizes Pranava Kumar's manuscript argument for the full Nivat conjecture. The original October 1 verification snapshot is preserved at [`3cbea761cbc5cb8039ef1a5990f52be3ba2a23bd`](https://github.com/PranavaKCode/nivat-lean/tree/3cbea761cbc5cb8039ef1a5990f52be3ba2a23bd). This branch prepares that development for Palomar, including its required toolchain, module system, independent statement, licensing, and provenance metadata.
 

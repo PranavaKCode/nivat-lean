@@ -2,7 +2,7 @@
 version: v0.4
 
 project:
-  name: "Nivat's conjecture: formalization of Pranava Kumar's argument"
+  name: "Nivat's conjecture"
   description: >-
     For every configuration on the integer plane over an arbitrary finite
     alphabet, a positive k by n rectangle with at most k*n occurring translated
