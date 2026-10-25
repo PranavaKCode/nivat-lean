@@ -1,6 +1,6 @@
 # Nivat's conjecture
 
-This repository formalizes Pranava Kumar's manuscript argument for the full Nivat conjecture. The original October 1 verification snapshot is preserved at [`3cbea761cbc5cb8039ef1a5990f52be3ba2a23bd`](https://github.com/PranavaKCode/nivat-lean/tree/3cbea761cbc5cb8039ef1a5990f52be3ba2a23bd). This branch prepares that development for Palomar, including its required toolchain, module system, independent statement, licensing, and provenance metadata.
+This repository formalizes the argument in my paper for the full Nivat conjecture. The Lean proof is due to Catenation, my custom agentic framework. The original October 1 verification snapshot is preserved at [`3cbea761cbc5cb8039ef1a5990f52be3ba2a23bd`](https://github.com/PranavaKCode/nivat-lean/tree/3cbea761cbc5cb8039ef1a5990f52be3ba2a23bd). This branch prepares that development for Palomar, including its required toolchain, module system, independent statement, licensing, and provenance metadata.
 
 ## Exact theorem statement
 
@@ -76,12 +76,12 @@ The supplied *A proof of Nivat's conjecture*, dated 14 September 2026, is preser
 - PDF SHA-256: `6b3b5efdeb7aa549fdd0ca06cfda61b4be60241b369eb790d49b1f8fbf6b16e0`
 - LaTeX SHA-256: `da6d92e41bef1dc3a7560dc6505fdee228f9fd261d582a58f442c3e469211c4f`
 
-An earlier version, *Rectangular complexity, periodic regions, and local observables*, was publicly deposited on [Zenodo on 8 September 2026](https://doi.org/10.5281/zenodo.22666792), before the identified parallel repository was created on 14 September. The deposited PDF is preserved as [`inputs/zenodo-22666792.pdf`](inputs/zenodo-22666792.pdf). Zenodo's server timestamps and DataCite's DOI registration corroborate the earlier deposit. Kumar identifies it as the earlier presentation of the argument formalized here and claims priority for that argument. The two manuscript versions contain revisions and are not byte-identical. The dated evidence and its limits are recorded in [`provenance/chronology.json`](provenance/chronology.json).
+An earlier version, *Rectangular complexity, periodic regions, and local observables*, was publicly deposited on [Zenodo on 8 September 2026](https://doi.org/10.5281/zenodo.22666792), before the identified parallel repository was created on 14 September. The deposited PDF is preserved as [`inputs/zenodo-22666792.pdf`](inputs/zenodo-22666792.pdf). Zenodo's server timestamps and DataCite's DOI registration corroborate the earlier deposit. I identify it as the earlier presentation of the argument formalized here and claim priority for that argument. The two manuscript versions contain revisions and are not byte-identical. The dated evidence and its limits are recorded in [`provenance/chronology.json`](provenance/chronology.json).
 
-A [parallel Lean formalization](https://github.com/PalomarArchive/boonsuan--nivat--8f5b1fc73411/tree/0d94547e934418c9d1b75fcbb7d6af493e86759d) was supplied as a reference. It is disclosed under `related_formalizations` in [`formalization.yaml`](formalization.yaml). This proof development attributes its mathematical source to Kumar's manuscripts.
+A [parallel Lean formalization](https://github.com/PalomarArchive/boonsuan--nivat--8f5b1fc73411/tree/0d94547e934418c9d1b75fcbb7d6af493e86759d) was supplied as a reference. It is disclosed under `related_formalizations` in [`formalization.yaml`](formalization.yaml). This Lean proof formalizes the argument in my manuscripts.
 
 ## AI assistance and licenses
 
-AI assistance was used to translate the pre-existing paper's arguments into Lean, including supporting lemmas, formal proof construction, debugging, and verification. The responsible maintainer reports models including GPT-6 Astra through the custom agentic framework Catenation. Exact model-run identifiers and framework logs were not recorded in the original public snapshot; those model and framework names are the maintainer's attribution. Full disclosure and source alignment appear in [`formalization.yaml`](formalization.yaml).
+I used AI assistance to translate the arguments in my paper into Lean, including supporting lemmas, formal proof construction, debugging, and verification. I used models including GPT-6 Astra through Catenation, my custom agentic framework. Exact model-run identifiers and framework logs were not recorded in the original public snapshot; those model and framework names are my attribution. Full disclosure and source alignment appear in [`formalization.yaml`](formalization.yaml).
 
 Code, scripts, and project metadata are licensed under [Apache-2.0](LICENSE). The manuscripts are licensed under [CC BY 4.0](inputs/PAPER-LICENSE.md). See [`NOTICE`](NOTICE) for the distinction.

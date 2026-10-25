@@ -8,8 +8,9 @@ project:
     alphabet, a positive k by n rectangle with at most k*n occurring translated
     patterns forces a nonzero global period of the original configuration.
     The statement includes equality at the complexity threshold and rectangles
-    of width or height one. The proof formalizes Pranava Kumar's manuscript
-    through Laurent annihilators, a sharp periodic-wedge complexity bound,
+    of width or height one. The Lean proof is due to Catenation, my custom
+    agentic framework, translating the argument in my paper into Lean. The
+    proof uses Laurent annihilators, a sharp periodic-wedge complexity bound,
     generating polygons, and selection of the same nonperiodic orbit point
     throughout the periodic-background construction. Its mathematical setting
     is multidimensional symbolic dynamics and combinatorics of low-complexity
@@ -33,7 +34,7 @@ sources:
     author_endorsement: participated
     note: >-
       The supplied retitled manuscript is preserved byte-for-byte in inputs/.
-      The author identifies the earlier Zenodo preprint below as an earlier
+      I identify the earlier Zenodo preprint below as an earlier
       presentation of the same mathematical argument. The Lean formalization
       was completed later than the manuscript and is a separate development.
   - title: "Rectangular complexity, periodic regions, and local observables"
@@ -49,9 +50,9 @@ sources:
       Zenodo records publication on 8 September 2026 and creation of the record
       at 2026-09-08T20:54:10.217288Z. DataCite records DOI registration at
       2026-09-08T20:54:11Z, preceding creation of the identified parallel
-      repository on 14 September 2026. The author identifies this deposit as the
-      earlier presentation of the argument later formalized here and claims
-      priority for that argument. This records the author's claim and the dated
+      repository on 14 September 2026. I identify this deposit as the
+      earlier presentation of the argument later formalized here and claim
+      priority for that argument. This records my claim and the dated
       source; it does not treat the date of completion of Lean code as the
       date of origin of the mathematical argument. The deposited version and
       the retitled manuscript share the main proof architecture but contain
@@ -97,9 +98,9 @@ related_formalizations:
     note: >-
       A parallel Lean formalization of the same conjecture by another author,
       identified to the formalization agents as a reference. The present
-      repository formalizes Kumar's manuscript and contains its own substantive
+      repository formalizes my manuscript and contains its own substantive
       proof development; it is not a dependency on or wrapper around this
-      repository. The author's argument-priority claim concerns the earlier
+      repository. My argument-priority claim concerns the earlier
       Zenodo paper above, rather than the order in which Lean code was completed.
 
 classification:
@@ -135,8 +136,8 @@ automation:
   methods:
     - method: agent
       models:
-        - "GPT-6 Astra (model name reported by the responsible maintainer)"
-      framework: "Catenation (the custom agentic framework reported by the responsible maintainer)"
+        - "GPT-6 Astra (self-reported model name)"
+      framework: "Catenation (my custom agentic framework; self-reported attribution)"
       tool_setup: >-
         Agent-assisted translation of the paper's arguments into Lean 4 and
         Mathlib, including supporting Lean lemmas, formal proof construction,
@@ -147,12 +148,12 @@ automation:
         pre-existing paper, while the AI contribution is the Lean formalization
         and the supporting proof development required by that formalization.
   notes: >-
-    The responsible maintainer reports using models including GPT-6 Astra
-    through a custom developed agentic framework called Catenation to translate
-    the arguments made in the paper into Lean. The formalization work included
-    auxiliary lemmas and proof engineering. Exact model-run identifiers and
-    framework execution logs were not recorded in the original public snapshot;
-    model and framework attribution here is the maintainer's self-report.
+    I used models including GPT-6 Astra through Catenation, my custom agentic
+    framework, to translate the arguments in my paper into Lean. I credit the
+    Lean proof to Catenation. The formalization work included auxiliary lemmas
+    and proof engineering. Exact model-run identifiers and framework execution
+    logs were not recorded in the original public snapshot; the model and
+    framework attribution here is my self-report.
 
 fidelity:
   divergences: >-
